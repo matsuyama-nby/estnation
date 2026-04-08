@@ -1,79 +1,282 @@
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import AsideNav from '@/components/AsideNav';
 
 export const metadata = {
-  title: "タイトル",
+	title: "タイトル",
   description: "説明",
 };
 
 export default function Page() {
   return (
 	<body>
-		
-			<Header />
-    		<main>
-					{/* KV */}
-					<div className="kv-wrapper">
-    		  	<div className="relative">
+		<Header />
+		<div className="fixed-background" />
+		<main className="relative z-100">
+			{/* KV */}
+			<div className="kv-wrapper">
+				<div className="relative">
+					<picture>
+						<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+						<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="THE INTELLECTUAL JOURNEY" />
+					</picture>
+					<div className="kv-ttl">
+						<h1 className="text-[45px] font-en-garamond">THE INTELLECTUAL JOURNEY</h1>
+						<p className="text-[13px] font-en-futura">- FLAVORS & NATURE ENCOUNTER -</p>
+						<p className="text-[18px]">知的好奇心を刺激する名ホテルへの旅路</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="intro">
+				<p className="text-[13px] leading-[130%] font-bold">INTRODUCTION</p>
+				<p className="basis-[65%] text-[15px] leading-[185%]">旅の目的は、人の数だけ存在します。日々の喧騒を離れて静謐に身を置き自分と向き合う旅。あるいは未知の体験を求める活動的な旅。その中でも、今、多くの人々が旅に求めているのは「学び」という名の贅沢ではないでしょうか。時代を超えた建築に触れ、自然の中で五感を研ぎ澄ます。洗練された装いで食の芸術を愉しむ。旅は私たちに計り知れない経験と新たな視座を与えてくれます。真の豊かさを求める人々が増えた現代、審美眼を持つプロフェッショナルはどのような地を目的地に選ぶのでしょうか。今回は、デザイン・建築メディア『Ala Champ Magazine』の編集長を務めるジョアンナ・カウェキさんを迎え、「ふふ 東京 銀座」を舞台に知的好奇心を深く刺激する旅の過ごし方を紐解いていきます。</p>
+			</div>
+
+			<section className="section">
+				<h2 className="font-en-garamond text-[40px] tracking-[0.1em] leading-[120%] mb-[53px] font-bold">NAVIGATOR</h2>
+				<div className="flex justify-between">
+					<div className="basis-[calc((100%-40px)/2)]">
+						<div className="mb-[40px]">
+							<p className="mb-[15px] text-[11px]">ALA CHMAP MAGAZINE FOUNDER</p>
+							<p className="tracking-[0.1em] text-[30px] font-en-garamond font-bold mb-[8px]">JOANNA KAWACKI</p>
+							<p className="text-[12px]">ジョアンナ・カウェキ</p>
+						</div>
+						<p className="mb-[30px]">オーストラリア出身、東京在住の編集者・ジャーナリスト。デザイン/建築メディア『Ala Champ Magazine』のファウンダー。建築、旅、アートといった分野に造詣が深く、2013年に東京へ拠点を移してからはグローバルな視点から日本の建築や、文化を発信している。国内外のビジネスエリートからも高い支持を集め、ファッションを含め様々な分野に精通している。</p>
+					</div>
+					<picture className="w-[238px]">
+						<source srcSet="/photo/page/2026_intellectual-journey/img/img-navigator.webp" type="image/webp" />
+						<img src="/photo/page/2026_intellectual-journey/img/img-navigator.jpg" alt="" />
+					</picture>
+				</div>
+			</section>
+
+			<section className="section flex-gap-40-2col">
+				<div className="grid gap-[40px]">
+					<picture>
+						<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-1.webp" type="image/webp" />
+						<img src="/photo/page/2026_intellectual-journey/img/img-hotel-1.jpg" alt="" />
+					</picture>
+					<div>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-2.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-2.jpg" alt="" />
+						</picture>
+						<p className="text-[11px] mt-[10px]">ふふ 東京 銀座内にある日本料理「銀座がゆう」では宿泊者がプライベート空間を満喫できるよう全て個室になっているが、レストラン内には大きなカウンターを備え、通り道にも枯山水を模した空間や作品が置かれるなど、個室に入るまでの時間を視覚的に楽しむことができる。</p>
+					</div>
+				</div>
+				<div>
+					<h2 className="section-ttl">旅は新たな知識のカケラ<br />を与えてくれる</h2>
+					<p className="question-text">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
+					<p>
+						ジョアンナ・カウェキ（以下J）：日常のあらゆることに好奇心を持つのはとても大切なことです。旅や日々の経験を通じて、私たちは自分自身のことをより深く知り、自分たちが生きる世界への理解を深めることができます。「わからないことを質問する」のを怖がらず挑戦してみてほしいと思います。それは恥ずかしいことではなく、むしろ知性の証です。質問することで、ものがどう作られ、どこから来たのかという新しい知識が手に入ります。<br />
+						そして実体験はなにものにも代えがたい財産です。知識を積み重ね、学ぶことは脳の柔軟性を鍛えることにも繋がります。また、今の世界には「共感」や「思いやり」といった価値観がもっと必要だと思います。旅をすることは世界が広大で、かつ「すべてが繋がり合っている場所」であることを実感させてくれる素晴らしい手段なのです。<br />
+						そして最近の旅行者は、もちろん全てではないんですが洗練されてはいるもののどこか単調な都市の高級ホテルから離れつつあります。代わって支持されているのは、その土地の風景や伝統に深く根ざした、地方の宿です。こうした宿にはその土地ならではの“情緒”が息づいています。<br />
+						この変化の真の原動力は、「その土地の文化にどっぷりと浸かりたい」という切実な思いにあると私は考えています。旅行者はもはや、単に目的地を“訪れる”だけでは満足できません。たとえ数晩であっても、その場所に「溶け込んで暮らしたい」と願っているのです。地方の宿は、そんな願いを心に深く刻み込んでくれる体験なのです。
+					</p>
+				</div>
+			</section>
+
+			<section className="section">
+				<picture>
+					<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-3.webp" type="image/webp" />
+					<img src="/photo/page/2026_intellectual-journey/img/img-hotel-3.jpg" alt="" />
+				</picture>
+				<div className="flex">
+					<p className="text-[11px] mt-[10px] w-[calc((100%-40px)/2)] ml-auto">エントランスには銀箔の作品や、竹籠のアートが飾られ、ふふ 東京 銀座が国内のアーティストに敬意を払いながら伝統作品を現代的にアップデートしている様子が伺える。</p>
+				</div>
+				<h2 className="section-ttl">日本的な美意識を<br />現代の感覚に落とし込む</h2>
+				<div className="columns-2 gap-[40px]">
+					<p className="question-text">今回は地方にも多くの宿を展開する「ふふ 東京 銀座」をご紹介いただきました。この場所が持つ知的好奇心を刺激するポイントはなんでしょうか。また、ふふのような「和モダン」な空間が注目を集める理由を教えてください。</p>
+					<p>
+						J：ふふは熱海、河口湖、箱根、軽井沢と地方の多くに宿を展開していますが、「ふふ 東京 銀座」であれば日本リゾートの魅力を東京で体感することができます。日本の美意識を大切にする内装や、「おもてなし」、すなわち真のホスピタリティがしっかりと根付いています。おもてなしとは、内面から自然と溢れ出す精神性だと考えています。ふふのスタッフの方々からは、まさにその精神が伝わってきます。<br />
+						さらに、本物の空間を作り上げるために、才能豊かで尊敬を集める様々な職人たちに協力してもらうことに細心の注意を払っています。例えば、エレベーターの内部は金沢の銀箔職人によるアートに仕上げられ、エントランスの入り口には「銀座もとじ」による泥染めの掛け軸や精緻に編み込まれた竹の彫刻などの作品が飾られており、日本の伝統文化と職人技の美しさを体感することができます。宿のなかで特にお気に入りの場所はルーフトップです。都会のオアシスのような緑に囲まれながら足湯に浸かってリラックスでき、眼下にはビル群のスカイラインや、銀座の象徴である中央通りのショッピング街を眺めることができる素晴らしい空間になっています。<br />
+						ふふにもあるように、現代の日本では伝統的な職人技が持つ普遍的な美しさを再評価し、今の時代に自然にフィットする「現代の視点」で捉え直そうとする動きが多くあると思います。「和モダン」の魅力は昔ながらの雰囲気と、今この瞬間の新しさという、相反する感覚を同時に味わえることだと思います。「侘び寂び」や「間」、そして「無常の美学」といった、長きにわたって磨き上げられた感性を土台にしながら、現代的なミニマリズムを見事に融合させているのです。<br />
+						現代人が惹きつけられているのは、ある種の「気付き」からではないでしょうか。それは、日本の伝統デザインはずっと昔から時代を先取りしていました。伝統に現代的なセンスを掛け合わせることは、決して本質を薄めることではありません。むしろ、その本質を再び活性化させ、今の私たちにとって新鮮で、意味深く、そして「静かな特別感」を感じさせてくれるものへと進化させているのです。
+					</p>
+				</div>
+			</section>
+
+			<section className="section">
+				<h2 className="section-ttl">着心地の良さを追求することは<br />楽さだけなく、自信にもつながる</h2>
+				<p className="question-text">全国各地を旅するジョアンナさんが旅の装いについて重要視する部分はなんでしょうか。</p>
+				<p className="mb-[46px]">
+					J：リネンやオーガニックコットン、ウールなどの天然素材は、着心地が良く、温度を調節してくれるので大好きです。私のスタイルは、白Tシャツやシャツにゴールドのピアスを合わせるだけという、とてもシンプルなもの。これは、あえて無駄を削ぎ落とすことで本質を際立たせる「簡素」という考え方に近いかもしれません。旅では、持ち運べる荷物も時間も限られているからこそ、身に付けるものはすべて、明確な目的と意味を持ったものを選んでいます。<br />
+					着心地の良さの重要性は仕事での服装も同じです。服を着て心地よくいられると、自然と自信が湧いてくるもの。自分が愛着を持てて、誇らしく思える服を着ることはとても大切です。なぜなら、それが一日の始まりと終わりの気分にそのまま繋がるからです。最近では、多くの素晴らしいデザイナーが美しいシルエットの服を作っており、どんな場面でもおしゃれでプロフェッショナルに見せることができます。私にとって、服とは“体にまとう建築”のようなものです。それは私たちの体を守るシェルターであり、周囲の環境や「自分は何者であるか」を映し出す鏡でもあるのです。
+				</p>
+				<div className="flex-gap-40-2col">
+					<picture>
+						<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-4.webp" type="image/webp" />
+						<img src="/photo/page/2026_intellectual-journey/img/img-hotel-4.jpg" alt="" />
+					</picture>
+					<div>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-5.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-5.jpg" alt="" />
+						</picture>
+						<p className="photo-caption">この日ジョアンナさんはローレンマヌーギアンのコートにアンダーカバーのパンツ、マルジェラのブーツという出立ちであった。着心地を追求したミニマルなデザインが特徴のローレンマヌーギアンはリラックスして過ごすことができ、旅先での食事など少しのドレスアップが必要な場面でも重宝する一着となっている。</p>
+					</div>
+				</div>
+			</section>
+
+			<section className="section flex-gap-40-2col">
+				<div>
+					<h2 className="section-ttl">好奇心を持ち続けることが<br />洗練につながる</h2>
+					<p className="question-text">エストネーションでは、このコンテンツが一年間続き、そのコンセプトは「Creative with Refine（創造性と教養のある品格）」です。ジョアンナさんにとって「クリエイティブで洗練された人」とはどのような人物ですか？また、エストネーションの空間や店舗から受けるインスピレーションについてもお聞かせください。</p>
+					<p>
+						J：私にとって洗練された人とは、静かな好奇心を持って世界を歩み、常に何かを吸収し、点と点を繋ぎ、他の人が見過ごしてしまうような場所に美しさを見出せる人です。つまり「自分自身に正直であること」だと思っています。自分の直感に従えば、それは自然と新しい旅へと導いてくれるはずです。<br />
+						エストネーション六本木ヒルズ店には森美術館やブリコラージュ、ブレッド＆カンパニーを訪れる際に立ち寄ることが多いです。ウェアからジュエリー、コスメ、アイウェアまで、何か新しい興味深いブランドがないかチェックするのに最適なんです。オンラインショッピングは便利ですが、よりパーソナルで触覚的な体験ができる実店舗に足を運ぶのは素晴らしい経験だと思います。デザインの観点からも、マーチャンダイジングやディスプレイ、新しいブランドのラインナップ、そしてどのようなお客様が買い物をしているのかなど、空間全体を観察することを楽しんでいます。
+					</p>
+				</div>
+				<div>
+					<picture>
+						<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-6.webp" type="image/webp" />
+						<img src="/photo/page/2026_intellectual-journey/img/img-hotel-6.jpg" alt="" />
+					</picture>
+					<p className="photo-caption">角部屋に位置するラグジュアリーコーナースイートでは、一面に配置された窓から銀座の街並みを部屋から眺めることができる。部屋にはふふ熱海から毎日運んでくるという温泉を楽しむことができる。</p>
+				</div>
+			</section>
+
+			<section className="section flex-gap-40-2col">
+				<p>HOTEL</p>
+				<div>
+					<h2>FUFU TOKYO GINZA</h2>
+					<p>ふふ 東京 銀座</p>
+				</div>
+			</section>
+
+			{/* fashion */}
+			<div className="flex">
+				<AsideNav />
+				<div className="flex-1 border-t border-t-[var(--color-primary)]">
+					{/* MENS */}
+					<section id="mens" className="fashion-content">
+						<h2 className="section-ttl-garamond mb-[53px] ml-[70px]">RECOMMEND STYLE FOR MENS</h2>
+						<div className="flex-gap-none-2col">
+							<div className="content-info-left">
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[61px]">MENS 01</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[40px]">心休まる高級感が<br />成立するセットアップ</p>
+								<p>1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
+							</div>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="THE INTELLECTUAL JOURNEY" />
-							</picture>
-							<div className="kv-ttl">
-								<h1 className="text-[45px] font-en-garamond">THE INTELLECTUAL JOURNEY</h1>
-								<p className="text-[13px] font-en-futura">- FLAVORS & NATURE ENCOUNTER -</p>
-								<p className="text-[18px]">知的好奇心を刺激する名ホテルへの旅路</p>
-							</div>
-			  		</div>
-					</div>
-
-					<div className="intro">
-						<p className="text-[13px] leading-[130%] font-bold">INTRODUCTION</p>
-						<p className="basis-[65%] text-[15px] leading-[185%]">旅の目的は、人の数だけ存在します。日々の喧騒を離れて静謐に身を置き自分と向き合う旅。あるいは未知の体験を求める活動的な旅。その中でも、今、多くの人々が旅に求めているのは「学び」という名の贅沢ではないでしょうか。時代を超えた建築に触れ、自然の中で五感を研ぎ澄ます。洗練された装いで食の芸術を愉しむ。旅は私たちに計り知れない経験と新たな視座を与えてくれます。真の豊かさを求める人々が増えた現代、審美眼を持つプロフェッショナルはどのような地を目的地に選ぶのでしょうか。今回は、デザイン・建築メディア『Ala Champ Magazine』の編集長を務めるジョアンナ・カウェキさんを迎え、「ふふ 東京 銀座」を舞台に知的好奇心を深く刺激する旅の過ごし方を紐解いていきます。</p>
-					</div>
-
-					<section className="section">
-						<h2 className="font-en-garamond text-[40px] tracking-[0.1em] leading-[120%] mb-[53px] font-bold">NAVIGATOR</h2>
-						<div className="flex justify-between">
-							<div className="basis-[48%]">
-								<div className="mb-[40px]">
-									<p className="mb-[15px] text-[11px]">ALA CHMAP MAGAZINE FOUNDER</p>
-									<p className="tracking-[0.1em] text-[30px] font-en-garamond font-bold mb-[8px]">JOANNA KAWACKI</p>
-									<p className="text-[12px]">ジョアンナ・カウェキ</p>
-								</div>
-								<p className="mb-[30px]">オーストラリア出身、東京在住の編集者・ジャーナリスト。デザイン/建築メディア『Ala Champ Magazine』のファウンダー。建築、旅、アートといった分野に造詣が深く、2013年に東京へ拠点を移してからはグローバルな視点から日本の建築や、文化を発信している。国内外のビジネスエリートからも高い支持を集め、ファッションを含め様々な分野に精通している。</p>
-							</div>
-							<picture className="w-[238px]">
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-navigator.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-navigator.jpg" alt="" />
+								<source srcSet="/photo/page/2026_intellectual-journey/img/img-mens-1.webp" type="image/webp" />
+								<img src="/photo/page/2026_intellectual-journey/img/img-mens-1.jpg" alt="" />
 							</picture>
 						</div>
 					</section>
-
-					<section className="section flex justify-between gap-[40px]">
-						<div className="basis-[48%] grid gap-[40px]">
+					{/* WOMENS */}
+					<section id="womens" className="fashion-content">
+						<h2 className="section-ttl-garamond mb-[53px] ml-[70px]">RECOMMEND STYLE FOR MENS</h2>
+						<div className="flex-gap-none-2col">
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-1.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-hotel-1.jpg" alt="" />
+								<source srcSet="/photo/page/2026_intellectual-journey/img/img-womens-1.webp" type="image/webp" />
+								<img src="/photo/page/2026_intellectual-journey/img/img-womens-1.jpg" alt="" />
 							</picture>
-							<div>
-								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-2.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-hotel-2.jpg" alt="" />
-								</picture>
-								<p className="text-[11px] mt-[10px]">ふふ 東京 銀座内にある日本料理「銀座がゆう」では宿泊者がプライベート空間を満喫できるよう全て個室になっているが、レストラン内には大きなカウンターを備え、通り道にも枯山水を模した空間や作品が置かれるなど、個室に入るまでの時間を視覚的に楽しむことができる。</p>
+							<div className="content-info-right">
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[61px]">WOMENS 01</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[40px]">心休まる高級感が<br />成立するセットアップ</p>
+								<p>1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
 							</div>
 						</div>
-						<div className="flex-1">
-							<h2 className="mb-[60px] text-[20px] tracking-[0.02em]">旅は新たな知識のカケラ<br />を与えてくれる</h2>
-							<p className="mb-[38px]">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
-							<p>ジョアンナ・カウェキ（以下J）：日常のあらゆることに好奇心を持つのはとても大切なことです。旅や日々の経験を通じて、私たちは自分自身のことをより深く知り、自分たちが生きる世界への理解を深めることができます。「わからないことを質問する」のを怖がらず挑戦してみてほしいと思います。それは恥ずかしいことではなく、むしろ知性の証です。質問することで、ものがどう作られ、どこから来たのかという新しい知識が手に入ります。 そして実体験はなにものにも代えがたい財産です。知識を積み重ね、学ぶことは脳の柔軟性を鍛えることにも繋がります。また、今の世界には「共感」や「思いやり」といった価値観がもっと必要だと思います。旅をすることは世界が広大で、かつ「すべてが繋がり合っている場所」であることを実感させてくれる素晴らしい手段なのです。 そして最近の旅行者は、もちろん全てではないんですが洗練されてはいるもののどこか単調な都市の高級ホテルから離れつつあります。代わって支持されているのは、その土地の風景や伝統に深く根ざした、地方の宿です。こうした宿にはその土地ならではの“情緒”が息づいています。 この変化の真の原動力は、「その土地の文化にどっぷりと浸かりたい」という切実な思いにあると私は考えています。旅行者はもはや、単に目的地を“訪れる”だけでは満足できません。たとえ数晩であっても、その場所に「溶け込んで暮らしたい」と願っているのです。地方の宿は、そんな願いを心に深く刻み込んでくれる体験なのです。</p>
+						<div className="flex-gap-none-2col">
+							<div className="content-info-left">
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[61px]">WOMENS 01</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[40px]">心休まる高級感が<br />成立するセットアップ</p>
+								<p>1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
+							</div>
+							<picture>
+								<source srcSet="/photo/page/2026_intellectual-journey/img/img-womens-2.webp" type="image/webp" />
+								<img src="/photo/page/2026_intellectual-journey/img/img-womens-2.jpg" alt="" />
+							</picture>
 						</div>
 					</section>
+				</div>
+			</div>
 
-				</main>
-			<Footer />
+			<section className="section-hotel">
+				<h2 className="font-en-garamond text-[40px] tracking-[0.1em] leading-[1.2] mb-[16px]">FEEDING THE MIND LOCALLY</h2>
+				<p className="text-[18px] tracking-[0.02em] leading-[1.78] mb-[50px]">地方にある知性を刺激する宿たち</p>
+				<p className="max-w-[calc(500/1280*100vw)] text-[15px] leading-[1.87]">ふふ 銀座 東京を舞台に知的好奇心を刺激する旅について語ってくれたジョアンナ。ここでは東京から離れ、地方にある個性に溢れ様々な角度から知性を刺激してくれる宿を紹介していきます。あなたの旅のメモに入れ、機会があればぜひ訪れてみてください。</p>
+				<section className="hotel-content-box">
+					<div className="flex-gap-1-3col mb-[40px]">
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-1.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-1.jpg" alt="" />
+						</picture>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-2.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-2.jpg" alt="" />
+						</picture>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-3.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-3.jpg" alt="" />
+						</picture>
+					</div>
+					<div className="flex-gap-none-2col">
+						<div>
+							<h3 className="hotel-ttl">THE WESTIN MIYAKO KYOTO KASUIEN</h3>
+							<p>ウェスティン都ホテル京都　数寄屋風別館 佳水園</p>
+						</div>
+						<p>文化が丁寧に保存されつつ、現代に合わせてアップデートされた美しい一例です。ここは京都でも指折りの特別な場所だと思います。もともとは1959年に建築家・村野藤吾の設計によって建てられた数寄屋造りの建物で、2020年に中村拓志（NAP建築設計事務所）の手によってリノベーションされました。中村は、村野のオリジナルデザインを尊重して残しつつ、彼自身の独創的なエッセンスを加えています。滞在中は、ぜひ建物の細部にまで注目してみてください。こうした本当のしつらえは、今の日本においてますます希少なものとなっているからです。</p>
+					</div>
+				</section>
+
+				<section className="hotel-content-box">
+					<div className="flex-gap-1-3col">
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-1.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-numazu-1.jpg" alt="" />
+						</picture>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-2.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-numazu-2.jpg" alt="" />
+						</picture>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-3.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-numazu-3.jpg" alt="" />
+						</picture>
+					</div>
+					<div className="flex">
+						<p className="font-en-futura mt-[5px] mb-[22px] ml-auto text-[10px] tracking-[0.12em] leading-[1.8]">PHOTO：BEN RICHARDS</p>
+					</div>
+					<div className="flex-gap-none-2col">
+						<div>
+							<h3 className="hotel-ttl">NUMAZUCLUB</h3>
+							<p>沼津倶楽部</p>
+						</div>
+						<p>「沼津倶楽部」は、静岡県沼津市の富士山と駿河湾を眺めることができる、樹齢数百年の松林の中にひっそりと佇む美しいブティックホテルです。敷地の半分は築110年以上の数寄屋造りの茶室で、もう半分には故・渡辺明氏が設計した傑出したモダニズム建築の集合別邸が広がっています。他では味わえないそのデザインは、時代を超えたような世界へと誘ってくれます。滞在中は、ただゆったりと時の移ろいを楽しんでみてください。自然に囲まれ、鳥のさえずりや穏やかな風を感じるこの場所は、思考を休めたり、新しいアイデアのインスピレーションを得るのに最高の環境です。</p>
+					</div>
+				</section>
+
+				<section className="hotel-content-box">
+					<div className="flex-gap-1-3col mb-[40px]">
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-1.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-1.jpg" alt="" />
+						</picture>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-2.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-2.jpg" alt="" />
+						</picture>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-3.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-3.jpg" alt="" />
+						</picture>
+					</div>
+					<div className="flex-gap-none-2col">
+						<div>
+							<h3 className="hotel-ttl">SATOYAMA JUJO</h3>
+							<p>里山十帖</p>
+						</div>
+						<p>新潟県南魚沼の奥深くに位置する、美しいブティック旅館です。築数百年の古民家に北欧デザインを融合させたインテリアが特徴です。この宿は、長期の温泉滞在で身体を癒す日本の伝統的な「湯治」のコンセプトに現代的なアプローチで取り組んでいます。地元で採れた旬の食材を使ったオーガニックな料理と、新潟の山々を望む最高の景色を楽しめる天然温泉が魅力的。滞在中は浴衣でリラックスできますが、日中に桑木野シェフと一緒に季節のハーブや山菜を採りに行くなら、歩きやすい靴を忘れずに持参してください。</p>
+					</div>
+				</section>
+			</section>
+
+		</main>
+
+		<Footer />
 		
 	</body>
-  );
+	);
 }

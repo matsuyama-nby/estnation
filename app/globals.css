@@ -25,29 +25,46 @@ body {
 	font-family: var(--font-ja);
   height: 100%;
   min-height: 100dvh;
-  line-height: 1.5;
+  line-height: calc(26 / 14);
   font-size: 1.4rem;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+/* ページ全体の背景 */
+.fixed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80dvh; 
+  z-index: -1;
+  background-image: url('/photo/page/2026_intellectual-journey/img/bg-main.png');
+  background-image: -webkit-image-set(
+    url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
+    url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
+  );
+  background-image: image-set(
+    url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
+    url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
+  );
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 60%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 60%,
+    transparent 100%
+  );
 }
 
 /* KV */
 .kv-wrapper {
   width: 100%;
   padding: 86px calc(120 / 1280 * 100vw) 0;
-  background: url(/photo/page/2026_intellectual-journey/img/bg-main.png) no-repeat top;
-  /*background-image: url('/photo/page/2026_intellectual-journey/img/bg-main.png');
-  background-image: -webkit-image-set(
-    url("/photo/page/2026_intellectual-journey/img/bg-main.webp") type("image/webp"),
-    url("/photo/page/2026_intellectual-journey/img/bg-main.png") type("image/png")
-  );
-  background-image: image-set(
-    url("/photo/page/2026_intellectual-journey/img/bg-main.webp") type("image/webp"),
-    url("/photo/page/2026_intellectual-journey/img/bg-main.png") type("image/png")
-  );
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;*/
 }
 .kv-ttl {
   position: absolute;
@@ -72,3 +89,117 @@ body {
   padding: calc(80 / 1280 * 100vw) 0;
   margin: 0 calc(120 / 1280 * 100vw);
 }
+.section-ttl {
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 1.75;
+  margin-bottom: 60px;
+}
+.section-ttl-garamond {
+  font-family: var(--font-en-garamond);
+  font-size: 40px;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+/* 質問テキスト */
+.question-text {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 38px;
+}
+.question-text::before {
+  content: "";
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  background-color: var(--color-primary);
+}
+
+/* flex layout */
+@layer utilities {
+  /* 2カラム gap40 */
+  .flex-gap-40-2col {
+    @apply flex gap-[40px];
+  }
+  .flex-gap-40-2col > * {
+    @apply basis-[calc((100%-40px)/2)];
+  }
+  /* 2カラム gap無し */
+  .flex-gap-none-2col {
+    @apply flex gap-0;
+  }
+  .flex-gap-none-2col > * {
+    @apply basis-[50%];
+  }
+  /* 3カラム gap1px */
+  .flex-gap-1-3col {
+    @apply flex gap-[1px];
+  }
+  .flex-gap-1-3col > * {
+    @apply basis-[calc((100%-1px*2)/3)];
+  }
+}
+
+/* 写真説明 */ 
+.photo-caption {
+  font-size: 11px;
+  margin-top: 10px;
+  line-height: calc(18 / 11);
+}
+
+/* 服 */
+.fashion-menu {
+  border: 1px solid var(--color-primary);
+  border-left: none;
+  padding: 50px 0 80px;
+  flex-basis: calc(120 / 1280 * 100vw);
+}
+.menu-links {
+ position: relative;
+ padding-left: 25px;
+ display: grid;
+ gap: 10px;
+}
+.indicator {
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  background-color: var(--color-primary);
+  top: 0.8em;
+  left: 0;
+  transition: top 0.3s ease-in-out;
+}
+.is-womens {
+  top: calc(2.7em + 10px);
+}
+.fashion-content {
+  border-bottom: 1px solid var(--color-primary);
+  padding: 50px 0 80px;
+}
+.content-info-left {
+  padding: 177px 110px 0 69px;
+}
+.content-info-right {
+  padding: 177px 70px 0 110px;
+}
+
+/* 宿 */
+.section-hotel {
+  padding: 100px 0 120px;
+  margin: 0 calc(120 / 1280 * 100vw);
+}
+.hotel-content-box {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--color-primary);
+}
+.hotel-ttl {
+  font-family: var(--font-en-garamond);
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  line-height: 1.17;
+  margin-bottom: 8px;
+}
+
