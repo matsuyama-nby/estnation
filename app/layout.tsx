@@ -24,6 +24,8 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        <title>タイトル</title>
+        <meta name="description" content="説明"></meta>
         <link rel="stylesheet" href="https://use.typekit.net/akc6vgu.css" />
       </head>
       {children}

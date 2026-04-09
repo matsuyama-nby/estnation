@@ -1,18 +1,25 @@
+"use client";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AsideNav from '@/components/AsideNav';
-
-export const metadata = {
-	title: "タイトル",
-  description: "説明",
-};
+import Menu from '@/components/Menu';
+import { useMenuToggle } from '@/hooks/useMenuToggle';
 
 export default function Page() {
+	const menuState = useMenuToggle();
   return (
 	<body>
-		<Header />
+		<Header 
+      isOpen={menuState.isOpen} 
+      openMenu={menuState.openMenu} 
+    />
 		<div className="fixed-background" />
-		<main className="relative z-100">
+		<Menu 
+      isOpen={menuState.isOpen} 
+      closeMenu={menuState.closeMenu} 
+    />
+		<main className="relative z-10">
 			{/* KV */}
 			<div className="kv-wrapper">
 				<div className="relative">
@@ -20,39 +27,35 @@ export default function Page() {
 						<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
 						<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="THE INTELLECTUAL JOURNEY" />
 					</picture>
-					<div className="kv-ttl">
-						<h1 className="text-[45px] font-en-garamond">THE INTELLECTUAL JOURNEY</h1>
-						<p className="text-[13px] font-en-futura">- FLAVORS & NATURE ENCOUNTER -</p>
-						<p className="text-[18px]">知的好奇心を刺激する名ホテルへの旅路</p>
+					<div className="kv-ttl-content">
+						<h1 className="font-en-garamond text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.4] mb-[calc(6/1280*100vw)]">THE INTELLECTUAL JOURNEY</h1>
+						<p className="font-en-futura text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(41.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
+						<p className="text-[calc(18/1280*100vw)] tracking-[0.02em] leading-[1.78]">知的好奇心を刺激する名ホテルへの旅路</p>
 					</div>
 				</div>
 			</div>
-
 			<div className="intro">
-				<p className="text-[13px] leading-[130%] font-bold">INTRODUCTION</p>
-				<p className="basis-[65%] text-[15px] leading-[185%]">旅の目的は、人の数だけ存在します。日々の喧騒を離れて静謐に身を置き自分と向き合う旅。あるいは未知の体験を求める活動的な旅。その中でも、今、多くの人々が旅に求めているのは「学び」という名の贅沢ではないでしょうか。時代を超えた建築に触れ、自然の中で五感を研ぎ澄ます。洗練された装いで食の芸術を愉しむ。旅は私たちに計り知れない経験と新たな視座を与えてくれます。真の豊かさを求める人々が増えた現代、審美眼を持つプロフェッショナルはどのような地を目的地に選ぶのでしょうか。今回は、デザイン・建築メディア『Ala Champ Magazine』の編集長を務めるジョアンナ・カウェキさんを迎え、「ふふ 東京 銀座」を舞台に知的好奇心を深く刺激する旅の過ごし方を紐解いていきます。</p>
+				<p className="font-en-futura text-[13px] tracking-[0.12em] leading-[1.31]">INTRODUCTION</p>
+				<p className="basis-[65%] text-[15px] leading-[1.87]">旅の目的は、人の数だけ存在します。日々の喧騒を離れて静謐に身を置き自分と向き合う旅。あるいは未知の体験を求める活動的な旅。その中でも、今、多くの人々が旅に求めているのは「学び」という名の贅沢ではないでしょうか。時代を超えた建築に触れ、自然の中で五感を研ぎ澄ます。洗練された装いで食の芸術を愉しむ。旅は私たちに計り知れない経験と新たな視座を与えてくれます。真の豊かさを求める人々が増えた現代、審美眼を持つプロフェッショナルはどのような地を目的地に選ぶのでしょうか。今回は、デザイン・建築メディア『Ala Champ Magazine』の編集長を務めるジョアンナ・カウェキさんを迎え、「ふふ 東京 銀座」を舞台に知的好奇心を深く刺激する旅の過ごし方を紐解いていきます。</p>
 			</div>
-
-			<section className="section">
-				<h2 className="font-en-garamond text-[40px] tracking-[0.1em] leading-[120%] mb-[53px] font-bold">NAVIGATOR</h2>
-				<div className="flex justify-between">
-					<div className="basis-[calc((100%-40px)/2)]">
-						<div className="mb-[40px]">
-							<p className="mb-[15px] text-[11px]">ALA CHMAP MAGAZINE FOUNDER</p>
-							<p className="tracking-[0.1em] text-[30px] font-en-garamond font-bold mb-[8px]">JOANNA KAWACKI</p>
-							<p className="text-[12px]">ジョアンナ・カウェキ</p>
-						</div>
-						<p className="mb-[30px]">オーストラリア出身、東京在住の編集者・ジャーナリスト。デザイン/建築メディア『Ala Champ Magazine』のファウンダー。建築、旅、アートといった分野に造詣が深く、2013年に東京へ拠点を移してからはグローバルな視点から日本の建築や、文化を発信している。国内外のビジネスエリートからも高い支持を集め、ファッションを含め様々な分野に精通している。</p>
+			{/* NAVIGATOR */}
+			<section className="section !pt-[43px] !pb-[70px]">
+				<h2 className="section-ttl-garamond mb-[53px]">NAVIGATOR</h2>
+				<div className="flex-gap-40-2col">
+					<div>
+						<p className="font-en-futura text-[11px] tracking-[0.12em] leading-[1.27] mb-[15px]">ALA CHMAP MAGAZINE FOUNDER</p>
+						<p className="font-en-garamond text-[30px] tracking-[0.1em] leading-[1.17] mb-[8px]">JOANNA KAWACKI</p>
+						<p className="text-[12px] tracking-[0.02em] leading-[1.67] mb-[30px]">ジョアンナ・カウェキ</p>
+						<p className="mb-[24px]">オーストラリア出身、東京在住の編集者・ジャーナリスト。デザイン/建築メディア『Ala Champ Magazine』のファウンダー。建築、旅、アートといった分野に造詣が深く、2013年に東京へ拠点を移してからはグローバルな視点から日本の建築や、文化を発信している。国内外のビジネスエリートからも高い支持を集め、ファッションを含め様々な分野に精通している。</p>
 					</div>
-					<picture className="w-[238px]">
+					<picture className="!basis-[22.9%]">
 						<source srcSet="/photo/page/2026_intellectual-journey/img/img-navigator.webp" type="image/webp" />
 						<img src="/photo/page/2026_intellectual-journey/img/img-navigator.jpg" alt="" />
 					</picture>
 				</div>
 			</section>
-
 			<section className="section flex-gap-40-2col">
-				<div className="grid gap-[40px]">
+				<div className="grid gap-[40px] content-start">
 					<picture>
 						<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-1.webp" type="image/webp" />
 						<img src="/photo/page/2026_intellectual-journey/img/img-hotel-1.jpg" alt="" />
@@ -62,12 +65,12 @@ export default function Page() {
 							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-2.webp" type="image/webp" />
 							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-2.jpg" alt="" />
 						</picture>
-						<p className="text-[11px] mt-[10px]">ふふ 東京 銀座内にある日本料理「銀座がゆう」では宿泊者がプライベート空間を満喫できるよう全て個室になっているが、レストラン内には大きなカウンターを備え、通り道にも枯山水を模した空間や作品が置かれるなど、個室に入るまでの時間を視覚的に楽しむことができる。</p>
+						<p className="photo-caption">ふふ 東京 銀座内にある日本料理「銀座がゆう」では宿泊者がプライベート空間を満喫できるよう全て個室になっているが、レストラン内には大きなカウンターを備え、通り道にも枯山水を模した空間や作品が置かれるなど、個室に入るまでの時間を視覚的に楽しむことができる。</p>
 					</div>
 				</div>
 				<div>
 					<h2 className="section-ttl">旅は新たな知識のカケラ<br />を与えてくれる</h2>
-					<p className="question-text">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
+					<p className="question-text mb-[26px]">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
 					<p>
 						ジョアンナ・カウェキ（以下J）：日常のあらゆることに好奇心を持つのはとても大切なことです。旅や日々の経験を通じて、私たちは自分自身のことをより深く知り、自分たちが生きる世界への理解を深めることができます。「わからないことを質問する」のを怖がらず挑戦してみてほしいと思います。それは恥ずかしいことではなく、むしろ知性の証です。質問することで、ものがどう作られ、どこから来たのかという新しい知識が手に入ります。<br />
 						そして実体験はなにものにも代えがたい財産です。知識を積み重ね、学ぶことは脳の柔軟性を鍛えることにも繋がります。また、今の世界には「共感」や「思いやり」といった価値観がもっと必要だと思います。旅をすることは世界が広大で、かつ「すべてが繋がり合っている場所」であることを実感させてくれる素晴らしい手段なのです。<br />
@@ -76,14 +79,13 @@ export default function Page() {
 					</p>
 				</div>
 			</section>
-
 			<section className="section">
 				<picture>
 					<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-3.webp" type="image/webp" />
 					<img src="/photo/page/2026_intellectual-journey/img/img-hotel-3.jpg" alt="" />
 				</picture>
 				<div className="flex">
-					<p className="text-[11px] mt-[10px] w-[calc((100%-40px)/2)] ml-auto">エントランスには銀箔の作品や、竹籠のアートが飾られ、ふふ 東京 銀座が国内のアーティストに敬意を払いながら伝統作品を現代的にアップデートしている様子が伺える。</p>
+					<p className="photo-caption w-[calc((100%-40px)/2)] ml-auto">エントランスには銀箔の作品や、竹籠のアートが飾られ、ふふ 東京 銀座が国内のアーティストに敬意を払いながら伝統作品を現代的にアップデートしている様子が伺える。</p>
 				</div>
 				<h2 className="section-ttl">日本的な美意識を<br />現代の感覚に落とし込む</h2>
 				<div className="columns-2 gap-[40px]">
@@ -96,11 +98,10 @@ export default function Page() {
 					</p>
 				</div>
 			</section>
-
 			<section className="section">
 				<h2 className="section-ttl">着心地の良さを追求することは<br />楽さだけなく、自信にもつながる</h2>
 				<p className="question-text">全国各地を旅するジョアンナさんが旅の装いについて重要視する部分はなんでしょうか。</p>
-				<p className="mb-[46px]">
+				<p className="mb-[40px]">
 					J：リネンやオーガニックコットン、ウールなどの天然素材は、着心地が良く、温度を調節してくれるので大好きです。私のスタイルは、白Tシャツやシャツにゴールドのピアスを合わせるだけという、とてもシンプルなもの。これは、あえて無駄を削ぎ落とすことで本質を際立たせる「簡素」という考え方に近いかもしれません。旅では、持ち運べる荷物も時間も限られているからこそ、身に付けるものはすべて、明確な目的と意味を持ったものを選んでいます。<br />
 					着心地の良さの重要性は仕事での服装も同じです。服を着て心地よくいられると、自然と自信が湧いてくるもの。自分が愛着を持てて、誇らしく思える服を着ることはとても大切です。なぜなら、それが一日の始まりと終わりの気分にそのまま繋がるからです。最近では、多くの素晴らしいデザイナーが美しいシルエットの服を作っており、どんな場面でもおしゃれでプロフェッショナルに見せることができます。私にとって、服とは“体にまとう建築”のようなものです。それは私たちの体を守るシェルターであり、周囲の環境や「自分は何者であるか」を映し出す鏡でもあるのです。
 				</p>
@@ -118,7 +119,6 @@ export default function Page() {
 					</div>
 				</div>
 			</section>
-
 			<section className="section flex-gap-40-2col">
 				<div>
 					<h2 className="section-ttl">好奇心を持ち続けることが<br />洗練につながる</h2>
@@ -136,69 +136,99 @@ export default function Page() {
 					<p className="photo-caption">角部屋に位置するラグジュアリーコーナースイートでは、一面に配置された窓から銀座の街並みを部屋から眺めることができる。部屋にはふふ熱海から毎日運んでくるという温泉を楽しむことができる。</p>
 				</div>
 			</section>
-
-			<section className="section flex-gap-40-2col">
-				<p>HOTEL</p>
-				<div>
-					<h2>FUFU TOKYO GINZA</h2>
-					<p>ふふ 東京 銀座</p>
+			<section className="section flex-gap-40-2col !pt-[19px]">
+				<p className="font-en-futura text-[13px] tracking-[0.12em] leading-[1.31]">HOTEL</p>
+				<div className="pt-[6.5px]">
+					<h2 className="font-en-garamond text-[30px] tracking-[0.1em] leading-[1.17]">FUFU TOKYO GINZA</h2>
+					<p className="text-[12px] tracking-[0.02em] leading-[2.75] mb-[19.5px]">ふふ 東京 銀座</p>
 				</div>
-			</section>
-
+			</section> 
 			{/* fashion */}
 			<div className="flex">
 				<AsideNav />
 				<div className="flex-1 border-t border-t-[var(--color-primary)]">
 					{/* MENS */}
 					<section id="mens" className="fashion-content">
-						<h2 className="section-ttl-garamond mb-[53px] ml-[70px]">RECOMMEND STYLE FOR MENS</h2>
+						<h2 className="section-ttl-garamond mb-[53px] ml-[calc(70/1280*100vw)]">RECOMMEND STYLE FOR MENS</h2>
 						<div className="flex-gap-none-2col">
 							<div className="content-info-left">
-								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[61px]">MENS 01</p>
-								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[40px]">心休まる高級感が<br />成立するセットアップ</p>
-								<p>1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[53.5px]">MENS 01</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[26.5px]">心休まる高級感が<br />成立するセットアップ</p>
+								<p className="mb-[34px]">1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
 							</div>
 							<picture>
 								<source srcSet="/photo/page/2026_intellectual-journey/img/img-mens-1.webp" type="image/webp" />
 								<img src="/photo/page/2026_intellectual-journey/img/img-mens-1.jpg" alt="" />
 							</picture>
 						</div>
+						<div className="flex-gap-none-2col">
+							<picture>
+								<source srcSet="/photo/page/2026_intellectual-journey/img/img-mens-2.webp" type="image/webp" />
+								<img src="/photo/page/2026_intellectual-journey/img/img-mens-2.jpg" alt="" />
+							</picture>
+							<div className="content-info-left">
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[53.5px]">MENS 02</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[26.5px]">リゾートムードと<br />気品溢れる装い</p>
+								<p className="mb-[34px]">エフォートレスでありながらエレガンスも併せ持つモード界の帝王、ジョルジオ・アルマーニのシャツとパンツ。リネンをベースにした清涼感がありながらもとろけるような質感の生地とアルマーニが得意とするリラックス感のあるカッティングは、エキゾチックな夏の旅の装いに上品さを与えてくれる。</p>
+							</div>
+						</div>
+						<div className="flex-gap-none-2col">
+							<div className="content-info-left">
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[53.5px]">MENS 03</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[26.5px]">フランスの端正さを感じる<br />カジュアルシャツ</p>
+								<p className="mb-[34px]">1968年にアラン・フィガレによって創業された、フランスを代表する老舗シャツメーカーであるフィガレ。卸売りをせずに直営のみでの販売に徹底してきたため国内での認知度は高くないブランドだが、フランスの気品を感じるこのシャツは一枚でも、ジャケットの下に着ても静かに個性を発揮してくれる上に良心的な価格も魅力だ。小ぶりなカラーはノータイでも美しく首元をまとめることができ、カジュアルなドレスアップが求められる旅先での食事シーンなどでも重宝するだろう。</p>
+							</div>
+							<picture>
+								<source srcSet="/photo/page/2026_intellectual-journey/img/img-mens-3.webp" type="image/webp" />
+								<img src="/photo/page/2026_intellectual-journey/img/img-mens-3.jpg" alt="" />
+							</picture>
+						</div>
 					</section>
 					{/* WOMENS */}
 					<section id="womens" className="fashion-content">
-						<h2 className="section-ttl-garamond mb-[53px] ml-[70px]">RECOMMEND STYLE FOR MENS</h2>
+						<h2 className="section-ttl-garamond mb-[53px] ml-[calc(70/1280*100vw)]">RECOMMEND STYLE FOR WOMENS</h2>
 						<div className="flex-gap-none-2col">
 							<picture>
 								<source srcSet="/photo/page/2026_intellectual-journey/img/img-womens-1.webp" type="image/webp" />
 								<img src="/photo/page/2026_intellectual-journey/img/img-womens-1.jpg" alt="" />
 							</picture>
-							<div className="content-info-right">
-								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[61px]">WOMENS 01</p>
-								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[40px]">心休まる高級感が<br />成立するセットアップ</p>
-								<p>1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
+							<div className="content-info-left">
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[53.5px]">WOMENS 02</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[26.5px]">軽やかな色合いとノーカラーが<br />旅の装いを格上げしてくれる</p>
+								<p className="mb-[34px]">清涼感のあるリネン素材と軽快な色合いが特徴のESTNATIONのセットアップ。ノーカラーのため、カーディガンのように気軽に羽織ることができ、ウエストゴム仕様のパンツは移動の多い旅でもストレスなく過ごすことができる。元々ノーカラージャケットはフォーマルな装いをより自由に着こなすために生まれたもの。このジャケットを羽織り自由を謳歌する旅を楽しみたい。</p>
 							</div>
 						</div>
 						<div className="flex-gap-none-2col">
 							<div className="content-info-left">
-								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[61px]">WOMENS 01</p>
-								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[40px]">心休まる高級感が<br />成立するセットアップ</p>
-								<p>1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[53.5px]">WOMENS 01</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[26.5px]">柔らかな動きが<br />優雅なスタイルを作り出す</p>
+								<p className="mb-[34px]">2024AWからウィメンズラインをローンチしたコモリ。同じニット素材で作られたカーディガンとドレスはセットアップのように着用ができ、タイトなシルエットながらニットの柔らかな質感が体に寄り添い、ストレスなく着用することができる。少し荒く編み込まれたニットは夏でも気軽に着用でき、肌寒ければカーディガンを羽織ることもできるなど、汎用性にも優れている。</p>
 							</div>
 							<picture>
 								<source srcSet="/photo/page/2026_intellectual-journey/img/img-womens-2.webp" type="image/webp" />
 								<img src="/photo/page/2026_intellectual-journey/img/img-womens-2.jpg" alt="" />
 							</picture>
 						</div>
+						<div className="flex-gap-none-2col">
+							<picture>
+								<source srcSet="/photo/page/2026_intellectual-journey/img/img-womens-3.webp" type="image/webp" />
+								<img src="/photo/page/2026_intellectual-journey/img/img-womens-3.jpg" alt="" />
+							</picture>
+							<div className="content-info-left">
+								<p className="font-en-futura text-[16px] tracking-[0.1em] leading-[1.31] mb-[53.5px]">WOMENS 03</p>
+								<p className="text-[20px] tracking-[0.02em] leading-[1.75] mb-[26.5px]">フランス映画から着想を得た<br />ラフで心地よい一着</p>
+								<p className="mb-[34px]">クロード・ソーテ監督によるフランス映画の名作『すぎ去りし日の…』に登場するヒロイン がメンズのドレスシャツをラフに羽織る様からインスピレーションを受けた一着。着想源の通りドライながらも心地よい肌触りのリネン素材とメンズも着用できるリラックス感のあるシルエットは肩肘を張らず、様々なスタイリングに合わせることができる。旅行のワードローブに忍ばせておきたい一着だ。</p>
+							</div>
+						</div>
 					</section>
 				</div>
 			</div>
-
 			<section className="section-hotel">
-				<h2 className="font-en-garamond text-[40px] tracking-[0.1em] leading-[1.2] mb-[16px]">FEEDING THE MIND LOCALLY</h2>
-				<p className="text-[18px] tracking-[0.02em] leading-[1.78] mb-[50px]">地方にある知性を刺激する宿たち</p>
+				<h2 className="section-ttl-garamond mb-[6px]">FEEDING THE MIND LOCALLY</h2>
+				<p className="text-[18px] tracking-[0.02em] leading-[1.78] mb-[36.5px]">地方にある知性を刺激する宿たち</p>
 				<p className="max-w-[calc(500/1280*100vw)] text-[15px] leading-[1.87]">ふふ 銀座 東京を舞台に知的好奇心を刺激する旅について語ってくれたジョアンナ。ここでは東京から離れ、地方にある個性に溢れ様々な角度から知性を刺激してくれる宿を紹介していきます。あなたの旅のメモに入れ、機会があればぜひ訪れてみてください。</p>
-				<section className="hotel-content-box">
-					<div className="flex-gap-1-3col mb-[40px]">
+				<section className="hotel-content-box !pt-[43.5px]">
+					<div className="flex-gap-1-3col mb-[37.5px]">
 						<picture>
 							<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-1.webp" type="image/webp" />
 							<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-1.jpg" alt="" />
@@ -213,14 +243,13 @@ export default function Page() {
 						</picture>
 					</div>
 					<div className="flex-gap-none-2col">
-						<div>
+						<div className="pr-[64px]">
 							<h3 className="hotel-ttl">THE WESTIN MIYAKO KYOTO KASUIEN</h3>
-							<p>ウェスティン都ホテル京都　数寄屋風別館 佳水園</p>
+							<p className="hotel-ttl-ja">ウェスティン都ホテル京都　数寄屋風別館 佳水園</p>
 						</div>
 						<p>文化が丁寧に保存されつつ、現代に合わせてアップデートされた美しい一例です。ここは京都でも指折りの特別な場所だと思います。もともとは1959年に建築家・村野藤吾の設計によって建てられた数寄屋造りの建物で、2020年に中村拓志（NAP建築設計事務所）の手によってリノベーションされました。中村は、村野のオリジナルデザインを尊重して残しつつ、彼自身の独創的なエッセンスを加えています。滞在中は、ぜひ建物の細部にまで注目してみてください。こうした本当のしつらえは、今の日本においてますます希少なものとなっているからです。</p>
 					</div>
 				</section>
-
 				<section className="hotel-content-box">
 					<div className="flex-gap-1-3col">
 						<picture>
@@ -240,16 +269,15 @@ export default function Page() {
 						<p className="font-en-futura mt-[5px] mb-[22px] ml-auto text-[10px] tracking-[0.12em] leading-[1.8]">PHOTO：BEN RICHARDS</p>
 					</div>
 					<div className="flex-gap-none-2col">
-						<div>
+						<div className="pr-[64px]">
 							<h3 className="hotel-ttl">NUMAZUCLUB</h3>
-							<p>沼津倶楽部</p>
+							<p className="hotel-ttl-ja">沼津倶楽部</p>
 						</div>
 						<p>「沼津倶楽部」は、静岡県沼津市の富士山と駿河湾を眺めることができる、樹齢数百年の松林の中にひっそりと佇む美しいブティックホテルです。敷地の半分は築110年以上の数寄屋造りの茶室で、もう半分には故・渡辺明氏が設計した傑出したモダニズム建築の集合別邸が広がっています。他では味わえないそのデザインは、時代を超えたような世界へと誘ってくれます。滞在中は、ただゆったりと時の移ろいを楽しんでみてください。自然に囲まれ、鳥のさえずりや穏やかな風を感じるこの場所は、思考を休めたり、新しいアイデアのインスピレーションを得るのに最高の環境です。</p>
 					</div>
 				</section>
-
 				<section className="hotel-content-box">
-					<div className="flex-gap-1-3col mb-[40px]">
+					<div className="flex-gap-1-3col mb-[37.5px]">
 						<picture>
 							<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-1.webp" type="image/webp" />
 							<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-1.jpg" alt="" />
@@ -264,13 +292,63 @@ export default function Page() {
 						</picture>
 					</div>
 					<div className="flex-gap-none-2col">
-						<div>
+						<div className="pr-[64px]">
 							<h3 className="hotel-ttl">SATOYAMA JUJO</h3>
-							<p>里山十帖</p>
+							<p className="hotel-ttl-ja">里山十帖</p>
 						</div>
 						<p>新潟県南魚沼の奥深くに位置する、美しいブティック旅館です。築数百年の古民家に北欧デザインを融合させたインテリアが特徴です。この宿は、長期の温泉滞在で身体を癒す日本の伝統的な「湯治」のコンセプトに現代的なアプローチで取り組んでいます。地元で採れた旬の食材を使ったオーガニックな料理と、新潟の山々を望む最高の景色を楽しめる天然温泉が魅力的。滞在中は浴衣でリラックスできますが、日中に桑木野シェフと一緒に季節のハーブや山菜を採りに行くなら、歩きやすい靴を忘れずに持参してください。</p>
 					</div>
 				</section>
+			</section>
+			<section className="section-other">
+				<h2 className="section-other-ttl">OTHER CONTENTS</h2>
+				<div className="mx-[calc(120/1280*100vw)] mb-[151px]">
+					<a href="" className="relative">
+						<div className="link-ttl z-2">
+							<p className="font-en-garamond text-[calc(14/1280*100vw)] mb-[calc(31.56/1280*100vw)]">VOL 1 | APRIL.2026</p>
+							<p className="font-en-garamond text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
+							<p className="font-en-futura text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(33.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
+							<p className="text-[18px] tracking-[0.02em] leading-[1.78]">食と自然体験、知的好奇心を刺激する旅</p>
+						</div>
+						<picture>
+							<source srcSet="/photo/page/2026_intellectual-journey/img/img-other.webp" type="image/webp" />
+							<img src="/photo/page/2026_intellectual-journey/img/img-other.jpg" alt="" />
+						</picture>
+						<div className="absolute inset-0 bg-black/35 z-1" />
+					</a>
+				</div>
+				<ul className="flex-gap-none-2col">
+					<li>
+						<a href="https://www.estnation.co.jp/" className="relative">
+							<div className="link-ttl">
+								<p className="font-en-futura text-[26px] tracking-[0.1em]">STORE</p>
+								<p className="mt-[21px] text-[12px] tracking-[0.03em] leading-[1.5]">
+									<span className="block">洗練された空間でライフスタイリストが</span>
+									<span className="block">最適なご提案をさせていただきます</span>
+								</p>
+							</div>
+							<picture>
+								<source srcSet="/photo/page/2026_intellectual-journey/img/img-store.webp" type="image/webp" />
+								<img src="/photo/page/2026_intellectual-journey/img/img-store.jpg" alt="" />
+							</picture>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.estnation.co.jp/store" className="relative">
+							<div className="link-ttl">
+								<p className="font-en-futura text-[26px] tracking-[0.1em]">ONLINE STORE</p>
+								<p className="mt-[21px] text-[12px] tracking-[0.03em] leading-[1.5]">
+									<span className="block">最新情報や厳選されたアイテムを</span>
+									<span className="block">オンラインでも探せます</span>
+								</p>
+							</div>
+							<picture className="block overflow-hidden">
+								<source srcSet="/photo/page/2026_intellectual-journey/img/img-online.webp" type="image/webp" />
+								<img src="/photo/page/2026_intellectual-journey/img/img-online.jpg" alt="" />
+							</picture>
+						</a>
+					</li>					
+				</ul>
 			</section>
 
 		</main>

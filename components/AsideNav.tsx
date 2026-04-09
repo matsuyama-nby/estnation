@@ -7,11 +7,11 @@ export default function AsideNav() {
 
   return (
 		<aside className="fashion-menu">
-			<div className="sticky top-20">
+			<div className="sticky top-[140px]">
 				<nav className="menu-links">
 					<div className={`indicator ${activeSection === 'womens' ? 'is-womens' : ''}`} />
-					<a href="#mens" className="">MEN</a>
-					<a href="#womens" className="">WOMEN</a>
+					<a href="#mens" className="text-[13px] tracking-[0.12em] leading-[1.31]">MEN</a>
+					<a href="#womens" className="text-[13px] tracking-[0.12em] leading-[1.31]">WOMEN</a>
 				</nav>
 			</div>
 		</aside>

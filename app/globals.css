@@ -63,14 +63,13 @@ body {
 
 /* KV */
 .kv-wrapper {
-  width: 100%;
-  padding: 86px calc(120 / 1280 * 100vw) 0;
+  padding-top: 86px;
+  margin: 90px calc(120 / 1280 * 100vw) 0;
 }
-.kv-ttl {
+.kv-ttl-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  top: calc(264.56 / 1280 * 100vw);
   color: var(--color-secondary);
   text-align: center;
 }
@@ -78,7 +77,7 @@ body {
 /* イントロ */
 .intro {
   display: flex;
-  padding: calc(70 / 1280 * 100vw) 0 calc(80 / 1280 * 100vw);
+  padding: 63.5px 0 73.5px;
   margin: 0 calc(120 / 1280 * 100vw);
   justify-content: space-between;
 }
@@ -86,14 +85,14 @@ body {
 /* セクション共通 */
 .section {
   border-top: 1px solid var(--color-primary);
-  padding: calc(80 / 1280 * 100vw) 0;
+  padding: 80px 0;
   margin: 0 calc(120 / 1280 * 100vw);
 }
 .section-ttl {
   font-size: 20px;
   letter-spacing: 0.02em;
   line-height: 1.75;
-  margin-bottom: 60px;
+  margin-bottom: 46.5px;
 }
 .section-ttl-garamond {
   font-family: var(--font-en-garamond);
@@ -106,7 +105,7 @@ body {
 .question-text {
   position: relative;
   padding-left: 30px;
-  margin-bottom: 38px;
+  margin-bottom: 26px;
 }
 .question-text::before {
   content: "";
@@ -122,7 +121,7 @@ body {
 @layer utilities {
   /* 2カラム gap40 */
   .flex-gap-40-2col {
-    @apply flex gap-[40px];
+    @apply flex gap-[40px] justify-between;
   }
   .flex-gap-40-2col > * {
     @apply basis-[calc((100%-40px)/2)];
@@ -146,11 +145,11 @@ body {
 /* 写真説明 */ 
 .photo-caption {
   font-size: 11px;
-  margin-top: 10px;
+  margin-top: 6.5px;
   line-height: calc(18 / 11);
 }
 
-/* 服 */
+/* 服 サイドナビ */
 .fashion-menu {
   border: 1px solid var(--color-primary);
   border-left: none;
@@ -168,31 +167,32 @@ body {
   width: 15px;
   height: 1px;
   background-color: var(--color-primary);
-  top: 0.8em;
+  top: 8px;
   left: 0;
   transition: top 0.3s ease-in-out;
 }
 .is-womens {
-  top: calc(2.7em + 10px);
+  top: 33px;
 }
+/* 服 コンテンツ */
 .fashion-content {
   border-bottom: 1px solid var(--color-primary);
-  padding: 50px 0 80px;
+  padding: 40px 0 80px;
 }
 .content-info-left {
-  padding: 177px 110px 0 69px;
+  padding: calc(177 / 1280 * 100vw) calc(110 / 1280 * 100vw) 0 calc(69 / 1280 * 100vw);
 }
 .content-info-right {
-  padding: 177px 70px 0 110px;
+  padding: calc(177 / 1280 * 100vw) calc(70 / 1280 * 100vw) 0 calc(110 / 1280 * 100vw);
 }
 
 /* 宿 */
 .section-hotel {
-  padding: 100px 0 120px;
+  padding: 96px 0 120px;
   margin: 0 calc(120 / 1280 * 100vw);
 }
 .hotel-content-box {
-  padding: 50px 0;
+  padding: 50px 0 44px;
   border-bottom: 1px solid var(--color-primary);
 }
 .hotel-ttl {
@@ -200,6 +200,104 @@ body {
   font-size: 30px;
   letter-spacing: 0.1em;
   line-height: 1.17;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+}
+.hotel-ttl-ja {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 1.67;
+  margin-bottom: 26px;
 }
 
+/* OTHER CONTENTS */
+.section-other {
+  border-top: 1px solid var(--color-primary);
+  background-color: #7F7F7F;
+  padding-top: 92px;
+}
+.section-other-ttl {
+  font-family: var(--font-en-garamond);
+  font-size: 40px;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  color: var(--color-secondary);
+  margin-bottom: 50px;
+  text-align: center;
+}
+.link-ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--color-secondary);
+  width: 100%;
+}
+
+/* メニューボタン */
+.menu-btn {
+  position: absolute;
+  top: 36px;
+  right: 40px;
+  font-family: var(--font-en-futura);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  line-height: 1.31;
+  color: var(--color-secondary);
+}
+
+/* ヘッダー */
+.header {
+  background-image: url('/photo/page/2026_intellectual-journey/img/bg-main.png');
+  background-image: -webkit-image-set(
+    url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
+    url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
+  );
+  background-image: image-set(
+    url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
+    url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
+  );
+  background-size: cover;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.logo-wrapper {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* menu */
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .6s;
+  z-index: 1000;
+}
+.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transition: .6s;
+}
+.menu-list-wrapper {
+  display: flex;
+  gap: 52px;
+  justify-content: space-between;
+  padding: 150px 52px;
+}
+.menu-list {
+  flex-basis: calc((100%-104px)/3);
+  display: grid;
+}
