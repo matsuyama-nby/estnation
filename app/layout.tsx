@@ -27,6 +27,7 @@ export default function RootLayout({
         <title>タイトル</title>
         <meta name="description" content="説明"></meta>
         <link rel="stylesheet" href="https://use.typekit.net/akc6vgu.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
       </head>
       {children}
     </html>
