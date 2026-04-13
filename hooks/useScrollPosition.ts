@@ -6,10 +6,13 @@ export const useScrollPosition = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    const threshold = window.innerHeight * 0.7;
     const handleScroll = () => {
-      // 10px以上スクロールしたら状態を切り替える
-      setIsScrolled(window.scrollY > window.innerHeight * 0.7);
+      setIsScrolled(window.scrollY > threshold);
     };
+    if (window.scrollY > threshold) {
+      setIsScrolled(true);
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

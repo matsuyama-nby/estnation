@@ -18,50 +18,231 @@ export default function Menu({ isOpen, closeMenu }: any) {
 				<button className="menu-btn" onClick={closeMenu}>CLOSE</button>
 			</div>
 			<div className="block h-full overflow-y-auto">
-			<div className="menu-list-wrapper">
-				<ul className="menu-list">
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-				</ul>
-				<ul className="menu-list">
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-				</ul>
-				<ul className="menu-list">
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-					<li>
-						<img src="/photo/page/2026_intellectual-journey/img/test-dummy.png" alt="" />
-					</li>
-				</ul>
-			</div></div>
+				<div className="menu-list-wrapper">
+					<ul className="menu-list">
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 01</span>
+										<span className="separator" />
+										<span>2026 APRIL</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 02</span>
+										<span className="separator" />
+										<span>2026 MAY</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 03</span>
+										<span className="separator" />
+										<span>2026 JUNE</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 04</span>
+										<span className="separator" />
+										<span>2026 JULY</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul className="menu-list">
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 05</span>
+										<span className="separator" />
+										<span>2026 AUGUST</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 06</span>
+										<span className="separator" />
+										<span>2026 SEPTEMBER</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 07</span>
+										<span className="separator" />
+										<span>2026 OCTOBER</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 08</span>
+										<span className="separator" />
+										<span>2026 NOBEMBER</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul className="menu-list">
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 09</span>
+										<span className="separator" />
+										<span>2026 DECEMBER</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 10</span>
+										<span className="separator" />
+										<span>2026 JANUARY</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 11</span>
+										<span className="separator" />
+										<span>2026 FEBRUARY</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="" className="item-link">
+								<picture className="item-img">
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+								</picture>
+								<div>
+									<div className="volume-info">
+										<span>VOL 12</span>
+										<span className="separator" />
+										<span>2026 MARCH</span>
+									</div>
+									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
+									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
+									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
   );
 }

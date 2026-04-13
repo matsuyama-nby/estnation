@@ -8,7 +8,6 @@ import { useMenuToggle } from '@/hooks/useMenuToggle';
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import Script from "next/script";
 import { useEffect, useRef } from "react";
-import { Span } from "next/dist/trace";
 
 export default function Page() {
 	const { isOpen, openMenu, closeMenu } = useMenuToggle();
@@ -16,45 +15,150 @@ export default function Page() {
 	// Swiper
 	const swiperRef = useRef<any>(null);
 	const initSwiper = () => {
-    if (swiperRef.current) {
-      swiperRef.current.destroy();
-    }
+		if (swiperRef.current) {
+			swiperRef.current.destroy();
+		}
 		// @ts-ignore
-    swiperRef.current = new (window as any).Swiper(".swiper", {
-      centeredSlides: true,
-      slidesPerView: 1.1,
-      spaceBetween: 13,
-      loop: true,
-    });
-  }
-  return (
+		swiperRef.current = new (window as any).Swiper(".swiper", {
+			centeredSlides: true,
+			slidesPerView: 1.1,
+			spaceBetween: 13,
+			loop: true,
+		});
+	}
+	// GSAP
+	const initGSAP = () => {
+		const gsap = (window as any).gsap;
+		const ScrollTrigger = (window as any).ScrollTrigger;
+		if (!gsap || !ScrollTrigger) {
+			return;
+		}
+		gsap.registerPlugin(ScrollTrigger);
+		// 画像
+		gsap.utils.toArray('img').forEach((target: any) => {
+			gsap.fromTo(target, {
+				 clipPath: 'inset(0 100% 0 0)',
+			}, {
+				clipPath: 'inset(0 0% 0 0)',
+				duration: 1.0,
+				ease: "power3.inOut",
+				scrollTrigger: {
+					trigger: target,
+					start: 'top 80%',
+				}
+			});
+		});
+		// テキスト
+		gsap.utils.toArray('h1, h2, h3, .main-content p, dl').forEach((target: any) => {
+			gsap.fromTo(target, {
+				 clipPath: 'inset(100% 0 0 0)',
+			}, {
+				clipPath: 'inset(0% 0 0 0)',
+				duration: 1.3,
+				scrollTrigger: {
+					trigger: target,
+					start: 'top 90%',
+				}
+			});
+		});
+		gsap.utils.toArray('.link-ttl').forEach((target: any) => {
+			gsap.fromTo(target, {
+				clipPath: 'inset(100% 0 0 0)',
+				xPercent: -50,
+				yPercent: -50,
+			}, {
+				clipPath: 'inset(0% 0 0 0)',
+				xPercent: -50,
+				yPercent: -50,
+				duration: 1.3,
+				scrollTrigger: {
+					trigger: target,
+					start: 'top 90%',
+				}
+			});
+		});
+		// 冒頭ロゴ
+		gsap.fromTo('.init-logo', {
+			y: 20,
+		}, {
+			y: 0,
+			duration: 1.1,
+		});
+		gsap.fromTo('.init-logo span', {
+			autoAlpha: 0,
+		}, {
+			autoAlpha: 1,
+			duration: 0.8,
+			//delay: 0.2,
+			ease: "elastic.out(1, 0.6)",
+			stagger: {
+				each: 0.06,
+				from: "center"
+			}
+		});
+	};
+
+return (
 	<body className={`${isScrolled ? "is-scrolled" : "is-top"}`}>
-		{/* SwiperのJSを読み込み、終わったらinitSwiperを実行 */}
+		{/* Swiperを読み込み、終わったらinitSwiperを実行 */}
 		<Script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      onLoad={initSwiper}
-    />
+			src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+			onLoad={initSwiper}
+		/>
+		{/* GSAP */}
+		<Script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+			strategy="afterInteractive"
+		/>
+		<Script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+			strategy="afterInteractive"
+			onLoad={initGSAP}
+		/>
 		{/* 初期表示画面 */}
 		<div className="init-screen">
 			<div className="init-logo">
-				<picture>
-					<source srcSet="/photo/page/2026_intellectual-journey/img/logo-title.webp" type="image/webp" />
-					<img src="/photo/page/2026_intellectual-journey/img/logo-title.png" alt="Creative with Refine" className="w-[calc(500/1280*100vw)]" />
-				</picture>
+				<div>
+					<span className="text-[60px] text-[var(--color-secondary)]">C</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">r</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">e</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">a</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">t</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">i</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">v</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">e </span>
+					<span className="text-[60px] text-[var(--color-secondary)]">w</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">i</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">t</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">h </span>
+					<span className="text-[60px] text-[var(--color-secondary)]">R</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">e</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">f</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">i</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">n</span>
+					<span className="text-[60px] text-[var(--color-secondary)]">e</span>
+				</div>
 			</div>
 		</div>
 		<Header 
-      isOpen={isOpen} 
-      openMenu={openMenu} 
-    />
+			isOpen={isOpen} 
+			openMenu={openMenu} 
+		/>
 		<div className="fixed-background" />
 		<Menu 
-  		isOpen={isOpen} 
-  		closeMenu={closeMenu} 
-    />
+			isOpen={isOpen} 
+			closeMenu={closeMenu} 
+		/>
 		<main className="main-content">
 			{/* KV */}
 			<div className="kv-wrapper">
+				<div className="kv-top">
+					<p>FOOD</p>
+					<span className="kv-top-separator" />
+					<p>NATURE</p>
+					<span className="kv-top-separator" />
+					<p>JOURNEY</p>
+				</div>
 				<div className="relative">
 					{/* pc */}
 					<picture className="hidden md:block">
@@ -293,7 +397,7 @@ export default function Page() {
 				<div className="flex-1 min-w-0 border-t border-t-[var(--color-primary)]">
 					{/* MENS */}
 					<section id="mens" className="fashion-content">
-						<h2 className="section-ttl-garamond mb-[40px] lg:mb-[53px] ml-[calc(70/1280*100vw)]">RECOMMEND STYLE FOR MENS</h2>
+						<h2 className="section-ttl-garamond mb-[40px] lg:mb-[53px] ml-[calc(70/1280*100vw)]">RECOMMEND STYLE <br className="block lg:hidden" />FOR MENS</h2>
 						{/* 01 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col mb-[80px] lg:mb-0 lg:min-w-0">
 							<div className="content-info-left order-2 lg:order-1 lg:min-w-0">
@@ -357,7 +461,7 @@ export default function Page() {
 					</section>
 					{/* WOMENS */}
 					<section id="womens" className="fashion-content">
-						<h2 className="section-ttl-garamond mb-[40px] lg:mb-[53px] ml-[calc(70/1280*100vw)]">RECOMMEND STYLE FOR WOMENS</h2>
+						<h2 className="section-ttl-garamond mb-[40px] lg:mb-[53px] ml-[calc(70/1280*100vw)]">RECOMMEND STYLE <br className="block lg:hidden" />FOR WOMENS</h2>
 						{/* 01 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col mb-[80px] lg:mb-0">
 							<picture>
@@ -705,48 +809,52 @@ export default function Page() {
 				</section>
 			</section>
 			
-			<section className="section-other">
-				<h2 className="section-other-ttl">OTHER CONTENTS</h2>
-				<div className="mx-[calc(26/390*100vw)] md:mx-[calc(120/1280*100vw)] mb-[109.5px] md:mb-[151px]">
-					{/* pc */}
-					<div className="hidden md:block">
-						<a href="" className="relative">
-							<div className="link-ttl z-2">
-								<picture className="flex justify-center">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[calc(171/1280*100vw)] mb-[calc(31.56/1280*100vw)]" />
+			<section>
+				{/*
+				<div className="other-content">
+					<h2 className="other-content-ttl">OTHER CONTENTS</h2>
+					<div className="mx-[calc(26/390*100vw)] md:mx-[calc(120/1280*100vw)]">
+
+						<div className="hidden md:block">
+							<a href="" className="relative">
+								<div className="link-ttl z-2">
+									<picture className="flex justify-center">
+										<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
+										<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[calc(171/1280*100vw)] mb-[calc(31.56/1280*100vw)]" />
+									</picture>
+									<p className="font-en-garamond text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
+									<p className="font-en-futura text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(33.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
+									<p className="text-[calc(18/1280*100vw)] tracking-[0.02em] leading-[1.78]">食と自然体験、知的好奇心を刺激する旅</p>
+								</div>
+								<picture>
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-other.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-other.jpg" alt="" />
 								</picture>
-								<p className="font-en-garamond text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
-								<p className="font-en-futura text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(33.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
-								<p className="text-[calc(18/1280*100vw)] tracking-[0.02em] leading-[1.78]">食と自然体験、知的好奇心を刺激する旅</p>
+								<div className="absolute inset-0 bg-black/35 z-1" />
+							</a>
+						</div>
+
+						<div className="block md:hidden">
+							<a href="" className="relative">
+								<picture>
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-other-sp.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-other-sp.jpg" alt="" />
+								</picture>
+								<div className="absolute inset-0 bg-black/35" />
+							</a>
+							<div className="text-[var(--color-secondary)] mt-[15px]">
+								<picture>
+									<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[159px] mb-[11.48px]" />
+								</picture>
+								<p className="font-en-garamond text-[20px] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
+								<p className="font-en-futura text-[10px] tracking-[0.12em] leading-[1.31] mb-[12.5px]">- FLAVORS & NATURE ENCOUNTER -</p>
+								<p className="text-[15px] tracking-[0.02em] leading-[1.78]">食と自然体験、知的好奇心を刺激する旅</p>
 							</div>
-							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-other.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-other.jpg" alt="" />
-							</picture>
-							<div className="absolute inset-0 bg-black/35 z-1" />
-						</a>
-					</div>
-					{/* sp */}
-					<div className="block md:hidden">
-						<a href="" className="relative">
-							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-other-sp.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-other-sp.jpg" alt="" />
-							</picture>
-							<div className="absolute inset-0 bg-black/35" />
-						</a>
-						<div className="text-[var(--color-secondary)] mt-[15px]">
-							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[159px] mb-[11.48px]" />
-							</picture>
-							<p className="font-en-garamond text-[20px] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
-							<p className="font-en-futura text-[10px] tracking-[0.12em] leading-[1.31] mb-[12.5px]">- FLAVORS & NATURE ENCOUNTER -</p>
-							<p className="text-[15px] tracking-[0.02em] leading-[1.78]">食と自然体験、知的好奇心を刺激する旅</p>
 						</div>
 					</div>
 				</div>
+				*/}
 				<ul className="md:flex-gap-none-2col">
 					<li>
 						<a href="https://www.estnation.co.jp/" className="relative">
@@ -780,7 +888,7 @@ export default function Page() {
 					</li>					
 				</ul>
 			</section>
-
+			
 		</main>
 
 		<Footer />
