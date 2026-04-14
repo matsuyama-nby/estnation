@@ -33,8 +33,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 APRIL</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -51,8 +50,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 MAY</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -69,8 +67,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 JUNE</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -87,8 +84,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 JULY</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -107,8 +103,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 AUGUST</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -125,8 +120,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 SEPTEMBER</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -143,8 +137,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 OCTOBER</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -161,8 +154,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 NOBEMBER</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -181,8 +173,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 DECEMBER</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -199,8 +190,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 JANUARY</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -217,8 +207,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 FEBRUARY</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>
@@ -235,8 +224,7 @@ export default function Menu({ isOpen, closeMenu }: any) {
 										<span>2026 MARCH</span>
 									</div>
 									<p className="menu-link-ttl">THE INTELLECTUAL JOURNEY</p>
-									<p className="menu-link-ttl-sub">FLAVORS & NATURE ENCOUNTER</p>
-									<p className="menu-link-desc">食と自然体験、<br />知的好奇心を刺激する旅</p>
+									<p className="menu-link-desc">知的好奇心を刺激する<br />名ホテルへの旅路</p>
 								</div>
 							</a>
 						</li>

@@ -47,7 +47,7 @@ export default function Footer() {
 			</div>
 			*/}
 			<ul className="md:flex-gap-none-2col">
-				<li>
+				<li className="other-item">
 					<a href="https://www.estnation.co.jp/" className="relative">
 						<div className="link-ttl">
 							<p className="font-en-futura text-[21px] md:text-[26px] tracking-[0.1em]">STORE</p>
@@ -62,7 +62,7 @@ export default function Footer() {
 						</picture>
 					</a>
 				</li>
-				<li>
+				<li className="other-item">
 					<a href="https://www.estnation.co.jp/store" className="relative">
 						<div className="link-ttl">
 							<p className="font-en-futura text-[21px] md:text-[26px] tracking-[0.1em]">ONLINE STORE</p>
@@ -71,7 +71,7 @@ export default function Footer() {
 								<span className="block">オンラインでも探せます</span>
 							</p>
 						</div>
-						<picture className="block overflow-hidden">
+						<picture>
 							<source srcSet="/photo/page/2026_intellectual-journey/img/img-online.webp" type="image/webp" />
 							<img src="/photo/page/2026_intellectual-journey/img/img-online.jpg" alt="" />
 						</picture>

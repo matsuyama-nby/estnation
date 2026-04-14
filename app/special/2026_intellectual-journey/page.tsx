@@ -5,13 +5,13 @@ import Footer from "@/components/footer";
 import AsideNav from '@/components/AsideNav';
 import Menu from '@/components/Menu';
 import { useMenuToggle } from '@/hooks/useMenuToggle';
-import { useScrollPosition } from "@/hooks/useScrollPosition";
+import { usePageReady } from "@/hooks/usePageReady";
 import Script from "next/script";
 import { useEffect, useRef } from "react";
 
 export default function Page() {
 	const { isOpen, openMenu, closeMenu } = useMenuToggle();
-	const isScrolled = useScrollPosition();
+	const isReady = usePageReady();
 	// Swiper
 	const swiperRef = useRef<any>(null);
 	const initSwiper = () => {
@@ -29,13 +29,12 @@ export default function Page() {
 	const initGSAP = () => {
 		const gsap = (window as any).gsap;
 		const ScrollTrigger = (window as any).ScrollTrigger;
-		const tl = gsap.timeline();
-		if (!gsap || !ScrollTrigger) {
-			return;
-		}
+		//const tl = gsap.timeline();
+		if (!gsap || !ScrollTrigger) return;
 		gsap.registerPlugin(ScrollTrigger);
+		
 		// 画像
-		gsap.utils.toArray('img').forEach((target: any) => {
+		gsap.utils.toArray('img:not(.char img)').forEach((target: any) => {
 			gsap.fromTo(target, {
 				clipPath: 'inset(0 100% 0 0)',
 			}, {
@@ -51,10 +50,14 @@ export default function Page() {
 		// テキスト
 		gsap.utils.toArray('h1, h2, h3, .main-content p, dl').forEach((target: any) => {
 			gsap.fromTo(target, {
-				clipPath: 'inset(100% 0 0 0)',
+				yPercent: 50,
 			}, {
-				clipPath: 'inset(0% 0 0 0)',
-				duration: 1.3,
+				yPercent: 0,
+        duration: 1.1,
+        stagger: {
+          each: .045,
+          ease: "power4.out"
+        },
 				scrollTrigger: {
 					trigger: target,
 					start: 'top 90%',
@@ -82,19 +85,19 @@ export default function Page() {
 			autoAlpha: 0,
 		}, {
 			autoAlpha: 1,
-			duration: 1.1,
+			duration: 1.4,
 		});
 
 		gsap.fromTo('.init-logo .char', {
-				yPercent: 150,
+				yPercent: 60,
 			}, {
 				yPercent: 0,
 				duration: 1.4,
 				stagger: {
 					from: 'center',
-					each: 0.02,
+					each: 0.03,
 				},
-				ease: 'expo.inOut',
+				ease: 'expo.out',
 			}
 		);
 
@@ -116,10 +119,31 @@ export default function Page() {
 		// 		from: "center"
 		// 	}
 		// });
+		// KV画像
+		gsap.fromTo('.kv-wrapper img', {
+			clipPath: 'inset(0 100% 0 0)',
+		}, {
+			clipPath: 'inset(0 0% 0 0)',
+			duration: 1.0,
+			ease: "power3.inOut",
+			delay: 1.7,
+		});
+		// KVテキスト
+		gsap.fromTo('.kv-ttl-content', {
+			yPercent: 50,
+		}, {
+			yPercent: 0,
+      duration: 1.1,
+      stagger: {
+        each: .045,
+        ease: "power4.out"
+      },
+			delay: 2.0,
+		});
 	};
 
 return (
-	<body className={`${isScrolled ? "is-scrolled" : "is-top"}`}>
+	<body className={`${isReady ? "is-ready" : ""}`}>
 		{/* Swiperを読み込み、終わったらinitSwiperを実行 */}
 		<Script
 			src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
@@ -200,6 +224,7 @@ return (
 			isOpen={isOpen} 
 			openMenu={openMenu} 
 		/>
+		<div className="fixed-background-filter" />
 		<div className="fixed-background" />
 		<Menu 
 			isOpen={isOpen} 
@@ -208,13 +233,6 @@ return (
 		<main className="main-content">
 			{/* KV */}
 			<div className="kv-wrapper">
-				<div className="kv-top">
-					<p>FOOD</p>
-					<span className="kv-top-separator" />
-					<p>NATURE</p>
-					<span className="kv-top-separator" />
-					<p>JOURNEY</p>
-				</div>
 				<div className="relative">
 					{/* pc */}
 					<picture className="hidden md:block">
@@ -228,11 +246,10 @@ return (
 					</picture>
 					<div className="absolute inset-0 bg-black/35 z-1" />
 					<div className="kv-ttl-content z-2">
-						<h1 className="font-en-garamond text-[calc(35/390*100vw)] md:text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.09] md:leading-[1.4] mb-[calc(17.64/390*100vw)] md:mb-0">
+						<h1 className="font-en-garamond text-[calc(35/390*100vw)] md:text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.09] md:leading-[1.4] mb-[calc(67.94/390*100vw)] md:mb-[calc(55.44/1280*100vw)]">
 							<span className="hidden md:block">THE INTELLECTUAL JOURNEY</span>
 							<span className="block md:hidden">THE<br />INTELLECTUAL<br />JOURNEY</span>
 						</h1>
-						<p className="font-en-futura text-[calc(12/390*100vw)] md:text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(32.8/390*100vw)] md:mb-[calc(34.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
 						<p className="text-[calc(15/390*100vw)] md:text-[calc(18/1280*100vw)] tracking-[0.02em] leading-[1.78]">知的好奇心を刺激する名ホテルへの旅路</p>
 					</div>
 				</div>
@@ -249,17 +266,21 @@ return (
 				<div className="md:flex-gap-40-2col flex flex-col md:flex-row">
 					<div className="order-2 md:order-1">
 						<p className="font-en-futura text-[10px] md:text-[11px] tracking-[0.12em] leading-[1.3] md:leading-[1.27] mb-[10.5px] md:mb-[15px] text-center md:text-left">ALA CHMAP MAGAZINE FOUNDER</p>
-						<p className="font-en-garamond text-[25px] md:text-[30px] tracking-[0.1em] leading-[1.2] md:leading-[1.17] mb-[1px] md:mb-[8px] text-center md:text-left">JOANNA KAWACKI</p>
+						<p className="font-en-garamond text-[25px] md:text-[30px] tracking-[0.1em] leading-[1.2] md:leading-[1.17] mb-[1px] md:mb-[8px] text-center md:text-left">JOANNA KAWECKI</p>
 						<p className="text-[11px] md:text-[12px] tracking-[0.02em] leading-[1.67] mb-[26px] md:mb-[30px] text-center md:text-left">ジョアンナ・カウェキ</p>
 						<p className="mb-[24.5px] md:mb-[24px]">オーストラリア出身、東京在住の編集者・ジャーナリスト。デザイン/建築メディア『Ala Champ Magazine』のファウンダー。建築、旅、アートといった分野に造詣が深く、2013年に東京へ拠点を移してからはグローバルな視点から日本の建築や、文化を発信している。国内外のビジネスエリートからも高い支持を集め、ファッションを含め様々な分野に精通している。</p>
 						<div className="info-wrapper">
 							<dl className="info">
 								<dt>WEB SITE</dt>
-								<dd>CHAMP-MAGAZINE.COM</dd>
+								<dd>
+									<a href="https://champ-magazine.com/" target="_blank">CHAMP-MAGAZINE.COM</a>
+								</dd>
 							</dl>
 							<dl className="info">
 								<dt>INSTAGRAM</dt>
-								<dd>@CHAMP_MAGAZINE</dd>
+								<dd>
+									<a href="https://www.instagram.com/champ_magazine/" target="_blank">@CHAMP_MAGAZINE</a>
+								</dd>
 							</dl>
 						</div>
 					</div>
@@ -288,8 +309,8 @@ return (
 							</div>
 						</div>
 						<div>
-							<h2 className="section-ttl">旅は新たな知識のカケラ<br />を与えてくれる</h2>
-							<p className="question-text mb-[26px]">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
+							<h2 className="section-ttl font-medium">旅は新たな知識のカケラ<br />を与えてくれる</h2>
+							<p className="question-text mb-[26px] font-medium">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
 							<p>
 								ジョアンナ・カウェキ（以下J）：日常のあらゆることに好奇心を持つのはとても大切なことです。旅や日々の経験を通じて、私たちは自分自身のことをより深く知り、自分たちが生きる世界への理解を深めることができます。「わからないことを質問する」のを怖がらず挑戦してみてほしいと思います。それは恥ずかしいことではなく、むしろ知性の証です。質問することで、ものがどう作られ、どこから来たのかという新しい知識が手に入ります。<br />
 								そして実体験はなにものにも代えがたい財産です。知識を積み重ね、学ぶことは脳の柔軟性を鍛えることにも繋がります。また、今の世界には「共感」や「思いやり」といった価値観がもっと必要だと思います。旅をすることは世界が広大で、かつ「すべてが繋がり合っている場所」であることを実感させてくれる素晴らしい手段なのです。<br />
@@ -305,8 +326,8 @@ return (
 						<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-1.webp" type="image/webp" />
 						<img src="/photo/page/2026_intellectual-journey/img/img-hotel-1.jpg" alt="" />
 					</picture>
-					<h2 className="section-ttl">旅は新たな知識のカケラ<br />を与えてくれる</h2>
-					<p className="question-text mb-[26px]">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
+					<h2 className="section-ttl font-medium">旅は新たな知識のカケラ<br />を与えてくれる</h2>
+					<p className="question-text mb-[26px] font-medium">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
 					<p className="mb-[47.5px]">
 						ジョアンナ・カウェキ（以下J）：日常のあらゆることに好奇心を持つのはとても大切なことです。旅や日々の経験を通じて、私たちは自分自身のことをより深く知り、自分たちが生きる世界への理解を深めることができます。「わからないことを質問する」のを怖がらず挑戦してみてほしいと思います。それは恥ずかしいことではなく、むしろ知性の証です。質問することで、ものがどう作られ、どこから来たのかという新しい知識が手に入ります。<br />
 						そして実体験はなにものにも代えがたい財産です。知識を積み重ね、学ぶことは脳の柔軟性を鍛えることにも繋がります。また、今の世界には「共感」や「思いやり」といった価値観がもっと必要だと思います。旅をすることは世界が広大で、かつ「すべてが繋がり合っている場所」であることを実感させてくれる素晴らしい手段なのです。<br />
@@ -331,9 +352,9 @@ return (
 					<div className="flex">
 						<p className="photo-caption w-[calc((100%-40px)/2)] ml-auto">エントランスには銀箔の作品や、竹籠のアートが飾られ、ふふ 東京 銀座が国内のアーティストに敬意を払いながら伝統作品を現代的にアップデートしている様子が伺える。</p>
 					</div>
-					<h2 className="section-ttl">日本的な美意識を<br />現代の感覚に落とし込む</h2>
+					<h2 className="section-ttl font-medium">日本的な美意識を<br />現代の感覚に落とし込む</h2>
 					<div className="columns-2 gap-[40px]">
-						<p className="question-text">今回は地方にも多くの宿を展開する「ふふ 東京 銀座」をご紹介いただきました。この場所が持つ知的好奇心を刺激するポイントはなんでしょうか。また、ふふのような「和モダン」な空間が注目を集める理由を教えてください。</p>
+						<p className="question-text font-medium">今回は地方にも多くの宿を展開する「ふふ 東京 銀座」をご紹介いただきました。この場所が持つ知的好奇心を刺激するポイントはなんでしょうか。また、ふふのような「和モダン」な空間が注目を集める理由を教えてください。</p>
 						<p>
 							J：ふふは熱海、河口湖、箱根、軽井沢と地方の多くに宿を展開していますが、「ふふ 東京 銀座」であれば日本リゾートの魅力を東京で体感することができます。日本の美意識を大切にする内装や、「おもてなし」、すなわち真のホスピタリティがしっかりと根付いています。おもてなしとは、内面から自然と溢れ出す精神性だと考えています。ふふのスタッフの方々からは、まさにその精神が伝わってきます。<br />
 							さらに、本物の空間を作り上げるために、才能豊かで尊敬を集める様々な職人たちに協力してもらうことに細心の注意を払っています。例えば、エレベーターの内部は金沢の銀箔職人によるアートに仕上げられ、エントランスの入り口には「銀座もとじ」による泥染めの掛け軸や精緻に編み込まれた竹の彫刻などの作品が飾られており、日本の伝統文化と職人技の美しさを体感することができます。宿のなかで特にお気に入りの場所はルーフトップです。都会のオアシスのような緑に囲まれながら足湯に浸かってリラックスでき、眼下にはビル群のスカイラインや、銀座の象徴である中央通りのショッピング街を眺めることができる素晴らしい空間になっています。<br />
@@ -344,8 +365,8 @@ return (
 				</div>
 				{/* sp */}
 				<div className="block md:hidden">
-					<h2 className="section-ttl">日本的な美意識を<br />現代の感覚に落とし込む</h2>
-					<p className="question-text">今回は地方にも多くの宿を展開する「ふふ 東京 銀座」をご紹介いただきました。この場所が持つ知的好奇心を刺激するポイントはなんでしょうか。また、ふふのような「和モダン」な空間が注目を集める理由を教えてください。</p>
+					<h2 className="section-ttl font-medium">日本的な美意識を<br />現代の感覚に落とし込む</h2>
+					<p className="question-text font-medium">今回は地方にも多くの宿を展開する「ふふ 東京 銀座」をご紹介いただきました。この場所が持つ知的好奇心を刺激するポイントはなんでしょうか。また、ふふのような「和モダン」な空間が注目を集める理由を教えてください。</p>
 					<p className="mb-[47.5px]">
 						J：ふふは熱海、河口湖、箱根、軽井沢と地方の多くに宿を展開していますが、「ふふ 東京 銀座」であれば日本リゾートの魅力を東京で体感することができます。日本の美意識を大切にする内装や、「おもてなし」、すなわち真のホスピタリティがしっかりと根付いています。おもてなしとは、内面から自然と溢れ出す精神性だと考えています。ふふのスタッフの方々からは、まさにその精神が伝わってきます。<br />
 						さらに、本物の空間を作り上げるために、才能豊かで尊敬を集める様々な職人たちに協力してもらうことに細心の注意を払っています。例えば、エレベーターの内部は金沢の銀箔職人によるアートに仕上げられ、エントランスの入り口には「銀座もとじ」による泥染めの掛け軸や精緻に編み込まれた竹の彫刻などの作品が飾られており、日本の伝統文化と職人技の美しさを体感することができます。宿のなかで特にお気に入りの場所はルーフトップです。都会のオアシスのような緑に囲まれながら足湯に浸かってリラックスでき、眼下にはビル群のスカイラインや、銀座の象徴である中央通りのショッピング街を眺めることができる素晴らしい空間になっています。<br />
@@ -363,8 +384,8 @@ return (
 			<section className="section">
 				{/* pc */}
 				<div className="hidden md:block">
-					<h2 className="section-ttl">着心地の良さを追求することは<br />楽さだけなく、自信にもつながる</h2>
-					<p className="question-text">全国各地を旅するジョアンナさんが旅の装いについて重要視する部分はなんでしょうか。</p>
+					<h2 className="section-ttl font-medium">着心地の良さを追求することは<br />楽さだけなく、自信にもつながる</h2>
+					<p className="question-text font-medium">全国各地を旅するジョアンナさんが旅の装いについて重要視する部分はなんでしょうか。</p>
 					<p className="mb-[40px]">
 						J：リネンやオーガニックコットン、ウールなどの天然素材は、着心地が良く、温度を調節してくれるので大好きです。私のスタイルは、白Tシャツやシャツにゴールドのピアスを合わせるだけという、とてもシンプルなもの。これは、あえて無駄を削ぎ落とすことで本質を際立たせる「簡素」という考え方に近いかもしれません。旅では、持ち運べる荷物も時間も限られているからこそ、身に付けるものはすべて、明確な目的と意味を持ったものを選んでいます。<br />
 						着心地の良さの重要性は仕事での服装も同じです。服を着て心地よくいられると、自然と自信が湧いてくるもの。自分が愛着を持てて、誇らしく思える服を着ることはとても大切です。なぜなら、それが一日の始まりと終わりの気分にそのまま繋がるからです。最近では、多くの素晴らしいデザイナーが美しいシルエットの服を作っており、どんな場面でもおしゃれでプロフェッショナルに見せることができます。私にとって、服とは“体にまとう建築”のようなものです。それは私たちの体を守るシェルターであり、周囲の環境や「自分は何者であるか」を映し出す鏡でもあるのです。
@@ -389,8 +410,8 @@ return (
 						<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-4.webp" type="image/webp" />
 						<img src="/photo/page/2026_intellectual-journey/img/img-hotel-4.jpg" alt="" />
 					</picture>
-					<h2 className="section-ttl">着心地の良さを追求することは<br />楽さだけなく、自信にもつながる</h2>
-					<p className="question-text">全国各地を旅するジョアンナさんが旅の装いについて重要視する部分はなんでしょうか。</p>
+					<h2 className="section-ttl font-medium">着心地の良さを追求することは<br />楽さだけなく、自信にもつながる</h2>
+					<p className="question-text font-medium">全国各地を旅するジョアンナさんが旅の装いについて重要視する部分はなんでしょうか。</p>
 					<p className="mb-[47.5px]">
 						J：リネンやオーガニックコットン、ウールなどの天然素材は、着心地が良く、温度を調節してくれるので大好きです。私のスタイルは、白Tシャツやシャツにゴールドのピアスを合わせるだけという、とてもシンプルなもの。これは、あえて無駄を削ぎ落とすことで本質を際立たせる「簡素」という考え方に近いかもしれません。旅では、持ち運べる荷物も時間も限られているからこそ、身に付けるものはすべて、明確な目的と意味を持ったものを選んでいます。<br />
 						着心地の良さの重要性は仕事での服装も同じです。服を着て心地よくいられると、自然と自信が湧いてくるもの。自分が愛着を持てて、誇らしく思える服を着ることはとても大切です。なぜなら、それが一日の始まりと終わりの気分にそのまま繋がるからです。最近では、多くの素晴らしいデザイナーが美しいシルエットの服を作っており、どんな場面でもおしゃれでプロフェッショナルに見せることができます。私にとって、服とは“体にまとう建築”のようなものです。それは私たちの体を守るシェルターであり、周囲の環境や「自分は何者であるか」を映し出す鏡でもあるのです。
@@ -405,8 +426,8 @@ return (
 
 			<section className="section md:flex-gap-40-2col">
 				<div>
-					<h2 className="section-ttl">好奇心を持ち続けることが<br />洗練につながる</h2>
-					<p className="question-text">エストネーションでは、このコンテンツが一年間続き、そのコンセプトは「Creative with Refine（創造性と教養のある品格）」です。ジョアンナさんにとって「クリエイティブで洗練された人」とはどのような人物ですか？また、エストネーションの空間や店舗から受けるインスピレーションについてもお聞かせください。</p>
+					<h2 className="section-ttl font-medium">好奇心を持ち続けることが<br />洗練につながる</h2>
+					<p className="question-text font-medium">エストネーションでは、このコンテンツが一年間続き、そのコンセプトは「Creative with Refine（創造性と教養のある品格）」です。ジョアンナさんにとって「クリエイティブで洗練された人」とはどのような人物ですか？また、エストネーションの空間や店舗から受けるインスピレーションについてもお聞かせください。</p>
 					<p className="mb-[47.5px] md:mb-0">
 						J：私にとって洗練された人とは、静かな好奇心を持って世界を歩み、常に何かを吸収し、点と点を繋ぎ、他の人が見過ごしてしまうような場所に美しさを見出せる人です。つまり「自分自身に正直であること」だと思っています。自分の直感に従えば、それは自然と新しい旅へと導いてくれるはずです。<br />
 						エストネーション六本木ヒルズ店には森美術館やブリコラージュ、ブレッド＆カンパニーを訪れる際に立ち寄ることが多いです。ウェアからジュエリー、コスメ、アイウェアまで、何か新しい興味深いブランドがないかチェックするのに最適なんです。オンラインショッピングは便利ですが、よりパーソナルで触覚的な体験ができる実店舗に足を運ぶのは素晴らしい経験だと思います。デザインの観点からも、マーチャンダイジングやディスプレイ、新しいブランドのラインナップ、そしてどのようなお客様が買い物をしているのかなど、空間全体を観察することを楽しんでいます。
@@ -433,7 +454,9 @@ return (
 						</dl>
 						<dl className="info">
 							<dt>TEL</dt>
-							<dd>0570-0117-22</dd>
+							<dd>
+								<a href="tel:0570011722">0570-0117-22</a>
+							</dd>
 						</dl>
 						<dl className="info">
 							<dt>CHECK-IN / OUT</dt>
@@ -441,7 +464,9 @@ return (
 						</dl>
 						<dl className="info">
 							<dt>WEBSITE</dt>
-							<dd>WWW.FUFUTOKYO.JP</dd>
+							<dd>
+								<a href="https://www.fufutokyo.jp/" target="_blank">WWW.FUFUTOKYO.JP</a>
+							</dd>
 						</dl>
 					</div>
 				</div>
@@ -585,8 +610,8 @@ return (
 			{/* hotels */}
 			<section className="section-hotel">
 				<h2 className="section-ttl-garamond mb-[8.5px] md:mb-[6px]">FEEDING <br className="block lg:hidden" /> THE MIND LOCALLY</h2>
-				<p className="text-[15px] md:text-[18px] tracking-[0.02em] leading-[1.78] mb-[38.5px] md:mb-[36.5px]">地方にある知性を刺激する宿たち</p>
-				<p className="md:max-w-[calc(500/1280*100vw)] text-[14px] md:text-[15px] leading-[1.87]">ふふ 銀座 東京を舞台に知的好奇心を刺激する旅について語ってくれたジョアンナ。ここでは東京から離れ、地方にある個性に溢れ様々な角度から知性を刺激してくれる宿を紹介していきます。あなたの旅のメモに入れ、機会があればぜひ訪れてみてください。</p>
+				<p className="text-[15px] md:text-[18px] tracking-[0.02em] leading-[1.78] mb-[38.5px] md:mb-[36.5px] font-medium">地方にある知性を刺激する宿たち</p>
+				<p className="md:max-w-[calc(500/1280*100vw)] text-[14px] md:text-[15px] leading-[1.87]">ふふ 銀座 東京を舞台に知的好奇心を刺激する旅について語ってくれたジョアンナさん。ここでは東京から離れ、地方にある個性に溢れ様々な角度から知性を刺激してくれる宿を紹介していきます。あなたの旅のメモに入れ、機会があればぜひ訪れてみてください。</p>
 				{/* 京都 */}
 				<section className="hotel-content-box !pt-[44px] md:!pt-[43.5px]">
 					{/* pc */}
@@ -664,11 +689,15 @@ return (
 								</dl>
 								<dl className="info">
 									<dt>TEL</dt>
-									<dd>075-771-7111</dd>
+									<dd>
+										<a href="tel:0757717111">075-771-7111</a>
+									</dd>
 								</dl>
 								<dl className="info min-w-0">
 									<dt>WEBSITE</dt>
-									<dd className="truncate">WWW.MIYAKOHOTELS.NE.JP/WESTINKYOTO/STAY/KASUIEN/</dd>
+									<dd className="truncate">										
+										<a href="https://www.miyakohotels.ne.jp/WESTINKYOTO/STAY/KASUIEN/" target="_blank">WWW.MIYAKOHOTELS.NE.JP/WESTINKYOTO/STAY/KASUIEN/</a>
+									</dd>
 								</dl>
 							</div>
 						</div>
@@ -758,11 +787,15 @@ return (
 								</dl>
 								<dl className="info">
 									<dt>TEL</dt>
-									<dd>055-954-6611</dd>
+									<dd>
+										<a href="tel:0559546611">055-954-6611</a>
+									</dd>
 								</dl>
 								<dl className="info">
 									<dt>WEBSITE</dt>
-									<dd>WWW.NUMAZU-CLUB.COM</dd>
+									<dd>
+										<a href="https://numazu-club.com/" target="_blank">WWW.NUMAZU-CLUB.COM</a>
+									</dd>
 								</dl>
 							</div>
 						</div>
@@ -849,11 +882,15 @@ return (
 								</dl>
 								<dl className="info">
 									<dt>TEL</dt>
-									<dd>0570-001-810</dd>
+									<dd>
+										<a href="tel:0570001810">0570-001-810</a>
+									</dd>
 								</dl>
 								<dl className="info">
 									<dt>WEBSITE</dt>
-									<dd>WWW.SATOYAMA-JUJO.COM</dd>
+									<dd>
+										<a href="https://www.satoyama-jujo.com/" target="_blank">WWW.SATOYAMA-JUJO.COM</a>
+									</dd>
 								</dl>
 							</div>
 						</div>

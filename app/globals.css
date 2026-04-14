@@ -7,13 +7,19 @@
 	/* fonts */
 	--font-ja: "Yu Gothic Pr6N", "Yu Gothic", "YuGothic", "游ゴシック体", "游ゴシック", sans-serif;
 	--font-en-futura: "futura-pt", sans-serif;
-	--font-en-garamond: "garamond-premier-pro", serif;
+	--font-en-garamond: "garamond-premier-pro-display", serif;
 }
 
 @theme {
   --font-ja: var(--font-ja);
   --font-en-futura: var(--font-en-futura);
   --font-en-garamond: var(--font-en-garamond);
+}
+
+/* font weight */
+.font-en-garamond {
+  font-weight: 200;
+  font-style: normal;
 }
 
 html{
@@ -134,6 +140,17 @@ body {
     transparent 100%
   );
 }
+.fixed-background-filter {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80dvh;
+  mix-blend-mode: soft-light;
+  background-color: var(--color-secondary);
+  z-index: 0;
+  opacity: .5;
+}
 
 
 /* メインコンテンツ */
@@ -145,7 +162,12 @@ body {
 
 /* 初期画面 */
 .init-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  z-index: 9999;
   opacity: 1;
   transition: opacity 0.8s ease;
 }
@@ -211,14 +233,14 @@ body {
   opacity: 0;
   transition: opacity 0.8s ease;
 }
-/* スクロール後 */
-body.is-scrolled .init-screen {
+/* 表示後 */
+body.is-ready .init-screen {
   opacity: 0;
   visibility: hidden;
 }
-body.is-scrolled .header,
-body.is-scrolled .header-content,
-body.is-scrolled .main-content {
+body.is-ready .header,
+body.is-ready .header-content,
+body.is-ready .main-content {
   opacity: 1;
 }
 
@@ -237,6 +259,8 @@ body.is-scrolled .main-content {
 }
 .section-ttl-garamond {
   font-family: var(--font-en-garamond);
+  font-weight: 200;
+  font-style: normal;
   font-size: 40px;
   letter-spacing: 0.1em;
   line-height: 1.2;
@@ -314,7 +338,7 @@ body.is-scrolled .main-content {
 /* KV */
 .kv-wrapper {
   padding-top: 50px;
-  margin: 0 calc(120 / 1280 * 100vw);
+  margin: 90px calc(120 / 1280 * 100vw) 0;
 }
 .kv-ttl-content {
   position: absolute;
@@ -323,33 +347,14 @@ body.is-scrolled .main-content {
   color: var(--color-secondary);
   text-align: center;
 }
-.kv-top {
-  display: flex;
-  gap: 20px;
-  color: var(--color-secondary);
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.12em;
-  margin-bottom: 20px;
-  align-items: center;
-}
-.kv-top-separator {
-  background-color: var(--color-secondary);
-  width: 100%;
-  height: 1px;
-}
+
 @media (max-width: 767.9px) {
   .kv-wrapper {
     padding-top: 30px;
-    margin: 0 calc(13 / 390 * 100vw);
+    margin: 65px calc(13 / 390 * 100vw) 0;
   }
   .kv-ttl-content {
     top: calc(151.5 / 390 * 100vw);
-  }
-  .kv-top {
-    gap: 16px;
-    font-size: 10px;
-    margin-bottom: 19px;
   }
 }
 
@@ -473,6 +478,8 @@ body.is-scrolled .main-content {
 }
 .hotel-ttl {
   font-family: var(--font-en-garamond);
+  font-weight: 200;
+  font-style: normal;
   font-size: 30px;
   letter-spacing: 0.1em;
   line-height: 1.17;
@@ -503,7 +510,7 @@ body.is-scrolled .main-content {
 }
 
 
-/* OTHER CONTENTS */
+/* footer */
 .other-content {
   border-top: 1px solid var(--color-primary);
   background-color: #7F7F7F;
@@ -511,6 +518,8 @@ body.is-scrolled .main-content {
 }
 .other-content-ttl {
   font-family: var(--font-en-garamond);
+  font-weight: 200;
+  font-style: normal;
   font-size: 40px;
   letter-spacing: 0.1em;
   line-height: 1.4;
@@ -528,6 +537,17 @@ body.is-scrolled .main-content {
   width: 100%;
   clip-path: inset(100% 0 0 0);
   z-index: 2;
+}
+.other-item img {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.other-item picture {
+  display: block;
+  overflow: hidden;
+}
+.other-item:hover img {
+  transform: scale(1.05);
 }
 @media (max-width: 767.9px) {
   .other-content {
@@ -563,14 +583,14 @@ body.is-scrolled .main-content {
 
 /* ヘッダー */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 90px;
-    width: 100%;
-    mix-blend-mode: soft-light;
-    backdrop-filter: blur(20px);
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  mix-blend-mode: soft-light;
+  backdrop-filter: blur(20px);
+  z-index: 999;
 }
 
 .header::before {
@@ -620,7 +640,7 @@ body.is-scrolled .main-content {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(20px);
   opacity: 0;
   pointer-events: none;
   transition: .6s;
@@ -682,6 +702,8 @@ body.is-scrolled .main-content {
   align-items: center;
   color: var(--color-secondary);
   font-family: var(--font-en-garamond);
+  font-weight: 200;
+  font-style: normal;
   font-size: calc(11 / 1280 * 100vw);
   letter-spacing: 0.05em;
   line-height: 1.36;
@@ -704,18 +726,13 @@ body.is-scrolled .main-content {
 .menu-link-ttl {
   color: var(--color-secondary);
   font-family: var(--font-en-garamond);
+  font-weight: 200;
+  font-style: normal;
   font-size: calc(15 / 1280 * 100vw);
   line-height: 1.4;
   letter-spacing: 0.05em;
   white-space: nowrap;
-}
-.menu-link-ttl-sub {
-  color: var(--color-secondary);
-  font-family: var(--font-en-futura);
-  font-size: calc(9 / 1280 * 100vw);
-  line-height: 1.33;
-  letter-spacing: 0.12em;
-  margin-bottom: calc(10 / 1280 * 100vw);
+  margin-bottom: calc(27 / 1280 * 100vw);
 }
 .menu-link-desc {
   color: var(--color-secondary);
@@ -726,10 +743,7 @@ body.is-scrolled .main-content {
 @media (max-width: 767.9px) {
   .menu-link-ttl {
     font-size: calc(15 / 390 * 100vw);
-  }
-  .menu-link-ttl-sub {
-    font-size: calc(9 / 390 * 100vw);
-    margin-bottom: calc(15 / 390 * 100vw);
+    margin-bottom: calc(27 / 390 * 100vw);
   }
   .menu-link-desc {
     font-size: calc(13 / 390 * 100vw);
