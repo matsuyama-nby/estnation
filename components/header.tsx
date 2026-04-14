@@ -1,7 +1,7 @@
 export default function Header({ isOpen, openMenu }: any) {
 
 	return (
-		<header>
+		<header className={`header-wrapper ${isOpen ? 'is-open' : ''}`}>
 			<div className="header" />
 			<div className="header-content">
 				<div className="logo-wrapper">

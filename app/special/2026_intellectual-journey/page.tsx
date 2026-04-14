@@ -34,7 +34,7 @@ export default function Page() {
 		gsap.registerPlugin(ScrollTrigger);
 		
 		// 画像
-		gsap.utils.toArray('img:not(.char img)').forEach((target: any) => {
+		gsap.utils.toArray('img:not(.char img, .init-logo_comp img)').forEach((target: any) => {
 			gsap.fromTo(target, {
 				clipPath: 'inset(0 100% 0 0)',
 			}, {
@@ -50,17 +50,19 @@ export default function Page() {
 		// テキスト
 		gsap.utils.toArray('h1, h2, h3, .main-content p, dl').forEach((target: any) => {
 			gsap.fromTo(target, {
-				yPercent: 50,
+				autoAlpha: 0,
+				y: '40px',
 			}, {
-				yPercent: 0,
+				autoAlpha: 1,
+				y: '0px',
         duration: 1.1,
         stagger: {
-          each: .045,
-          ease: "power4.out"
+			each: .045,
+			ease: "power4.out"
         },
 				scrollTrigger: {
 					trigger: target,
-					start: 'top 90%',
+					start: 'top 75%',
 				}
 			});
 		});
@@ -85,45 +87,49 @@ export default function Page() {
 			autoAlpha: 0,
 		}, {
 			autoAlpha: 1,
+			clipPath: 'inset(0 0 0% 0)',
 			duration: 1.4,
 		});
 
-		gsap.fromTo('.init-logo .char', {
-				yPercent: 60,
-			}, {
-				yPercent: 0,
-				duration: 1.4,
-				stagger: {
-					from: 'center',
-					each: 0.03,
-				},
-				ease: 'expo.out',
-			}
-		);
+		gsap.fromTo('.char-wrapper .char img', {
+			clipPath: 'inset(0 0 100% 0)',
+		}, {
+			clipPath: 'inset(0 0 0% 0)',
+			duration: .4,
+		});
 
-		// gsap.fromTo('.init-logo', {
-		// 	y: 20,
-		// }, {
-		// 	y: 0,
-		// 	duration: 1.1,
-		// });
-		// gsap.fromTo('.init-logo span', {
-		// 	autoAlpha: 0,
-		// }, {
-		// 	autoAlpha: 1,
-		// 	duration: 0.6,
-		// 	// ease: "elastic.out(1, 0.6)",
-		// 	ease: "power3.inOut",
-		// 	stagger: {
-		// 		each: 0.04,
-		// 		from: "center"
-		// 	}
-		// });
+		gsap.fromTo('.init-logo .char', {
+			yPercent: 60,
+		}, {
+			yPercent: 0,
+			duration: 1.4,
+			stagger: {
+				from: 'center',
+				each: 0.03,
+			},
+			ease: 'expo.out',
+		});
+
+		// ESTNATIONロゴ
+		gsap.fromTo('.init-logo_comp', {
+			autoAlpha: 0,
+			yPercent: 120,
+		}, {
+			autoAlpha: 1,
+			yPercent: 0,
+			duration: 1.4,
+			ease: 'expo.out',
+		});
+
+
+
 		// KV画像
 		gsap.fromTo('.kv-wrapper img', {
-			clipPath: 'inset(0 100% 0 0)',
+			// clipPath: 'inset(0 100% 0 0)',
+			autoAlpha: 0,
 		}, {
-			clipPath: 'inset(0 0% 0 0)',
+			// clipPath: 'inset(0 0% 0 0)',
+			autoAlpha: 1,
 			duration: 1.0,
 			ease: "power3.inOut",
 			delay: 1.7,
@@ -133,11 +139,11 @@ export default function Page() {
 			yPercent: 50,
 		}, {
 			yPercent: 0,
-      duration: 1.1,
-      stagger: {
-        each: .045,
-        ease: "power4.out"
-      },
+			duration: 1.1,
+			stagger: {
+				each: .045,
+				ease: "power4.out"
+			},
 			delay: 2.0,
 		});
 	};

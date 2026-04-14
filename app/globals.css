@@ -198,6 +198,7 @@ body {
   align-items: flex-end;
   justify-content: center;
   width: 100%;
+  /* overflow: hidden; */
 }
 
 .init-logo .char {
@@ -607,6 +608,10 @@ body.is-ready .main-content {
   z-index: -1;
 }
 
+.header-wrapper.is-open .header {
+  z-index: 900;
+}
+
 .header-content {
   position: fixed;
   top: 0;
@@ -640,12 +645,42 @@ body.is-ready .main-content {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
   opacity: 0;
   pointer-events: none;
   transition: .6s;
   z-index: 1000;
 }
+
+.menu-noise-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  pointer-events: none;
+  transition: .6s;
+  z-index: 900;
+}
+
+.menu-noise-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/photo/page/2026_intellectual-journey/img/bg-menu.png);
+  background-image: -webkit-image-set(url(/photo/page/2026_intellectual-journey/img/bg-menu.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-menu.png) type('image/png'));
+  background-image: image-set(url(/photo/page/2026_intellectual-journey/img/bg-menu.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-menu.png) type('image/png'));
+  background-size: cover;
+  background-color: #000;
+  z-index: -1;
+}
+
 .is-open {
   opacity: 1;
   pointer-events: auto;
