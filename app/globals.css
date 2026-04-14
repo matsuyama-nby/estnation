@@ -18,7 +18,7 @@
 
 /* font weight */
 .font-en-garamond {
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -259,7 +259,7 @@ body.is-ready .main-content {
 }
 .section-ttl-garamond {
   font-family: var(--font-en-garamond);
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
   font-size: 40px;
   letter-spacing: 0.1em;
@@ -343,7 +343,7 @@ body.is-ready .main-content {
 .kv-ttl-content {
   position: absolute;
   width: 100%;
-  top: calc(255.56 / 1280 * 100vw);
+  top: calc(296 / 1280 * 100vw);
   color: var(--color-secondary);
   text-align: center;
 }
@@ -354,7 +354,7 @@ body.is-ready .main-content {
     margin: 65px calc(13 / 390 * 100vw) 0;
   }
   .kv-ttl-content {
-    top: calc(151.5 / 390 * 100vw);
+    top: calc(169.61 / 390 * 100vw);
   }
 }
 
@@ -478,7 +478,7 @@ body.is-ready .main-content {
 }
 .hotel-ttl {
   font-family: var(--font-en-garamond);
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
   font-size: 30px;
   letter-spacing: 0.1em;
@@ -518,7 +518,7 @@ body.is-ready .main-content {
 }
 .other-content-ttl {
   font-family: var(--font-en-garamond);
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
   font-size: 40px;
   letter-spacing: 0.1em;
@@ -702,7 +702,7 @@ body.is-ready .main-content {
   align-items: center;
   color: var(--color-secondary);
   font-family: var(--font-en-garamond);
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
   font-size: calc(11 / 1280 * 100vw);
   letter-spacing: 0.05em;
@@ -726,7 +726,7 @@ body.is-ready .main-content {
 .menu-link-ttl {
   color: var(--color-secondary);
   font-family: var(--font-en-garamond);
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
   font-size: calc(15 / 1280 * 100vw);
   line-height: 1.4;
