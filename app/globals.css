@@ -149,14 +149,65 @@ body {
   opacity: 1;
   transition: opacity 0.8s ease;
 }
-.init-logo {
+/* .init-logo {
   position: fixed;
+  overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.init-logo .char {
+  display: inline-block;
+  will-change: transform;
+} */
+.init-logo {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.init-logo .char-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.init-logo .char {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.init-logo .char img {
+  display: block;
+  width: auto;
+  height: 3.75vw;
+  max-width: 100%;
+}
+
+.init-logo_comp {
+  margin: 1.83vw auto 0;
+  width: 9.51vw;
+}
+
+@media (max-width: 767.9px) {
+  .init-logo .char img {
+    height: 8.01vw;
+  }
+
+.init-logo_comp {
+  margin: 5.05vw auto 0;
+  width: 21.42vw;
+}
+}
+
 /* 初期状態 */
-.main-content, .header {
+.main-content, .header, .header-content {
   opacity: 0;
   transition: opacity 0.8s ease;
 }
@@ -166,6 +217,7 @@ body.is-scrolled .init-screen {
   visibility: hidden;
 }
 body.is-scrolled .header,
+body.is-scrolled .header-content,
 body.is-scrolled .main-content {
   opacity: 1;
 }
@@ -510,23 +562,39 @@ body.is-scrolled .main-content {
 
 /* ヘッダー */
 .header {
-  background-image: url('/photo/page/2026_intellectual-journey/img/bg-main.png');
-  background-image: -webkit-image-set(
-    url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
-    url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
-  );
-  background-image: image-set(
-    url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
-    url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
-  );
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    mix-blend-mode: soft-light;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/photo/page/2026_intellectual-journey/img/bg-header.png);
+  background-image: -webkit-image-set(url(/photo/page/2026_intellectual-journey/img/bg-header.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-header.png) type('image/png'));
+  background-image: image-set(url(/photo/page/2026_intellectual-journey/img/bg-header.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-header.png) type('image/png'));
   background-size: cover;
-  height: 90px;
+  z-index: -1;
+}
+
+.header-content {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  height: 90px;
+  z-index: 1000;
 }
+
 .logo-wrapper {
   position: absolute;
   top: 15px;
@@ -534,7 +602,7 @@ body.is-scrolled .main-content {
   transform: translateX(-50%);
 }
 @media (max-width: 767.9px) {
-  .header {
+  .header, .header-content {
     height: 65px;
   }
   .logo-wrapper {
@@ -551,7 +619,7 @@ body.is-scrolled .main-content {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   opacity: 0;
   pointer-events: none;
   transition: .6s;
@@ -646,7 +714,7 @@ body.is-scrolled .main-content {
   font-size: calc(9 / 1280 * 100vw);
   line-height: 1.33;
   letter-spacing: 0.12em;
-  margin-bottom: calc(15 / 1280 * 100vw);
+  margin-bottom: calc(10 / 1280 * 100vw);
 }
 .menu-link-desc {
   color: var(--color-secondary);

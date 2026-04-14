@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { NextFont } from 'next/dist/compiled/@next/font';
-const myAdobeFont = {
-  src: 'https://use.typekit.net/akc6vgu.css',
-};
+// const myAdobeFont = {
+//   src: 'https://use.typekit.net/fqu4lqa.css',
+// };
 import "./globals.css";
 
 /*const geistSans = Geist({
@@ -26,10 +26,10 @@ export default function RootLayout({
       <head>
         <title>タイトル</title>
         <meta name="description" content="説明"></meta>
-        <link rel="stylesheet" href="https://use.typekit.net/akc6vgu.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/psv7toa.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
       </head>
-      {children}
+        {children}
     </html>
   );
 }

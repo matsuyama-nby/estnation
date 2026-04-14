@@ -1,7 +1,7 @@
 "use client";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 import AsideNav from '@/components/AsideNav';
 import Menu from '@/components/Menu';
 import { useMenuToggle } from '@/hooks/useMenuToggle';
@@ -18,7 +18,6 @@ export default function Page() {
 		if (swiperRef.current) {
 			swiperRef.current.destroy();
 		}
-		// @ts-ignore
 		swiperRef.current = new (window as any).Swiper(".swiper", {
 			centeredSlides: true,
 			slidesPerView: 1.1,
@@ -30,6 +29,7 @@ export default function Page() {
 	const initGSAP = () => {
 		const gsap = (window as any).gsap;
 		const ScrollTrigger = (window as any).ScrollTrigger;
+		const tl = gsap.timeline();
 		if (!gsap || !ScrollTrigger) {
 			return;
 		}
@@ -37,7 +37,7 @@ export default function Page() {
 		// 画像
 		gsap.utils.toArray('img').forEach((target: any) => {
 			gsap.fromTo(target, {
-				 clipPath: 'inset(0 100% 0 0)',
+				clipPath: 'inset(0 100% 0 0)',
 			}, {
 				clipPath: 'inset(0 0% 0 0)',
 				duration: 1.0,
@@ -51,7 +51,7 @@ export default function Page() {
 		// テキスト
 		gsap.utils.toArray('h1, h2, h3, .main-content p, dl').forEach((target: any) => {
 			gsap.fromTo(target, {
-				 clipPath: 'inset(100% 0 0 0)',
+				clipPath: 'inset(100% 0 0 0)',
 			}, {
 				clipPath: 'inset(0% 0 0 0)',
 				duration: 1.3,
@@ -79,23 +79,43 @@ export default function Page() {
 		});
 		// 冒頭ロゴ
 		gsap.fromTo('.init-logo', {
-			y: 20,
-		}, {
-			y: 0,
-			duration: 1.1,
-		});
-		gsap.fromTo('.init-logo span', {
 			autoAlpha: 0,
 		}, {
 			autoAlpha: 1,
-			duration: 0.8,
-			//delay: 0.2,
-			ease: "elastic.out(1, 0.6)",
-			stagger: {
-				each: 0.06,
-				from: "center"
-			}
+			duration: 1.1,
 		});
+
+		gsap.fromTo('.init-logo .char', {
+				yPercent: 150,
+			}, {
+				yPercent: 0,
+				duration: 1.4,
+				stagger: {
+					from: 'center',
+					each: 0.02,
+				},
+				ease: 'expo.inOut',
+			}
+		);
+
+		// gsap.fromTo('.init-logo', {
+		// 	y: 20,
+		// }, {
+		// 	y: 0,
+		// 	duration: 1.1,
+		// });
+		// gsap.fromTo('.init-logo span', {
+		// 	autoAlpha: 0,
+		// }, {
+		// 	autoAlpha: 1,
+		// 	duration: 0.6,
+		// 	// ease: "elastic.out(1, 0.6)",
+		// 	ease: "power3.inOut",
+		// 	stagger: {
+		// 		each: 0.04,
+		// 		from: "center"
+		// 	}
+		// });
 	};
 
 return (
@@ -118,25 +138,61 @@ return (
 		{/* 初期表示画面 */}
 		<div className="init-screen">
 			<div className="init-logo">
-				<div>
-					<span className="text-[60px] text-[var(--color-secondary)]">C</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">r</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">e</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">a</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">t</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">i</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">v</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">e </span>
-					<span className="text-[60px] text-[var(--color-secondary)]">w</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">i</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">t</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">h </span>
-					<span className="text-[60px] text-[var(--color-secondary)]">R</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">e</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">f</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">i</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">n</span>
-					<span className="text-[60px] text-[var(--color-secondary)]">e</span>
+				<div className="char-wrapper">
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-01.png" alt="C" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-02.png" alt="r" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-03.png" alt="e" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-04.png" alt="a" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-05.png" alt="t" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-06.png" alt="i" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-07.png" alt="v" />
+					</span>
+					{/* <span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-08.png" alt="e" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-09.png" alt=" " />
+					</span> */}
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-10.png" alt="w" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-11.png" alt="i" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-12.png" alt="t" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-13.png" alt="h" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-14.png" alt=" " />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-15.png" alt="R" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-16.png" alt="R" />
+					</span>
+					<span className="char">
+						<img src="/photo/page/2026_intellectual-journey/img/logo-17.png" alt="R" />
+					</span>
+				</div>
+				<div className="init-logo_comp">
+					<img src="/photo/page/2026_intellectual-journey/img/logo-comp.png" alt="ESTNATION" />
 				</div>
 			</div>
 		</div>
@@ -808,86 +864,7 @@ return (
 					</div>
 				</section>
 			</section>
-			
-			<section>
-				{/*
-				<div className="other-content">
-					<h2 className="other-content-ttl">OTHER CONTENTS</h2>
-					<div className="mx-[calc(26/390*100vw)] md:mx-[calc(120/1280*100vw)]">
 
-						<div className="hidden md:block">
-							<a href="" className="relative">
-								<div className="link-ttl z-2">
-									<picture className="flex justify-center">
-										<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[calc(171/1280*100vw)] mb-[calc(31.56/1280*100vw)]" />
-									</picture>
-									<p className="font-en-garamond text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
-									<p className="font-en-futura text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(33.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
-									<p className="text-[calc(18/1280*100vw)] tracking-[0.02em] leading-[1.78]">食と自然体験、知的好奇心を刺激する旅</p>
-								</div>
-								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-other.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-other.jpg" alt="" />
-								</picture>
-								<div className="absolute inset-0 bg-black/35 z-1" />
-							</a>
-						</div>
-
-						<div className="block md:hidden">
-							<a href="" className="relative">
-								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-other-sp.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-other-sp.jpg" alt="" />
-								</picture>
-								<div className="absolute inset-0 bg-black/35" />
-							</a>
-							<div className="text-[var(--color-secondary)] mt-[15px]">
-								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[159px] mb-[11.48px]" />
-								</picture>
-								<p className="font-en-garamond text-[20px] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
-								<p className="font-en-futura text-[10px] tracking-[0.12em] leading-[1.31] mb-[12.5px]">- FLAVORS & NATURE ENCOUNTER -</p>
-								<p className="text-[15px] tracking-[0.02em] leading-[1.78]">食と自然体験、知的好奇心を刺激する旅</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				*/}
-				<ul className="md:flex-gap-none-2col">
-					<li>
-						<a href="https://www.estnation.co.jp/" className="relative">
-							<div className="link-ttl">
-								<p className="font-en-futura text-[21px] md:text-[26px] tracking-[0.1em]">STORE</p>
-								<p className="mt-[21px] text-[12px] tracking-[0.03em] leading-[20.4px] md:leading-[1.5]">
-									<span className="block">洗練された空間でライフスタイリストが</span>
-									<span className="block">最適なご提案をさせていただきます</span>
-								</p>
-							</div>
-							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-store.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-store.jpg" alt="" />
-							</picture>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.estnation.co.jp/store" className="relative">
-							<div className="link-ttl">
-								<p className="font-en-futura text-[21px] md:text-[26px] tracking-[0.1em]">ONLINE STORE</p>
-								<p className="mt-[21px] text-[12px] tracking-[0.03em] leading-[20.4px] md:leading-[1.5]">
-									<span className="block">最新情報や厳選されたアイテムを</span>
-									<span className="block">オンラインでも探せます</span>
-								</p>
-							</div>
-							<picture className="block overflow-hidden">
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-online.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-online.jpg" alt="" />
-							</picture>
-						</a>
-					</li>					
-				</ul>
-			</section>
 			
 		</main>
 

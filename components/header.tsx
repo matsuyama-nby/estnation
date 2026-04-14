@@ -1,8 +1,9 @@
 export default function Header({ isOpen, openMenu }: any) {
 
 	return (
-		<header className="header">
-			<div className="relative">
+		<header>
+			<div className="header" />
+			<div className="header-content">
 				<div className="logo-wrapper">
 					<picture className="block mb-[11.15px] md:mb-[17px]">
 						<source srcSet="/photo/page/2026_intellectual-journey/img/logo-title.webp" type="image/webp" />

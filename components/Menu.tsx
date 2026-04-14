@@ -23,8 +23,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -41,8 +41,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -59,8 +59,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -77,8 +77,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -97,8 +97,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -115,8 +115,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -133,8 +133,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -151,8 +151,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -171,8 +171,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -189,8 +189,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -207,8 +207,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
@@ -225,8 +225,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 						<li className="menu-item">
 							<a href="" className="item-link">
 								<picture className="item-img">
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="" />
+									<source srcSet="/photo/page/2026_intellectual-journey/img/img-thumb.webp" type="image/webp" />
+									<img src="/photo/page/2026_intellectual-journey/img/img-thumb.jpg" alt="" />
 								</picture>
 								<div>
 									<div className="volume-info">
