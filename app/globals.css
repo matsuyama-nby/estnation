@@ -319,7 +319,7 @@ body.is-scrolled .main-content {
 .kv-ttl-content {
   position: absolute;
   width: 100%;
-  top: calc(264.56 / 1280 * 100vw);
+  top: calc(255.56 / 1280 * 100vw);
   color: var(--color-secondary);
   text-align: center;
 }
@@ -366,6 +366,7 @@ body.is-scrolled .main-content {
     padding: 41px 0 54px;
     flex-direction: column;
     gap: 34px;
+    margin: 0 calc(26 / 390 * 100vw);
   }
 }
 

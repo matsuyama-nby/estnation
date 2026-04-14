@@ -228,11 +228,11 @@ return (
 					</picture>
 					<div className="absolute inset-0 bg-black/35 z-1" />
 					<div className="kv-ttl-content z-2">
-						<h1 className="font-en-garamond text-[calc(35/390*100vw)] md:text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.09] md:leading-[1.4] mb-[calc(17.64/390*100vw)] md:mb-[calc(6/1280*100vw)]">
+						<h1 className="font-en-garamond text-[calc(35/390*100vw)] md:text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.09] md:leading-[1.4] mb-[calc(17.64/390*100vw)] md:mb-0">
 							<span className="hidden md:block">THE INTELLECTUAL JOURNEY</span>
 							<span className="block md:hidden">THE<br />INTELLECTUAL<br />JOURNEY</span>
 						</h1>
-						<p className="font-en-futura text-[calc(12/390*100vw)] md:text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(32.8/390*100vw)] md:mb-[calc(41.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
+						<p className="font-en-futura text-[calc(12/390*100vw)] md:text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(32.8/390*100vw)] md:mb-[calc(34.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
 						<p className="text-[calc(15/390*100vw)] md:text-[calc(18/1280*100vw)] tracking-[0.02em] leading-[1.78]">知的好奇心を刺激する名ホテルへの旅路</p>
 					</div>
 				</div>
@@ -240,7 +240,7 @@ return (
 
 			<div className="intro">
 				<p className="font-en-futura text-[12px] md:text-[13px] tracking-[0.12em] leading-[1.31]">INTRODUCTION</p>
-				<p className="basis-[65%] text-[15px] leading-[1.87]">旅の目的は、人の数だけ存在します。日々の喧騒を離れて静謐に身を置き自分と向き合う旅。あるいは未知の体験を求める活動的な旅。その中でも、今、多くの人々が旅に求めているのは「学び」という名の贅沢ではないでしょうか。時代を超えた建築に触れ、自然の中で五感を研ぎ澄ます。洗練された装いで食の芸術を愉しむ。旅は私たちに計り知れない経験と新たな視座を与えてくれます。真の豊かさを求める人々が増えた現代、審美眼を持つプロフェッショナルはどのような地を目的地に選ぶのでしょうか。今回は、デザイン・建築メディア『Ala Champ Magazine』の編集長を務めるジョアンナ・カウェキさんを迎え、「ふふ 東京 銀座」を舞台に知的好奇心を深く刺激する旅の過ごし方を紐解いていきます。</p>
+				<p className="basis-[65%] text-[14px] md:text-[15px] leading-[1.86] md:leading-[1.87]">旅の目的は、人の数だけ存在します。日々の喧騒を離れて静謐に身を置き自分と向き合う旅。あるいは未知の体験を求める活動的な旅。その中でも、今、多くの人々が旅に求めているのは「学び」という名の贅沢ではないでしょうか。時代を超えた建築に触れ、自然の中で五感を研ぎ澄ます。洗練された装いで食の芸術を愉しむ。旅は私たちに計り知れない経験と新たな視座を与えてくれます。真の豊かさを求める人々が増えた現代、審美眼を持つプロフェッショナルはどのような地を目的地に選ぶのでしょうか。今回は、デザイン・建築メディア『Ala Champ Magazine』の編集長を務めるジョアンナ・カウェキさんを迎え、「ふふ 東京 銀座」を舞台に知的好奇心を深く刺激する旅の過ごし方を紐解いていきます。</p>
 			</div>
 
 			{/* NAVIGATOR */}
