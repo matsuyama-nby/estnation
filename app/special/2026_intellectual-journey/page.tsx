@@ -69,12 +69,8 @@ export default function Page() {
 		gsap.utils.toArray('.link-ttl').forEach((target: any) => {
 			gsap.fromTo(target, {
 				clipPath: 'inset(100% 0 0 0)',
-				xPercent: -50,
-				yPercent: -50,
 			}, {
 				clipPath: 'inset(0% 0 0 0)',
-				xPercent: -50,
-				yPercent: -50,
 				duration: 1.3,
 				scrollTrigger: {
 					trigger: target,
@@ -274,11 +270,11 @@ return (
 
 			{/* NAVIGATOR */}
 			<section className="section !pt-[51px] md:!pt-[43px] pb-[60px] md:!pb-[70px]">
-				<h2 className="section-ttl-garamond mb-[29.5px] md:mb-[53px] text-center md:text-left !text-[30px] md:!text-[40px]">NAVIGATOR</h2>
+				<h2 className="section-ttl-garamond mb-[29.5px] md:mb-[53px] text-center md:text-left">NAVIGATOR</h2>
 				<div className="md:flex-gap-40-2col flex flex-col md:flex-row">
 					<div className="order-2 md:order-1">
 						<p className="font-en-futura text-[10px] md:text-[11px] tracking-[0.12em] leading-[1.3] md:leading-[1.27] mb-[10.5px] md:mb-[15px] text-center md:text-left">ALA CHMAP MAGAZINE FOUNDER</p>
-						<p className="font-en-garamond text-[25px] md:text-[30px] tracking-[0.1em] leading-[1.2] md:leading-[1.17] mb-[1px] md:mb-[8px] text-center md:text-left">JOANNA KAWECKI</p>
+						<p className="section-ttl-garamond-sm mb-[1px] md:mb-[8px] text-center md:text-left">JOANNA KAWECKI</p>
 						<p className="text-[11px] md:text-[12px] tracking-[0.02em] leading-[1.67] mb-[26px] md:mb-[30px] text-center md:text-left">ジョアンナ・カウェキ</p>
 						<p className="mb-[24.5px] md:mb-[24px]">オーストラリア出身、東京在住の編集者・ジャーナリスト。デザイン/建築メディア『Ala Champ Magazine』のファウンダー。建築、旅、アートといった分野に造詣が深く、2013年に東京へ拠点を移してからはグローバルな視点から日本の建築や、文化を発信している。国内外のビジネスエリートからも高い支持を集め、ファッションを含め様々な分野に精通している。</p>
 						<div className="info-wrapper">
@@ -305,9 +301,9 @@ return (
 
 			<section>
 				<div className="section md:flex-gap-40-2col !pt-[15.5px] md:!pt-[19px] !pb-0">
-					<p className="font-en-futura text-[13px] tracking-[0.12em] leading-[1.31] font-medium">INFORMAION</p>
+					<p className="font-en-futura text-[13px] tracking-[0.12em] leading-[1.31] font-medium">PLACE INFORMATION</p>
 					<div className="pt-[38px] md:pt-[6.5px]">
-						<h2 className="font-en-garamond text-[23px] md:text-[30px] tracking-[0.1em] leading-[1.17] mb-[1.5px] md:mb-0">FUFU TOKYO GINZA</h2>
+						<h2 className="section-ttl-garamond-sm mb-[1.5px] md:mb-0">FUFU TOKYO GINZA</h2>
 						<p className="text-[12px] tracking-[0.02em] leading-[2.75] mb-[26.5px] md:mb-[19.5px]">ふふ 東京 銀座</p>
 						<div className="info-wrapper">
 							<dl className="info">
@@ -492,13 +488,13 @@ return (
 				<AsideNav />
 				<div className="flex-1 min-w-0 border-t border-t-[var(--color-primary)]">
 					<div className="fashion-mainTtl-content">
-						<h2 className="section-ttl-garamond mb-[8.5px] lg:mb-[5px]">FEEDING <br className="block md:hidden" />THE MIND LOCALLY</h2>
-						<p className="text-[15px] lg:text-[18px] tracking-[0.02em] leading-[1.78] mb-[38.5px] lg:mb-[36.5px] font-semibold">全国を巡る知性を刺激する宿たち</p>
-						<p className="lg:max-w-[calc(500/1280*100vw)] text-[14px] lg:text-[15px] leading-[1.87]">ふふ 銀座 東京を舞台に知的好奇心を刺激する旅について語ってくれたジョアンナさん。ここでは東京から離れ、地方にある個性に溢れ様々な角度から知性を刺激してくれる宿を紹介していきます。あなたの旅のメモに入れ、機会があればぜひ訪れてみてください。</p>
+						<h2 className="section-ttl-garamond mb-[8.5px] lg:mb-[5px]">THE ESSENTIALS OF JOURNEY STYLE</h2>
+						<p className="text-[15px] lg:text-[18px] tracking-[0.02em] leading-[1.78] mb-[38.5px] lg:mb-[36.5px] font-semibold">旅先でこそ楽しみたい<br />品のある装いたち</p>
+						<p className="lg:max-w-[calc(500/1280*100vw)] text-[14px] lg:text-[15px] leading-[1.87]">旅の楽しみの一つはオケージョンに応じた装いを楽しめることです。移動から旅先、ディナーまで、その時々に応じた選択肢がある中で、どのような装いを選ぶべきなのか。ここでエストネーションスタッフがおすすめする旅のスタイルを紹介していきます。洗練された装いをまとうことで、アップデートされた知的好奇心を刺激する旅を楽しんでください。</p>
 					</div>
 					{/* MENS */}
 					<section id="mens" className="fashion-content">
-						<h3 className="section-ttl-garamond-sm mb-[40px] lg:mb-[53px] ml-[calc(26/390*100vw)] lg:ml-[calc(70/1280*100vw)]">RECOMMEND STYLE <br className="block lg:hidden" />FOR MENS</h3>
+						<h3 className="section-ttl-garamond-sm mb-[40px] lg:mb-[53px] ml-[calc(26/390*100vw)] lg:ml-[calc(70/1280*100vw)]">FOR MENS</h3>
 						{/* 01 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col mb-[80px] lg:mb-0 lg:min-w-0">
 							<div className="content-info-left order-2 lg:order-1 lg:min-w-0">
@@ -562,7 +558,7 @@ return (
 					</section>
 					{/* WOMENS */}
 					<section id="womens" className="fashion-content">
-						<h3 className="section-ttl-garamond-sm mb-[40px] lg:mb-[53px] ml-[calc(26/390*100vw)] lg:ml-[calc(70/1280*100vw)]">RECOMMEND STYLE <br className="block lg:hidden" />FOR WOMENS</h3>
+						<h3 className="section-ttl-garamond-sm mb-[40px] lg:mb-[53px] ml-[calc(26/390*100vw)] lg:ml-[calc(70/1280*100vw)]">FOR WOMENS</h3>
 						{/* 01 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col mb-[80px] lg:mb-0">
 							<picture>
