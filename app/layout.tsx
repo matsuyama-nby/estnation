@@ -28,7 +28,7 @@ export default function RootLayout({
         <meta name="description" content="説明"></meta>
         <link rel="stylesheet" href="https://use.typekit.net/bkf1ulu.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-        <link rel="preload" as="image" href="/photo/page/2026_intellectual-journey/img/bg-main.webp"></link>
+        <link rel="preload" as="image" href="/photo/page/2026_intellectual-journey/img/bg-main.webp" />
       </head>
         {children}
     </html>
