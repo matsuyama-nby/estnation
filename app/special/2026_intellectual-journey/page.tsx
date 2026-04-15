@@ -309,8 +309,8 @@ return (
 				<div className="section md:flex-gap-40-2col !pt-[15.5px] md:!pt-[19px] !pb-0">
 					<p className="font-en-futura text-[13px] tracking-[0.12em] leading-[1.31] font-medium">PLACE INFORMATION</p>
 					<div className="pt-[38px] md:pt-[6.5px]">
-						<h2 className="section-ttl-garamond-sm mb-[1.5px] md:mb-0">FUFU TOKYO GINZA</h2>
-						<p className="text-[12px] tracking-[0.02em] leading-[2.75] mb-[26.5px] md:mb-[19.5px]">ふふ 東京 銀座</p>
+						<h2 className="section-ttl-garamond-sm mb-[1.5px] md:mb-[4px]">FUFU TOKYO GINZA</h2>
+						<p className="text-[11px] md:text-[12px] tracking-[0.02em] leading-[1.67] mb-[21px] md:mb-[26px]">ふふ 東京 銀座</p>
 						<div className="info-wrapper">
 							<dl className="info">
 								<dt>ADDRESS</dt>
