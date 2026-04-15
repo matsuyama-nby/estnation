@@ -504,7 +504,7 @@ return (
 						{/* 01 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col mb-[80px] lg:mb-0 lg:min-w-0">
 							<div className="content-info-left order-2 lg:order-1 lg:min-w-0">
-								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-[28px] !mb-[53.5px]">MENS 01</p>
+								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">MENS 01</p>
 								<p className="text-[18px] lg:text-[20px] tracking-[0.02em] leading-[1.75] mb-[17.5px] lg:mb-[26.5px] font-semibold">心休まる高級感が<br />成立するセットアップ</p>
 								<p className="mb-[24.5px] lg:mb-[34px]">1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
 								<div className="info-wrapper">
@@ -530,7 +530,7 @@ return (
 								<img src="/photo/page/2026_intellectual-journey/img/img-mens-2.jpg" alt="" />
 							</picture>
 							<div className="content-info-left">
-								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-[28px] !mb-[53.5px]">MENS 02</p>
+								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">MENS 02</p>
 								<p className="text-[18px] lg:text-[20px] tracking-[0.02em] leading-[1.75] mb-[17.5px] lg:mb-[26.5px] font-semibold">リゾートムードと<br />気品溢れる装い</p>
 								<p className="mb-[24.5px] lg:mb-[34px]">エフォートレスでありながらエレガンスも併せ持つモード界の帝王、ジョルジオ・アルマーニのシャツとパンツ。リネンをベースにした清涼感がありながらもとろけるような質感の生地とアルマーニが得意とするリラックス感のあるカッティングは、エキゾチックな夏の旅の装いに上品さを与えてくれる。</p>
 								<div className="info-wrapper">
@@ -548,7 +548,7 @@ return (
 						{/* 03 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col">
 							<div className="content-info-left order-2 lg:order-1">
-								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-[28px] !mb-[53.5px]">MENS 03</p>
+								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">MENS 03</p>
 								<p className="text-[18px] lg:text-[20px] tracking-[0.02em] leading-[1.75] mb-[17.5px] lg:mb-[26.5px] font-semibold">フランスの端正さを感じる<br />カジュアルシャツ</p>
 								<p className="mb-[24.5px] lg:mb-[34px]">1968年にアラン・フィガレによって創業された、フランスを代表する老舗シャツメーカーであるフィガレ。卸売りをせずに直営のみでの販売に徹底してきたため国内での認知度は高くないブランドだが、フランスの気品を感じるこのシャツは一枚でも、ジャケットの下に着ても静かに個性を発揮してくれる上に良心的な価格も魅力だ。小ぶりなカラーはノータイでも美しく首元をまとめることができ、カジュアルなドレスアップが求められる旅先での食事シーンなどでも重宝するだろう。</p>
 								<dl className="info">
@@ -572,7 +572,7 @@ return (
 								<img src="/photo/page/2026_intellectual-journey/img/img-womens-1.jpg" alt="" />
 							</picture>
 							<div className="content-info-left">
-								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-[28px] !mb-[53.5px]">WOMENS 01</p>
+								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">WOMENS 01</p>
 								<p className="text-[18px] lg:text-[20px] tracking-[0.02em] leading-[1.75] mb-[17.5px] lg:mb-[26.5px] font-semibold">軽やかな色合いとノーカラーが<br />旅の装いを格上げしてくれる</p>
 								<p className="mb-[24.5px] lg:mb-[34px]">清涼感のあるリネン素材と軽快な色合いが特徴のESTNATIONのセットアップ。ノーカラーのため、カーディガンのように気軽に羽織ることができ、ウエストゴム仕様のパンツは移動の多い旅でもストレスなく過ごすことができる。元々ノーカラージャケットはフォーマルな装いをより自由に着こなすために生まれたもの。このジャケットを羽織り自由を謳歌する旅を楽しみたい。</p>
 								<div className="info-wrapper">
@@ -590,7 +590,7 @@ return (
 						{/* 02 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col mb-[80px] lg:mb-0">
 							<div className="content-info-left order-2 lg:order-1">
-								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-[28px] !mb-[53.5px]">WOMENS 02</p>
+								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">WOMENS 02</p>
 								<p className="text-[18px] lg:text-[20px] tracking-[0.02em] leading-[1.75] mb-[17.5px] lg:mb-[26.5px] font-semibold">柔らかな動きが<br />優雅なスタイルを作り出す</p>
 								<p className="mb-[24.5px] lg:mb-[34px]">2024AWからウィメンズラインをローンチしたコモリ。同じニット素材で作られたカーディガンとドレスはセットアップのように着用ができ、タイトなシルエットながらニットの柔らかな質感が体に寄り添い、ストレスなく着用することができる。少し荒く編み込まれたニットは夏でも気軽に着用でき、肌寒ければカーディガンを羽織ることもできるなど、汎用性にも優れている。</p>
 								<div className="info-wrapper">
@@ -616,7 +616,7 @@ return (
 								<img src="/photo/page/2026_intellectual-journey/img/img-womens-3.jpg" alt="" />
 							</picture>
 							<div className="content-info-left">
-								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-[28px] !mb-[53.5px]">WOMENS 03</p>
+								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">WOMENS 03</p>
 								<p className="text-[18px] lg:text-[20px] tracking-[0.02em] leading-[1.75] mb-[17.5px] lg:mb-[26.5px] font-semibold">フランス映画から着想を得た<br />ラフで心地よい一着</p>
 								<p className="mb-[24.5px] lg:mb-[34px]">クロード・ソーテ監督によるフランス映画の名作『すぎ去りし日の…』に登場するヒロイン がメンズのドレスシャツをラフに羽織る様からインスピレーションを受けた一着。着想源の通りドライながらも心地よい肌触りのリネン素材とメンズも着用できるリラックス感のあるシルエットは肩肘を張らず、様々なスタイリングに合わせることができる。旅行のワードローブに忍ばせておきたい一着だ。</p>
 								<dl className="info">

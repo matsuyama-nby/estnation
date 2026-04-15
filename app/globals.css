@@ -824,3 +824,13 @@ body.is-ready .main-content {
     font-size: calc(13 / 390 * 100vw);
   }
 }
+
+.mb-sextype {
+  margin-bottom: 53.5px;
+}
+
+@media (max-width: 767.9px) {
+  .mb-sextype {
+    margin-bottom: 28px;
+  }
+}
