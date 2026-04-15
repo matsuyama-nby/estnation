@@ -142,7 +142,6 @@ body {
     url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
     url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
   );
-  background-size: cover;
   mix-blend-mode: soft-light;
   opacity: 0.5;
   z-index: -1;
