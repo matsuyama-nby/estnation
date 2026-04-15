@@ -121,7 +121,7 @@ body {
   background: linear-gradient(
     to bottom,
     rgba(132, 132, 132, 1) 0%,
-    rgba(202, 202, 202, 0.42) 75%,
+    rgba(202, 202, 202, 0.42) 80%,
     rgba(255, 255, 255, 0) 100%
   );
   z-index: -2;
@@ -143,7 +143,7 @@ body {
     url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
   );
   mix-blend-mode: hard-light;
-  opacity: 0.45;
+  opacity: 0.4;
   z-index: -1;
 }
 
