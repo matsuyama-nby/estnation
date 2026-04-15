@@ -276,12 +276,12 @@ return (
 
 			{/* NAVIGATOR */}
 			<section className="section !pt-[51px] md:!pt-[43px] pb-[60px] md:!pb-[70px]">
-				<h2 className="section-ttl-garamond mb-[29.5px] md:mb-[53px] text-center md:text-left">NAVIGATOR</h2>
+				<h2 className="section-ttl-garamond mb-[29.5px] md:mb-[53px] text-center md:text-left !font-normal">NAVIGATOR</h2>
 				<div className="md:flex-gap-40-2col flex flex-col md:flex-row">
 					<div className="order-2 md:order-1">
 						<p className="font-en-futura text-[10px] md:text-[11px] tracking-[0.12em] leading-[1.3] md:leading-[1.27] mb-[10.5px] md:mb-[15px] text-center md:text-left">ALA CHMAP MAGAZINE FOUNDER</p>
-						<p className="section-ttl-garamond-sm mb-[1px] md:mb-[8px] text-center md:text-left">JOANNA KAWECKI</p>
-						<p className="text-[11px] md:text-[12px] tracking-[0.02em] leading-[1.67] mb-[26px] md:mb-[30px] text-center md:text-left">ジョアンナ・カウェキ</p>
+						<p className="section-ttl-garamond-sm mb-[7px] md:mb-[8px] text-center md:text-left !leading-none !font-normal">JOANNA KAWECKI</p>
+						<p className="text-[11px] md:text-[12px] tracking-[0.02em] leading-none mb-[29.5px] md:mb-[34px] text-center md:text-left">ジョアンナ・カウェキ</p>
 						<p className="mb-[24.5px] md:mb-[24px]">オーストラリア出身、東京在住の編集者・ジャーナリスト。デザイン/建築メディア『Ala Champ Magazine』のファウンダー。建築、旅、アートといった分野に造詣が深く、2013年に東京へ拠点を移してからはグローバルな視点から日本の建築や、文化を発信している。国内外のビジネスエリートからも高い支持を集め、ファッションを含め様々な分野に精通している。</p>
 						<div className="info-wrapper">
 							<dl className="info">
@@ -306,10 +306,10 @@ return (
 			</section>
 
 			<section>
-				<div className="section md:flex-gap-40-2col !pt-[15.5px] md:!pt-[19px] !pb-0">
+				<div className="section md:flex-gap-40-2col !pt-[15.5px] md:!pt-[30px] !pb-0">
 					<p className="font-en-futura text-[12px] md:text-[13px] tracking-[0.12em] leading-[1.31] font-medium">PLACE INFORMATION</p>
-					<div className="pt-[39px] md:pt-[6.5px]">
-						<h2 className="section-ttl-garamond-sm mb-[6px] md:mb-[15px] !leading-none">FUFU TOKYO GINZA</h2>
+					<div className="pt-[39px] md:pt-0">
+						<h2 className="section-ttl-garamond-sm mb-[6px] md:mb-[15px] !leading-none !font-normal">FUFU&nbsp;&nbsp;TOKYO&nbsp;&nbsp;GINZA</h2>
 						<p className="text-[11px] md:text-[12px] tracking-[0.02em] mb-[30px] md:mb-[23px] leading-none">ふふ 東京 銀座</p>
 						<div className="info-wrapper">
 							<dl className="info">
