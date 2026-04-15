@@ -8,6 +8,8 @@ type SectionId = 'mens' | 'womens';
 export const useScrollIndicator = () => {
   // 初期値 'mens'
   const [activeSection, setActiveSection] = useState<SectionId>('mens');
+  // メニューのtop位置
+  const [menuTop, setMenuTop] = useState<number>(0);
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
@@ -32,8 +34,22 @@ export const useScrollIndicator = () => {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    const updateMenuPosition = () => {
+      const titleContent = document.querySelector('.fashion-mainTtl-content');
+      if (titleContent) {
+        const height = titleContent.getBoundingClientRect().height;
+        setMenuTop(height + 60);
+      }
+    };
+
+    updateMenuPosition();
+    window.addEventListener('resize', updateMenuPosition);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateMenuPosition);
+    };
   }, []);
 
-  return activeSection;
+  return { activeSection, menuTop };
 };

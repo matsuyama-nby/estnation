@@ -3,10 +3,10 @@
 import { useScrollIndicator } from '@/hooks/useScrollIndicator';
 
 export default function AsideNav() {
-  const activeSection = useScrollIndicator();
+  const { activeSection, menuTop } = useScrollIndicator();
 
   return (
-		<aside className="fashion-menu">
+		<aside className="fashion-menu" style={{ paddingTop: `${menuTop}px` }}>
 			<div className="sticky top-[125.5px] md:top-[140px]">
 				<nav className="menu-links">
 					<div className={`indicator ${activeSection === 'womens' ? 'is-womens' : ''}`} />

@@ -266,6 +266,14 @@ body.is-ready .main-content {
   letter-spacing: 0.1em;
   line-height: 1.2;
 }
+.section-ttl-garamond-sm {
+  font-family: var(--font-en-garamond);
+  font-weight: 300;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+}
 @media (max-width: 767.9px) {
   .section {
     padding: 55.5px 0 56.5px;
@@ -276,7 +284,10 @@ body.is-ready .main-content {
     margin-bottom: 27.5px;
   }
   .section-ttl-garamond {
-    font-size: 28px;
+    font-size: 30px;
+  }
+  .section-ttl-garamond-sm {
+    font-size: 23px;
   }
 }
 
@@ -339,12 +350,12 @@ body.is-ready .main-content {
 /* KV */
 .kv-wrapper {
   padding-top: 50px;
-  margin: 90px calc(120 / 1280 * 100vw) 0;
+  margin: 70px calc(120 / 1280 * 100vw) 0;
 }
 .kv-ttl-content {
   position: absolute;
   width: 100%;
-  top: calc(296 / 1280 * 100vw);
+  top: calc(283 / 1280 * 100vw);
   color: var(--color-secondary);
   text-align: center;
 }
@@ -352,10 +363,10 @@ body.is-ready .main-content {
 @media (max-width: 767.9px) {
   .kv-wrapper {
     padding-top: 30px;
-    margin: 65px calc(13 / 390 * 100vw) 0;
+    margin: 45px calc(13 / 390 * 100vw) 0;
   }
   .kv-ttl-content {
-    top: calc(169.61 / 390 * 100vw);
+    top: calc(152 / 390 * 100vw);
   }
 }
 
@@ -381,7 +392,7 @@ body.is-ready .main-content {
 .fashion-menu {
   border: 1px solid var(--color-primary);
   border-left: none;
-  padding: 50px 0 80px;
+  padding-bottom: 80px;
   flex-basis: calc(120 / 1280 * 100vw);
   min-width: 0;
 }
@@ -415,7 +426,6 @@ body.is-ready .main-content {
 @media screen and (width < 1024px) {
   .fashion-menu {
     flex-basis: 10%;
-    padding-top: 60.5px;
   }
   .menu-links {
     padding-left: 14px;
@@ -437,19 +447,28 @@ body.is-ready .main-content {
 }
 /* アンカーリンク対応 */
 #mens, #womens {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 70px;
 }
 @media (max-width: 767.9px) {
   #mens, #womens {
-    scroll-margin-top: 65px;
+    scroll-margin-top: 45px;
   }
 }
 
+/* 服 h2エリア */
+.fashion-mainTtl-content {
+  padding: 100px calc(70 / 1280 * 100vw) 86.5px;
+}
+@media screen and (width < 1024px) {
+  .fashion-mainTtl-content {
+    padding: 60px calc(26 / 390 * 100vw) 11.5px;
+  }
+}
 
 /* 服 コンテンツ */
 .fashion-content {
   border-bottom: 1px solid var(--color-primary);
-  padding: 40px 0 80px;
+  padding: 45px 0 80px;
 }
 .content-info-left {
   padding: calc(177 / 1280 * 100vw) calc(110 / 1280 * 100vw) 0 calc(69 / 1280 * 100vw);
@@ -463,7 +482,7 @@ body.is-ready .main-content {
   }
   .content-info-left,
   .content-info-right {
-    padding: 0 calc(26 / 390 * 100vw) 0 calc(25.5 / 390 * 100vw);
+    padding: 0 calc(26 / 390 * 100vw);
   }
 }
 
@@ -564,7 +583,7 @@ body.is-ready .main-content {
 /* メニューボタン */
 .menu-btn {
   position: absolute;
-  top: 36px;
+  top: 26.5px;
   right: 40px;
   font-family: var(--font-en-futura);
   font-size: 13px;
@@ -575,7 +594,7 @@ body.is-ready .main-content {
 }
 @media (max-width: 767.9px) {
   .menu-btn {
-    top: 26px;
+    top: 16px;
     right: 13px;
     font-size: 10px;
   }
@@ -587,7 +606,7 @@ body.is-ready .main-content {
   position: fixed;
   top: 0;
   left: 0;
-  height: 90px;
+  height: 70px;
   width: 100%;
   mix-blend-mode: soft-light;
   backdrop-filter: blur(20px);
@@ -617,7 +636,7 @@ body.is-ready .main-content {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 70px;
   z-index: 1000;
 }
 
@@ -629,7 +648,7 @@ body.is-ready .main-content {
 }
 @media (max-width: 767.9px) {
   .header, .header-content {
-    height: 65px;
+    height: 45px;
   }
   .logo-wrapper {
     top: 13px;
@@ -688,7 +707,7 @@ body.is-ready .main-content {
 }
 .menu-header {
   position: relative;
-  height: 90px;
+  height: 70px;
 }
 .menu-list-wrapper {
   display: flex;
@@ -710,7 +729,7 @@ body.is-ready .main-content {
 }
 @media (max-width: 767.9px) {
   .menu-header {
-    height: 65px;
+    height: 45px;
   }
   .menu-list-wrapper {
     display: block;
