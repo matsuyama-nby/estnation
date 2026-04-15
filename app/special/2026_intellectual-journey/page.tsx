@@ -51,7 +51,7 @@ export default function Page() {
 		gsap.utils.toArray('h1, h2, h3, .main-content p, dl').forEach((target: any) => {
 			gsap.fromTo(target, {
 				autoAlpha: 0,
-				y: '40px',
+				y: '20px',
 			}, {
 				autoAlpha: 1,
 				y: '0px',
@@ -136,7 +136,7 @@ export default function Page() {
 		});
 		// KVテキスト
 		gsap.fromTo('.kv-ttl-content', {
-			yPercent: 50,
+			yPercent: 25,
 		}, {
 			yPercent: 0,
 			duration: 1.1,
