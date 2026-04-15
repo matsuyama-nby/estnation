@@ -5,7 +5,7 @@
   --color-primary: #000000;
   --color-secondary: #FFFFFF;
 	/* fonts */
-	--font-ja: "Yu Gothic Pr6N", "Yu Gothic", "YuGothic", "游ゴシック体", "游ゴシック", sans-serif;
+	--font-ja: "A+EqpB-游ゴシック体 Pr6N R", "Yu Gothic Pr6N", "Yu Gothic", "YuGothic", "游ゴシック体", "游ゴシック", sans-serif;
 	--font-en-futura: "futura-pt", sans-serif;
 	--font-en-garamond: "garamond-premier-pro-display", serif;
 }
@@ -694,7 +694,6 @@ body.is-ready .main-content {
   background-image: -webkit-image-set(url(/photo/page/2026_intellectual-journey/img/bg-menu.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-menu.png) type('image/png'));
   background-image: image-set(url(/photo/page/2026_intellectual-journey/img/bg-menu.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-menu.png) type('image/png'));
   background-size: cover;
-  background-color: #000;
   z-index: -1;
 }
 

@@ -161,6 +161,12 @@ return (
 			strategy="afterInteractive"
 			onLoad={initGSAP}
 		/>
+        <Script
+			id="realtype-script"
+			src="https://font.realtype.jp/api/script/v4"
+			data-rt-user="bywmEoK4daHLQzvYfZxoT50ss8C003dM"
+			strategy="afterInteractive"
+        />
 		{/* 初期表示画面 */}
 		<div className="init-screen">
 			<div className="init-logo">
