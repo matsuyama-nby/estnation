@@ -559,6 +559,12 @@ body.is-ready .main-content {
   clip-path: inset(100% 0 0 0);
   z-index: 2;
 }
+
+.other-item a {
+  position: relative;
+  display: block;
+}
+
 .other-item img {
   object-fit: cover;
   transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
