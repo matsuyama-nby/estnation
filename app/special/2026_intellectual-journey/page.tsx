@@ -34,7 +34,7 @@ export default function Page() {
 		gsap.registerPlugin(ScrollTrigger);
 		
 		// 画像
-		gsap.utils.toArray('img:not(.char img, .init-logo_comp img)').forEach((target: any) => {
+		gsap.utils.toArray('img:not(.char img, .init-logo_comp img, .item-link img)').forEach((target: any) => {
 			gsap.fromTo(target, {
 				clipPath: 'inset(0 100% 0 0)',
 			}, {

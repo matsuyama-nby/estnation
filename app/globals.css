@@ -610,8 +610,8 @@ body.is-ready .main-content {
   left: 0;
   height: 70px;
   width: 100%;
-  mix-blend-mode: soft-light;
-  background-color: rgba(255, 255, 255, 0.01);
+  /* mix-blend-mode: soft-light; */
+  /* background-color: rgba(132, 132, 132, 0.01); */
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   z-index: 999;
@@ -631,7 +631,9 @@ body.is-ready .main-content {
   background-image: -webkit-image-set(url(/photo/page/2026_intellectual-journey/img/bg-header.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-header.png) type('image/png'));
   background-image: image-set(url(/photo/page/2026_intellectual-journey/img/bg-header.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-header.png) type('image/png'));
   background-size: cover;
+  mix-blend-mode: soft-light;
   z-index: -1;
+  opacity: .4;
 }
 
 .header-wrapper.is-open .header {
@@ -671,6 +673,7 @@ body.is-ready .main-content {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
   opacity: 0;
   pointer-events: none;
   transition: .6s;
@@ -684,8 +687,6 @@ body.is-ready .main-content {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   mix-blend-mode: soft-light;
   opacity: 0;
   pointer-events: none;
