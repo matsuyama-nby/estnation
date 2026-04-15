@@ -616,7 +616,7 @@ body.is-ready .main-content {
   height: 70px;
   width: 100%;
   /* mix-blend-mode: soft-light; */
-  /* background-color: rgba(132, 132, 132, 0.01); */
+  background-color: rgba(255, 255, 255, 0.12);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   z-index: 999;
