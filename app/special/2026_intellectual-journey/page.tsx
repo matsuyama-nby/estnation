@@ -23,10 +23,14 @@ export default function Page() {
 			slidesPerView: 1.1,
 			spaceBetween: 13,
 			loop: true,
+			speed: 2000,
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
+			grabCursor: true,
+			watchSlidesProgress: true,
+			easing: 'linear',
 		});
 	}
 	// GSAP

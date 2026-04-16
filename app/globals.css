@@ -850,3 +850,9 @@ body.is-ready .main-content {
     margin-bottom: 28px;
   }
 }
+
+
+/* swiper */
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1) !important;
+}
