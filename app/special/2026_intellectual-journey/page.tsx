@@ -527,14 +527,18 @@ return (
 								<p className="text-[18px] lg:text-[20px] tracking-[0.02em] leading-[1.75] mb-[17.5px] lg:mb-[26.5px] font-semibold">心休まる高級感が<br />成立するセットアップ</p>
 								<p className="mb-[24.5px] lg:mb-[34px]">1954年創業の縫製工場をルーツにもつGOOD PEOPLE GOOD STITCHING GOOD PRODUCTとのコラボレーションによって生まれたセットアップ。暑い季節でも心地よく着られる“ウールに代わる素材”を目指して作られた素材と、ほどよいリラックス感が特徴のシルエットにより、歩くことの多い日中から夜のディナーまで幅広いシュチュエーションをカバーしてくれる。</p>
 								<div className="info-wrapper">
-									<dl className="info min-w-0">
-										<dt className="shrink-0">JACKET ¥60,500</dt>
-										<dd className="truncate min-w-0">GOOD PEOPLE GOOD STITCHING GOOD PRODUCT FOR ESTNATION</dd>
-									</dl>
-									<dl className="info min-w-0">
-										<dt className="shrink-0">PANTS ¥38,500</dt>
-										<dd className="truncate min-w-0">GOOD PEOPLE GOOD STITCHING GOOD PRODUCT FOR ESTNATION</dd>
-									</dl>
+									<a className="purchase-link" href="https://www.estnation.co.jp/item/detail/1_3345_6123404040026/417" target="_blank" rel="noopener noreferrer">
+										<dl className="info min-w-0">
+											<dt className="shrink-0">JACKET ¥60,500</dt>
+											<dd className="truncate min-w-0">GOOD PEOPLE GOOD STITCHING GOOD PRODUCT FOR ESTNATION</dd>
+										</dl>
+									</a>
+									<a className="purchase-link" href="https://www.estnation.co.jp/item/detail/1_3345_6123407040027/417" target="_blank" rel="noopener noreferrer">
+										<dl className="info min-w-0">
+											<dt className="shrink-0">PANTS ¥38,500</dt>
+											<dd className="truncate min-w-0">GOOD PEOPLE GOOD STITCHING GOOD PRODUCT FOR ESTNATION</dd>
+										</dl>
+									</a>
 								</div>
 							</div>
 							<picture className="order-1 lg:order-2 lg:min-w-0">

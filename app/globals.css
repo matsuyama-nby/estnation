@@ -860,7 +860,45 @@ body.is-ready .main-content {
   transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1) !important;
 }
 
+/* 商品リンク */
+a {
+  transition: opacity 0.6s ease;
+}
 
+a:hover {
+  opacity: .7;
+}
+
+.purchase-link {
+  width: fit-content;
+  max-width: 31.33vw;
+}
+
+.purchase-link dl {
+  position: relative;
+  transition: opacity 0.6s ease;
+}
+
+.purchase-link dl::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transition: opacity 0.6s ease;
+}
+
+.purchase-link:hover dl {
+  opacity: .7;
+}
+
+@media screen and (max-width: 1023.9px) {
+  .purchase-link {
+    max-width: 76.66vw;
+  }
+}
 
 /* 共通フッター */
 @media screen and (min-width: 751px) {

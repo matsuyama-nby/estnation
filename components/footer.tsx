@@ -50,7 +50,7 @@ export default function Footer() {
 				*/}
 				<ul className="md:flex-gap-none-2col">
 					<li className="other-item">
-						<a href="https://www.estnation.co.jp/" className="relative">
+						<a href="https://www.estnation.co.jp/store" className="relative">
 							<div className="link-ttl">
 								<p className="font-en-futura text-[21px] md:text-[26px] tracking-[0.1em]">STORE</p>
 								<p className="mt-[21px] text-[12px] tracking-[0.03em] leading-[20.4px] md:leading-[1.5]">
@@ -65,7 +65,7 @@ export default function Footer() {
 						</a>
 					</li>
 					<li className="other-item">
-						<a href="https://www.estnation.co.jp/store" className="relative">
+						<a href="https://www.estnation.co.jp/" className="relative">
 							<div className="link-ttl">
 								<p className="font-en-futura text-[21px] md:text-[26px] tracking-[0.1em]">ONLINE STORE</p>
 								<p className="mt-[21px] text-[12px] tracking-[0.03em] leading-[20.4px] md:leading-[1.5]">
