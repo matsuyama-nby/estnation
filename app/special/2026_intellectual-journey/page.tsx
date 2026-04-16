@@ -322,7 +322,7 @@ return (
 						<div className="info-wrapper">
 							<dl className="info">
 								<dt>ADDRESS</dt>
-								<dd className="!font-ja">東京都中央区銀座1丁目7-10 ヒューリック銀座ビル</dd>
+								<dd>東京都中央区銀座1丁目7-10 ヒューリック銀座ビル</dd>
 							</dl>
 							<dl className="info">
 								<dt>TEL</dt>
