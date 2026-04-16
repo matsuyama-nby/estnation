@@ -42,7 +42,7 @@ export default function Page() {
 		gsap.registerPlugin(ScrollTrigger);
 		
 		// 画像
-		gsap.utils.toArray('img:not(.char img, .init-logo_comp img, .item-link img)').forEach((target: any) => {
+		gsap.utils.toArray('img:not(.char img, .init-logo_comp img, .item-link img, .footer img').forEach((target: any) => {
 			gsap.fromTo(target, {
 				clipPath: 'inset(0 100% 0 0)',
 			}, {
@@ -56,7 +56,7 @@ export default function Page() {
 			});
 		});
 		// テキスト
-		gsap.utils.toArray('h1, h2, h3, .main-content p, dl').forEach((target: any) => {
+		gsap.utils.toArray('h1, h2, h3, .main-content p, dl:not(.footer dl)').forEach((target: any) => {
 			gsap.fromTo(target, {
 				autoAlpha: 0,
 				y: '20px',
