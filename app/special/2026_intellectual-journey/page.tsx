@@ -92,7 +92,7 @@ export default function Page() {
 			autoAlpha: 0,
 		}, {
 			autoAlpha: 1,
-			duration: 1.4,
+			duration: 1.0,
 		});
 
 		gsap.fromTo('.char-wrapper .char img', {
@@ -103,13 +103,13 @@ export default function Page() {
 		});
 
 		gsap.fromTo('.init-logo .char', {
-			yPercent: 40,
+			yPercent: 60,
 		}, {
 			yPercent: 0,
 			duration: 1.4,
 			stagger: {
 				from: 'center',
-				each: 0.04,
+				each: 0.02,
 			},
 			ease: 'power3.out',
 		});
