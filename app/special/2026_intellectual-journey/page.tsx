@@ -242,10 +242,10 @@ return (
 		/>
 		<div className="fixed-background-filter" />
 		<div className="fixed-background" />
-		<Menu 
+		{/*<Menu 
 			isOpen={isOpen} 
 			closeMenu={closeMenu} 
-		/>
+		/>*/}
 		<main className="main-content">
 			{/* KV */}
 			<div className="kv-wrapper">
