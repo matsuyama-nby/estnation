@@ -599,14 +599,18 @@ return (
 								<p className="text-[18px] lg:text-[20px] tracking-[0.02em] leading-[1.75] mb-[17.5px] lg:mb-[26.5px] font-semibold">軽やかな色合いとノーカラーが<br />旅の装いを格上げしてくれる</p>
 								<p className="mb-[24.5px] lg:mb-[34px]">清涼感のあるリネン素材と軽快な色合いが特徴のESTNATIONのセットアップ。ノーカラーのため、カーディガンのように気軽に羽織ることができ、ウエストゴム仕様のパンツは移動の多い旅でもストレスなく過ごすことができる。元々ノーカラージャケットはフォーマルな装いをより自由に着こなすために生まれたもの。このジャケットを羽織り自由を謳歌する旅を楽しみたい。</p>
 								<div className="info-wrapper">
-									<dl className="info">
-										<dt>JACKET ¥57,200</dt>
-										<dd>ESTNATION</dd>
-									</dl>
-									<dl className="info">
-										<dt>PANTS ¥37,400</dt>
-										<dd>ESTNATION</dd>
-									</dl>
+									<a className="purchase-link" href="https://www.estnation.co.jp/item/detail/1_890_6110904040318/422" target="_blank" rel="noopener noreferrer">
+										<dl className="info">
+											<dt>JACKET ¥57,200</dt>
+											<dd>ESTNATION</dd>
+										</dl>
+									</a>
+									<a className="purchase-link" href="https://www.estnation.co.jp/item/detail/1_890_6110907040319/422" target="_blank" rel="noopener noreferrer">
+										<dl className="info">
+											<dt>PANTS ¥37,400</dt>
+											<dd>ESTNATION</dd>
+										</dl>
+									</a>
 								</div>
 							</div>
 						</div>
