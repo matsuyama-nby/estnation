@@ -135,14 +135,14 @@ body {
   left: 0;
   width: 100%;
   height: 100vh; 
-  background-image: url('/photo/page/2026_intellectual-journey/img/bg-main.png');
+  background-image: url('/photo/page/creative_with_refine_01/img/bg-main.png');
   background-image: -webkit-image-set(
-    url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
-    url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
+    url('/photo/page/creative_with_refine_01/img/bg-main.webp') type('image/webp'),
+    url('/photo/page/creative_with_refine_01/img/bg-main.png') type('image/png')
   );
   background-image: image-set(
-    url('/photo/page/2026_intellectual-journey/img/bg-main.webp') type('image/webp'),
-    url('/photo/page/2026_intellectual-journey/img/bg-main.png') type('image/png')
+    url('/photo/page/creative_with_refine_01/img/bg-main.webp') type('image/webp'),
+    url('/photo/page/creative_with_refine_01/img/bg-main.png') type('image/png')
   );
   mix-blend-mode: hard-light;
   opacity: 0.4;
@@ -238,13 +238,13 @@ body {
   transition: opacity 0.8s ease;
 }
 /* 表示後 */
-body.is-ready .init-screen {
+.is-ready .init-screen {
   opacity: 0;
   visibility: hidden;
 }
-body.is-ready .header,
-body.is-ready .header-content,
-body.is-ready .main-content {
+.is-ready .header,
+.is-ready .header-content,
+.is-ready .main-content {
   opacity: 1;
 }
 
@@ -637,9 +637,9 @@ body.is-ready .main-content {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/photo/page/2026_intellectual-journey/img/bg-main.png);
-  background-image: -webkit-image-set(url(/photo/page/2026_intellectual-journey/img/bg-main.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-main.png) type('image/png'));
-  background-image: image-set(url(/photo/page/2026_intellectual-journey/img/bg-main.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-main.png) type('image/png'));
+  background-image: url(/photo/page/creative_with_refine_01/img/bg-main.png);
+  background-image: -webkit-image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
+  background-image: image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
   background-repeat: repeat;
   mix-blend-mode: soft-light;
   z-index: -1;
@@ -696,9 +696,9 @@ body.is-ready .main-content {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/photo/page/2026_intellectual-journey/img/bg-main.png);
-  background-image: -webkit-image-set(url(/photo/page/2026_intellectual-journey/img/bg-main.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-main.png) type('image/png'));
-  background-image: image-set(url(/photo/page/2026_intellectual-journey/img/bg-main.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-main.png) type('image/png'));
+  background-image: url(/photo/page/creative_with_refine_01/img/bg-main.png);
+  background-image: -webkit-image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
+  background-image: image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
   background-repeat: repeat;
   opacity: 0.2; 
   z-index: -1;
@@ -725,9 +725,9 @@ body.is-ready .main-content {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/photo/page/2026_intellectual-journey/img/bg-main.png);
-  background-image: -webkit-image-set(url(/photo/page/2026_intellectual-journey/img/bg-main.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-main.png) type('image/png'));
-  background-image: image-set(url(/photo/page/2026_intellectual-journey/img/bg-main.webp) type('image/webp'), url(/photo/page/2026_intellectual-journey/img/bg-main.png) type('image/png'));
+  background-image: url(/photo/page/creative_with_refine_01/img/bg-main.png);
+  background-image: -webkit-image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
+  background-image: image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
   background-repeat: repeat;
   z-index: -1;
 }

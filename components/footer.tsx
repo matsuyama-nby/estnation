@@ -12,16 +12,16 @@ export default function Footer() {
 							<a href="" className="relative">
 								<div className="link-ttl z-2">
 									<picture className="flex justify-center">
-										<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[calc(171/1280*100vw)] mb-[calc(31.56/1280*100vw)]" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/vol-01.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/vol-01.png" alt="" className="w-[calc(171/1280*100vw)] mb-[calc(31.56/1280*100vw)]" />
 									</picture>
 									<p className="font-en-garamond text-[calc(45/1280*100vw)] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
 									<p className="font-en-futura text-[calc(13/1280*100vw)] tracking-[0.12em] leading-[1.31] mb-[calc(33.44/1280*100vw)]">- FLAVORS & NATURE ENCOUNTER -</p>
 									<p className="text-[calc(18/1280*100vw)] tracking-[0.02em] leading-[1.78]">食と自然体験、知的好奇心を刺激する旅</p>
 								</div>
 								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-other.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-other.jpg" alt="" />
+									<source srcSet="/photo/page/creative_with_refine_01/img/img-other.webp" type="image/webp" />
+									<img src="/photo/page/creative_with_refine_01/img/img-other.jpg" alt="" />
 								</picture>
 								<div className="absolute inset-0 bg-black/35 z-1" />
 							</a>
@@ -30,15 +30,15 @@ export default function Footer() {
 						<div className="block md:hidden">
 							<a href="" className="relative">
 								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-other-sp.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-other-sp.jpg" alt="" />
+									<source srcSet="/photo/page/creative_with_refine_01/img/img-other-sp.webp" type="image/webp" />
+									<img src="/photo/page/creative_with_refine_01/img/img-other-sp.jpg" alt="" />
 								</picture>
 								<div className="absolute inset-0 bg-black/35" />
 							</a>
 							<div className="text-[var(--color-secondary)] mt-[15px]">
 								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[159px] mb-[11.48px]" />
+									<source srcSet="/photo/page/creative_with_refine_01/img/vol-01.webp" type="image/webp" />
+									<img src="/photo/page/creative_with_refine_01/img/vol-01.png" alt="" className="w-[159px] mb-[11.48px]" />
 								</picture>
 								<p className="font-en-garamond text-[20px] tracking-[0.1em] leading-[1.4]">THE INTELLECTUAL JOURNEY</p>
 								<p className="font-en-futura text-[10px] tracking-[0.12em] leading-[1.31] mb-[12.5px]">- FLAVORS & NATURE ENCOUNTER -</p>
@@ -59,8 +59,8 @@ export default function Footer() {
 								</p>
 							</div>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-store.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-store.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-store.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-store.jpg" alt="" />
 							</picture>
 						</a>
 					</li>
@@ -74,8 +74,8 @@ export default function Footer() {
 								</p>
 							</div>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-online.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-online.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-online.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-online.jpg" alt="" />
 							</picture>
 						</a>
 					</li>					

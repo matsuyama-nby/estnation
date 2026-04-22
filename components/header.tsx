@@ -6,8 +6,8 @@ export default function Header({ isOpen, openMenu }: any) {
 			<div className="header-content">
 				<div className="logo-wrapper">
 					<picture>
-						<source srcSet="/photo/page/2026_intellectual-journey/img/logo-title.webp" type="image/webp" />
-						<img src="/photo/page/2026_intellectual-journey/img/logo-title.png" alt="Creative with Refine" className="w-[190px] md:w-[302.42px]" />
+						<source srcSet="/photo/page/creative_with_refine_01/img/logo-title.webp" type="image/webp" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-title.png" alt="Creative with Refine" className="w-[190px] md:w-[302.42px]" />
 					</picture>
 				</div>
 				{/*

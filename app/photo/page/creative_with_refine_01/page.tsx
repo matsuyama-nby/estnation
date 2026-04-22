@@ -153,7 +153,7 @@ export default function Page() {
 	};
 
 return (
-	<body className={`${isReady ? "is-ready" : ""}`}>
+	<div className={`${isReady ? "is-ready" : ""}`}>
 		{/* Swiperを読み込み、終わったらinitSwiperを実行 */}
 		<Script
 			src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
@@ -191,59 +191,59 @@ return (
 			<div className="init-logo">
 				<div className="char-wrapper">
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-01.png" alt="C" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-01.png" alt="C" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-02.png" alt="r" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-02.png" alt="r" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-03.png" alt="e" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-03.png" alt="e" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-04.png" alt="a" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-04.png" alt="a" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-05.png" alt="t" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-05.png" alt="t" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-06.png" alt="i" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-06.png" alt="i" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-07.png" alt="v" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-07.png" alt="v" />
 					</span>
 					{/* <span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-08.png" alt="e" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-08.png" alt="e" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-09.png" alt=" " />
+						<img src="/photo/page/creative_with_refine_01/img/logo-09.png" alt=" " />
 					</span> */}
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-10.png" alt="w" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-10.png" alt="w" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-11.png" alt="i" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-11.png" alt="i" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-12.png" alt="t" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-12.png" alt="t" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-13.png" alt="h" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-13.png" alt="h" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-14.png" alt=" " />
+						<img src="/photo/page/creative_with_refine_01/img/logo-14.png" alt=" " />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-15.png" alt="R" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-15.png" alt="R" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-16.png" alt="R" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-16.png" alt="R" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/2026_intellectual-journey/img/logo-17.png" alt="R" />
+						<img src="/photo/page/creative_with_refine_01/img/logo-17.png" alt="R" />
 					</span>
 				</div>
 				<div className="init-logo_comp">
-					<img src="/photo/page/2026_intellectual-journey/img/logo-comp.png" alt="ESTNATION" />
+					<img src="/photo/page/creative_with_refine_01/img/logo-comp.png" alt="ESTNATION" />
 				</div>
 			</div>
 		</div>
@@ -263,13 +263,13 @@ return (
 				<div className="relative">
 					{/* pc */}
 					<picture className="hidden md:block">
-						<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv.webp" type="image/webp" />
-						<img src="/photo/page/2026_intellectual-journey/img/img-kv.jpg" alt="THE INTELLECTUAL JOURNEY" />
+						<source srcSet="/photo/page/creative_with_refine_01/img/img-kv.webp" type="image/webp" />
+						<img src="/photo/page/creative_with_refine_01/img/img-kv.jpg" alt="THE INTELLECTUAL JOURNEY" />
 					</picture>
 					{/* sp */}
 					<picture className="block md:hidden">
-						<source srcSet="/photo/page/2026_intellectual-journey/img/img-kv-sp.webp" type="image/webp" />
-						<img src="/photo/page/2026_intellectual-journey/img/img-kv-sp.jpg" alt="THE INTELLECTUAL JOURNEY" />
+						<source srcSet="/photo/page/creative_with_refine_01/img/img-kv-sp.webp" type="image/webp" />
+						<img src="/photo/page/creative_with_refine_01/img/img-kv-sp.jpg" alt="THE INTELLECTUAL JOURNEY" />
 					</picture>
 					<div className="absolute inset-0 bg-black/35 z-1" />
 					<div className="kv-ttl-content z-2">
@@ -279,8 +279,8 @@ return (
 						</h1>
 						<div className="flex mb-[calc(30/390*100vw)] md:mb-[calc(25/1280*100vw)]">
 							<picture className="mx-auto">
-								<source srcSet="/photo/page/2026_intellectual-journey/img/vol-01.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/vol-01.png" alt="" className="w-[calc(159/390*100vw)] md:w-[calc(181/1280*100vw)]" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/vol-01.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/vol-01.png" alt="" className="w-[calc(159/390*100vw)] md:w-[calc(181/1280*100vw)]" />
 							</picture>
 						</div>
 						<p className="text-[calc(15/390*100vw)] md:text-[calc(18/1280*100vw)] tracking-[0.02em] leading-[1.78]">知的好奇心を刺激する名ホテルへの旅路</p>
@@ -318,8 +318,8 @@ return (
 						</div>
 					</div>
 					<picture className="!basis-[35%] lg:!basis-[22.9%] order-1 md:order-2 mx-auto md:mx-0 mb-[35px] md:mb-0">
-						<source srcSet="/photo/page/2026_intellectual-journey/img/img-navigator.webp" type="image/webp" />
-						<img src="/photo/page/2026_intellectual-journey/img/img-navigator.jpg" alt="" className="w-[216px] md:w-auto" />
+						<source srcSet="/photo/page/creative_with_refine_01/img/img-navigator.webp" type="image/webp" />
+						<img src="/photo/page/creative_with_refine_01/img/img-navigator.jpg" alt="" className="w-[216px] md:w-auto" />
 					</picture>
 				</div>
 			</section>
@@ -371,13 +371,13 @@ return (
 							</div>
 							<div className="grid gap-[40px] content-start">
 								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-1.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-hotel-1.jpg" alt="" />
+									<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-1.webp" type="image/webp" />
+									<img src="/photo/page/creative_with_refine_01/img/img-hotel-1.jpg" alt="" />
 								</picture>
 								<div>
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-2.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-hotel-2.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-2.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-hotel-2.jpg" alt="" />
 									</picture>
 									<p className="photo-caption">ふふ 東京 銀座内にある日本料理「銀座がゆう」では宿泊者がプライベート空間を満喫できるよう全て個室になっているが、レストラン内には大きなカウンターを備え、通り道にも枯山水を模した空間や作品が置かれるなど、個室に入るまでの時間を視覚的に楽しむことができる。</p>
 								</div>
@@ -387,8 +387,8 @@ return (
 					{/* sp */}
 					<div className="block md:hidden">
 						<picture className="block mx-[calc(-26/390*100vw)] mt-[5px] mb-[45px]">
-							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-1.webp" type="image/webp" />
-							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-1.jpg" alt="" />
+							<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-1.webp" type="image/webp" />
+							<img src="/photo/page/creative_with_refine_01/img/img-hotel-1.jpg" alt="" />
 						</picture>
 						<h3 className="section-ttl font-semibold">旅は新たな知識のカケラ<br />を与えてくれる</h3>
 						<p className="question-text mb-[26px] font-semibold">今回の企画テーマは「知的好奇心を刺激する名ホテルへの旅路」ですが、ジョアンナさんにとって好奇心を持って旅をする意味と、近年旅行者が都市部のラグジュアリーホテルよりも地方の宿に惹かれる傾向にあるのはなぜだと思いますか。</p>
@@ -399,8 +399,8 @@ return (
 							この変化の真の原動力は、「その土地の文化にどっぷりと浸かりたい」という切実な思いにあると私は考えています。旅行者はもはや、単に目的地を“訪れる”だけでは満足できません。たとえ数晩であっても、その場所に「溶け込んで暮らしたい」と願っているのです。地方の宿は、そんな願いを心に深く刻み込んでくれる体験なのです。
 						</p>
 						<picture>
-							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-2.webp" type="image/webp" />
-							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-2.jpg" alt="" />
+							<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-2.webp" type="image/webp" />
+							<img src="/photo/page/creative_with_refine_01/img/img-hotel-2.jpg" alt="" />
 						</picture>
 						<p className="photo-caption">ふふ 東京 銀座内にある日本料理「銀座がゆう」では宿泊者がプライベート空間を満喫できるよう全て個室になっているが、レストラン内には大きなカウンターを備え、通り道にも枯山水を模した空間や作品が置かれるなど、個室に入るまでの時間を視覚的に楽しむことができる。</p>
 					</div>
@@ -410,8 +410,8 @@ return (
 					{/* pc */}
 					<div className="hidden md:block">
 						<picture>
-							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-3.webp" type="image/webp" />
-							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-3.jpg" alt="" />
+							<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-3.webp" type="image/webp" />
+							<img src="/photo/page/creative_with_refine_01/img/img-hotel-3.jpg" alt="" />
 						</picture>
 						<div className="flex">
 							<p className="photo-caption w-[calc((100%-40px)/2)] ml-auto">エントランスには銀箔の作品や、竹籠のアートが飾られ、ふふ 東京 銀座が国内のアーティストに敬意を払いながら伝統作品を現代的にアップデートしている様子が伺える。</p>
@@ -438,8 +438,8 @@ return (
 							現代人が惹きつけられているのは、ある種の「気付き」からではないでしょうか。それは、日本の伝統デザインはずっと昔から時代を先取りしていました。伝統に現代的なセンスを掛け合わせることは、決して本質を薄めることではありません。むしろ、その本質を再び活性化させ、今の私たちにとって新鮮で、意味深く、そして「静かな特別感」を感じさせてくれるものへと進化させているのです。
 						</p>
 						<picture className="block mx-[calc(-26/390*100vw)]">
-							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-3.webp" type="image/webp" />
-							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-3.jpg" alt="" />
+							<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-3.webp" type="image/webp" />
+							<img src="/photo/page/creative_with_refine_01/img/img-hotel-3.jpg" alt="" />
 						</picture>
 						<p className="photo-caption">エントランスには銀箔の作品や、竹籠のアートが飾られ、ふふ 東京 銀座が国内のアーティストに敬意を払いながら伝統作品を現代的にアップデートしている様子が伺える。</p>
 					</div>
@@ -456,13 +456,13 @@ return (
 						</p>
 						<div className="flex-gap-40-2col">
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-4.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-hotel-4.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-4.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-hotel-4.jpg" alt="" />
 							</picture>
 							<div>
 								<picture>
-									<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-5.webp" type="image/webp" />
-									<img src="/photo/page/2026_intellectual-journey/img/img-hotel-5.jpg" alt="" />
+									<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-5.webp" type="image/webp" />
+									<img src="/photo/page/creative_with_refine_01/img/img-hotel-5.jpg" alt="" />
 								</picture>
 								<p className="photo-caption">この日ジョアンナさんはローレンマヌーギアンのコートにアンダーカバーのパンツ、マルジェラのブーツという出立ちであった。着心地を追求したミニマルなデザインが特徴のローレンマヌーギアンはリラックスして過ごすことができ、旅先での食事など少しのドレスアップが必要な場面でも重宝する一着となっている。</p>
 							</div>
@@ -471,8 +471,8 @@ return (
 					{/* sp */}
 					<div className="block md:hidden">
 						<picture className="block mx-[calc(-26/390*100vw)] mt-[5px] mb-[45px]">
-							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-4.webp" type="image/webp" />
-							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-4.jpg" alt="" />
+							<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-4.webp" type="image/webp" />
+							<img src="/photo/page/creative_with_refine_01/img/img-hotel-4.jpg" alt="" />
 						</picture>
 						<h3 className="section-ttl font-semibold">着心地の良さを追求することは<br />楽さだけなく、自信にもつながる</h3>
 						<p className="question-text font-semibold">全国各地を旅するジョアンナさんが旅の装いについて重要視する部分はなんでしょうか。</p>
@@ -481,8 +481,8 @@ return (
 							着心地の良さの重要性は仕事での服装も同じです。服を着て心地よくいられると、自然と自信が湧いてくるもの。自分が愛着を持てて、誇らしく思える服を着ることはとても大切です。なぜなら、それが一日の始まりと終わりの気分にそのまま繋がるからです。最近では、多くの素晴らしいデザイナーが美しいシルエットの服を作っており、どんな場面でもおしゃれでプロフェッショナルに見せることができます。私にとって、服とは“体にまとう建築”のようなものです。それは私たちの体を守るシェルターであり、周囲の環境や「自分は何者であるか」を映し出す鏡でもあるのです。
 						</p>
 						<picture>
-							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-5.webp" type="image/webp" />
-							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-5.jpg" alt="" />
+							<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-5.webp" type="image/webp" />
+							<img src="/photo/page/creative_with_refine_01/img/img-hotel-5.jpg" alt="" />
 						</picture>
 						<p className="photo-caption">この日ジョアンナさんはローレンマヌーギアンのコートにアンダーカバーのパンツ、マルジェラのブーツという出立ちであった。着心地を追求したミニマルなデザインが特徴のローレンマヌーギアンはリラックスして過ごすことができ、旅先での食事など少しのドレスアップが必要な場面でも重宝する一着となっている。</p>
 					</div>
@@ -499,8 +499,8 @@ return (
 					</div>
 					<div>
 						<picture>
-							<source srcSet="/photo/page/2026_intellectual-journey/img/img-hotel-6.webp" type="image/webp" />
-							<img src="/photo/page/2026_intellectual-journey/img/img-hotel-6.jpg" alt="" />
+							<source srcSet="/photo/page/creative_with_refine_01/img/img-hotel-6.webp" type="image/webp" />
+							<img src="/photo/page/creative_with_refine_01/img/img-hotel-6.jpg" alt="" />
 						</picture>
 						<p className="photo-caption">角部屋に位置するラグジュアリーコーナースイートでは、一面に配置された窓から銀座の街並みを部屋から眺めることができる。部屋にはふふ熱海から毎日運んでくるという温泉を楽しむことができる。</p>
 					</div>
@@ -542,15 +542,15 @@ return (
 								</div>
 							</div>
 							<picture className="order-1 lg:order-2 lg:min-w-0">
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-mens-1.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-mens-1.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-mens-1.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-mens-1.jpg" alt="" />
 							</picture>
 						</div>
 						{/* 02 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col mb-[80px] lg:mb-0">
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-mens-2.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-mens-2.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-mens-2.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-mens-2.jpg" alt="" />
 							</picture>
 							<div className="content-info-left">
 								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">MENS 02</p>
@@ -580,8 +580,8 @@ return (
 								</dl>
 							</div>
 							<picture className="order-1 lg:order-2">
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-mens-3.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-mens-3.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-mens-3.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-mens-3.jpg" alt="" />
 							</picture>
 						</div>
 					</section>
@@ -591,8 +591,8 @@ return (
 						{/* 01 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col mb-[80px] lg:mb-0">
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-womens-1.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-womens-1.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-womens-1.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-womens-1.jpg" alt="" />
 							</picture>
 							<div className="content-info-left">
 								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">WOMENS 01</p>
@@ -632,15 +632,15 @@ return (
 								</div>
 							</div>
 							<picture className="order-1 lg:order-2">
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-womens-2.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-womens-2.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-womens-2.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-womens-2.jpg" alt="" />
 							</picture>
 						</div>
 						{/* 03 */}
 						<div className="flex flex-col gap-[40px] lg:flex-gap-none-2col">
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-womens-3.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-womens-3.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-womens-3.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-womens-3.jpg" alt="" />
 							</picture>
 							<div className="content-info-left">
 								<p className="font-en-futura text-[14px] lg:text-[16px] tracking-[0.1em] leading-[1.31] mb-sextype">WOMENS 03</p>
@@ -667,16 +667,16 @@ return (
 					<div className="hidden md:block">
 						<div className="flex-gap-1-3col mb-[37.5px]">
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-1.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-1.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-1.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-kyoto-1.jpg" alt="" />
 							</picture>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-2.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-2.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-2.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-kyoto-2.jpg" alt="" />
 							</picture>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-3.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-3.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-3.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-kyoto-3.jpg" alt="" />
 							</picture>
 						</div>
 					</div>
@@ -686,38 +686,38 @@ return (
 							<div className="swiper-wrapper">
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-1.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-1.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-1.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-kyoto-1.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-2.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-2.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-2.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-kyoto-2.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-3.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-3.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-3.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-kyoto-3.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-1.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-1.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-1.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-kyoto-1.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-2.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-2.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-2.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-kyoto-2.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-kyoto-3.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-kyoto-3.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-kyoto-3.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-kyoto-3.jpg" alt="" />
 									</picture>
 								</div>
 							</div>
@@ -762,16 +762,16 @@ return (
 					<div className="hidden md:block">
 						<div className="flex-gap-1-3col">
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-1.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-numazu-1.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-1.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-numazu-1.jpg" alt="" />
 							</picture>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-2.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-numazu-2.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-2.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-numazu-2.jpg" alt="" />
 							</picture>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-3.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-numazu-3.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-3.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-numazu-3.jpg" alt="" />
 							</picture>
 						</div>
 					</div>
@@ -781,38 +781,38 @@ return (
 							<div className="swiper-wrapper">
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-1.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-numazu-1.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-1.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-numazu-1.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-2.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-numazu-2.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-2.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-numazu-2.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-3.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-numazu-3.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-3.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-numazu-3.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-1.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-numazu-1.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-1.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-numazu-1.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-2.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-numazu-2.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-2.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-numazu-2.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-numazu-3.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-numazu-3.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-numazu-3.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-numazu-3.jpg" alt="" />
 									</picture>
 								</div>
 							</div>
@@ -860,16 +860,16 @@ return (
 					<div className="hidden md:block">
 						<div className="flex-gap-1-3col mb-[37.5px]">
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-1.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-1.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-1.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-satoyama-1.jpg" alt="" />
 							</picture>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-2.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-2.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-2.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-satoyama-2.jpg" alt="" />
 							</picture>
 							<picture>
-								<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-3.webp" type="image/webp" />
-								<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-3.jpg" alt="" />
+								<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-3.webp" type="image/webp" />
+								<img src="/photo/page/creative_with_refine_01/img/img-satoyama-3.jpg" alt="" />
 							</picture>
 						</div>
 					</div>
@@ -879,38 +879,38 @@ return (
 							<div className="swiper-wrapper">
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-1.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-1.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-1.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-satoyama-1.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-2.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-2.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-2.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-satoyama-2.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-3.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-3.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-3.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-satoyama-3.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-1.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-1.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-1.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-satoyama-1.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-2.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-2.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-2.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-satoyama-2.jpg" alt="" />
 									</picture>
 								</div>
 								<div className="swiper-slide">
 									<picture>
-										<source srcSet="/photo/page/2026_intellectual-journey/img/img-satoyama-3.webp" type="image/webp" />
-										<img src="/photo/page/2026_intellectual-journey/img/img-satoyama-3.jpg" alt="" />
+										<source srcSet="/photo/page/creative_with_refine_01/img/img-satoyama-3.webp" type="image/webp" />
+										<img src="/photo/page/creative_with_refine_01/img/img-satoyama-3.jpg" alt="" />
 									</picture>
 								</div>
 							</div>
@@ -954,6 +954,6 @@ return (
 
 		<Footer />
 		
-	</body>
+	</div>
 	);
 }

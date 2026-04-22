@@ -31,9 +31,11 @@ export default function RootLayout({
         {/* ESTNATION様用 */}
         <link rel="stylesheet" href="https://use.typekit.net/xnc1nod.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-        <link rel="preload" as="image" href="/photo/page/2026_intellectual-journey/img/bg-main.webp" />
+        <link rel="preload" as="image" href="/photo/page/creative_with_refine_01/img/bg-main.webp" />
       </head>
+      <body>
         {children}
+      </body>
     </html>
   );
 }
