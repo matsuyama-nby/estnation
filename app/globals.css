@@ -111,7 +111,7 @@ body {
   .lg\:flex-gap-none-2col > * {
     flex-basis: 50%;
   }
- }
+}
 
 /* ページ全体の背景 */
 .fixed-background {
@@ -135,20 +135,19 @@ body {
   left: 0;
   width: 100%;
   height: 100vh; 
-  background-image: url('/photo/page/creative_with_refine_01/img/bg-main.png');
+  background-image: url('/photo/page/creative_with_refine/01/img/bg-main.png');
   background-image: -webkit-image-set(
-    url('/photo/page/creative_with_refine_01/img/bg-main.webp') type('image/webp'),
-    url('/photo/page/creative_with_refine_01/img/bg-main.png') type('image/png')
+    url('/photo/page/creative_with_refine/01/img/bg-main.webp') type('image/webp'),
+    url('/photo/page/creative_with_refine/01/img/bg-main.png') type('image/png')
   );
   background-image: image-set(
-    url('/photo/page/creative_with_refine_01/img/bg-main.webp') type('image/webp'),
-    url('/photo/page/creative_with_refine_01/img/bg-main.png') type('image/png')
+    url('/photo/page/creative_with_refine/01/img/bg-main.webp') type('image/webp'),
+    url('/photo/page/creative_with_refine/01/img/bg-main.png') type('image/png')
   );
   mix-blend-mode: hard-light;
   opacity: 0.4;
   z-index: -1;
 }
-
 
 
 /* メインコンテンツ */
@@ -246,293 +245,6 @@ body {
 .is-ready .header-content,
 .is-ready .main-content {
   opacity: 1;
-}
-
-
-/* セクション共通 */
-.section {
-  border-top: 1px solid var(--color-primary);
-  padding: 80px 0;
-  margin: 0 calc(120 / 1280 * 100vw);
-}
-.section-ttl {
-  font-size: 20px;
-  letter-spacing: 0.02em;
-  line-height: 1.75;
-  margin-bottom: 46.5px;
-}
-.section-ttl-garamond {
-  font-family: var(--font-en-garamond);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-  letter-spacing: 0.1em;
-  line-height: 1.2;
-}
-.section-ttl-garamond-sm {
-  font-family: var(--font-en-garamond);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px;
-  letter-spacing: 0.1em;
-  line-height: 1.6;
-}
-@media (max-width: 767.9px) {
-  .section {
-    padding: 55.5px 0 56.5px;
-    margin: 0 calc(26 / 390 * 100vw);
-  }
-  .section-ttl {
-    font-size: 18px;
-    margin-bottom: 27.5px;
-  }
-  .section-ttl-garamond {
-    font-size: 30px;
-  }
-  .section-ttl-garamond-sm {
-    font-size: 25px;
-  }
-}
-
-
-/* ---- 共通パーツ ---- */
-/* 質問テキスト */
-.question-text {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 26px;
-}
-.question-text::before {
-  content: "";
-  position: absolute;
-  top: 0.8em;
-  left: 0;
-  width: 20px;
-  height: 1px;
-  background-color: var(--color-primary);
-}
-@media (max-width: 767.9px) {
-  .question-text {
-    margin-bottom: 27px;
-  }
-}
-
-/* 写真説明 */ 
-.photo-caption {
-  font-size: 11px;
-  margin-top: 6.5px;
-  line-height: calc(18 / 11);
-}
-
-/* 詳細情報テキスト */
-.info-wrapper {
-  display: grid;
-  gap: 4px;
-}
-.info {
-  display: flex;
-  gap: 10px;
-}
-.info dt,
-.info dd {
-  font-family: var(--font-en-futura);
-  font-size: 10px;
-  line-height: 1.3;
-  letter-spacing: 0.12em;
-}
-.info dt {
-  font-weight: 400;
-}
-.info dd {
-  font-weight: 500;
-}
-@media (max-width: 767.9px) {
-  .info-wrapper {
-    gap: 6px;
-  }
-}
-
-
-/* KV */
-.kv-wrapper {
-  padding-top: 50px;
-  margin: 70px calc(120 / 1280 * 100vw) 0;
-}
-.kv-ttl-content {
-  position: absolute;
-  width: 100%;
-  top: calc(283 / 1280 * 100vw);
-  color: var(--color-secondary);
-  text-align: center;
-}
-
-@media (max-width: 767.9px) {
-  .kv-wrapper {
-    padding-top: 30px;
-    margin: 55px calc(13 / 390 * 100vw) 0;
-  }
-  .kv-ttl-content {
-    top: calc(152 / 390 * 100vw);
-  }
-}
-
-
-/* イントロ */
-.intro {
-  display: flex;
-  padding: 63.5px 0 73.5px;
-  margin: 0 calc(120 / 1280 * 100vw);
-  justify-content: space-between;
-}
-@media (max-width: 767.9px) {
-  .intro {
-    padding: 41px 0 54px;
-    flex-direction: column;
-    gap: 34px;
-    margin: 0 calc(26 / 390 * 100vw);
-  }
-}
-
-
-/* 服 サイドナビ */
-.fashion-menu {
-  border: 1px solid var(--color-primary);
-  border-left: none;
-  padding-bottom: 80px;
-  flex-basis: calc(120 / 1280 * 100vw);
-  min-width: 0;
-}
-.menu-links {
- position: relative;
- padding-left: 25px;
- display: flex;
- flex-direction: column;
- align-items: flex-start;
- gap: 10px;
-}
-.indicator {
-  position: absolute;
-  width: 15px;
-  height: 1px;
-  background-color: var(--color-primary);
-  top: 8px;
-  left: 0;
-  transition: top 0.3s ease-in-out;
-}
-.is-womens {
-  top: 33px;
-}
-.link-item {
-  font-family: var(--font-en-futura);
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  line-height: 1.31;
-  white-space: nowrap;
-}
-@media screen and (width < 1024px) {
-  .fashion-menu {
-    flex-basis: 10%;
-  }
-  .menu-links {
-    padding-left: 14px;
-    gap: 73px;
-  }
-  .indicator {
-    width: 8px;
-    top: 25px;
-  }
-  .is-womens {
-    top: 138px;
-  }
-  .link-item {
-    font-size: 12px;
-    transform: rotate(90deg);
-    transform-origin: 0 12px;
-    margin-bottom: 12px;
-  }
-}
-/* アンカーリンク対応 */
-#mens, #womens {
-  scroll-margin-top: 70px;
-}
-@media (max-width: 767.9px) {
-  #mens, #womens {
-    scroll-margin-top: 55px;
-  }
-}
-
-/* 服 h2エリア */
-.fashion-mainTtl-content {
-  padding: 100px calc(70 / 1280 * 100vw) 86.5px;
-}
-@media screen and (width < 1024px) {
-  .fashion-mainTtl-content {
-    padding: 60px calc(26 / 390 * 100vw) 11.5px;
-  }
-}
-
-/* 服 コンテンツ */
-.fashion-content {
-  border-bottom: 1px solid var(--color-primary);
-  padding: 45px 0 80px;
-}
-.content-info-left {
-  padding: calc(177 / 1280 * 100vw) calc(110 / 1280 * 100vw) 0 calc(69 / 1280 * 100vw);
-}
-.content-info-right {
-  padding: calc(177 / 1280 * 100vw) calc(70 / 1280 * 100vw) 0 calc(110 / 1280 * 100vw);
-}
-@media screen and (width < 1024px) {
-  .fashion-content {
-    padding-top: 57.5px;
-  }
-  .content-info-left,
-  .content-info-right {
-    padding: 0 calc(26 / 390 * 100vw);
-  }
-}
-
-
-/* 宿 */
-.section-hotel {
-  padding: 96px 0 120px;
-  margin: 0 calc(120 / 1280 * 100vw);
-}
-.hotel-content-box {
-  padding: 50px 0 44px;
-  border-bottom: 1px solid var(--color-primary);
-}
-.hotel-ttl {
-  font-family: var(--font-en-garamond);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px;
-  letter-spacing: 0.1em;
-  line-height: 1.17;
-  margin-bottom: 4px;
-}
-.hotel-ttl-ja {
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  line-height: 1.67;
-  margin-bottom: 26px;
-}
-@media (max-width: 767.9px) {
-  .section-hotel {
-    padding: 57px 0 100.5px;
-    margin: 0 calc(26 / 390 * 100vw);
-  }
-  .hotel-content-box {
-    padding: 50.5px 0 51px;
-  }
-  .hotel-ttl {
-    font-size: 23px;
-    margin-bottom: 1.5px;
-  }
-  .hotel-ttl-ja {
-    font-size: 11px;
-    margin-bottom: 21px;
-  }
 }
 
 
@@ -637,9 +349,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/photo/page/creative_with_refine_01/img/bg-main.png);
-  background-image: -webkit-image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
-  background-image: image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
+  background-image: url(/photo/page/creative_with_refine/01/img/bg-main.png);
+  background-image: -webkit-image-set(url(/photo/page/creative_with_refine/01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine/01/img/bg-main.png) type('image/png'));
+  background-image: image-set(url(/photo/page/creative_with_refine/01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine/01/img/bg-main.png) type('image/png'));
   background-repeat: repeat;
   mix-blend-mode: soft-light;
   z-index: -1;
@@ -696,9 +408,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/photo/page/creative_with_refine_01/img/bg-main.png);
-  background-image: -webkit-image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
-  background-image: image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
+  background-image: url(/photo/page/creative_with_refine/01/img/bg-main.png);
+  background-image: -webkit-image-set(url(/photo/page/creative_with_refine/01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine/01/img/bg-main.png) type('image/png'));
+  background-image: image-set(url(/photo/page/creative_with_refine/01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine/01/img/bg-main.png) type('image/png'));
   background-repeat: repeat;
   opacity: 0.2; 
   z-index: -1;
@@ -725,9 +437,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/photo/page/creative_with_refine_01/img/bg-main.png);
-  background-image: -webkit-image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
-  background-image: image-set(url(/photo/page/creative_with_refine_01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine_01/img/bg-main.png) type('image/png'));
+  background-image: url(/photo/page/creative_with_refine/01/img/bg-main.png);
+  background-image: -webkit-image-set(url(/photo/page/creative_with_refine/01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine/01/img/bg-main.png) type('image/png'));
+  background-image: image-set(url(/photo/page/creative_with_refine/01/img/bg-main.webp) type('image/webp'), url(/photo/page/creative_with_refine/01/img/bg-main.png) type('image/png'));
   background-repeat: repeat;
   z-index: -1;
 }
@@ -854,51 +566,6 @@ body {
   }
 }
 
-
-/* swiper */
-.swiper-wrapper {
-  transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1) !important;
-}
-
-/* 商品リンク */
-a {
-  transition: opacity 0.6s ease;
-}
-
-a:hover {
-  opacity: .7;
-}
-
-.purchase-link {
-  width: fit-content;
-  max-width: 31.33vw;
-}
-
-.purchase-link dl {
-  position: relative;
-  transition: opacity 0.6s ease;
-}
-
-.purchase-link dl::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  transition: opacity 0.6s ease;
-}
-
-.purchase-link:hover dl {
-  opacity: .7;
-}
-
-@media screen and (max-width: 1023.9px) {
-  .purchase-link {
-    max-width: 76.66vw;
-  }
-}
 
 /* 共通フッター */
 @media screen and (min-width: 751px) {
