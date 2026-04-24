@@ -192,59 +192,59 @@ return (
 			<div className="init-logo">
 				<div className="char-wrapper">
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-01.png" alt="C" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-01.png" alt="C" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-02.png" alt="r" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-02.png" alt="r" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-03.png" alt="e" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-03.png" alt="e" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-04.png" alt="a" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-04.png" alt="a" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-05.png" alt="t" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-05.png" alt="t" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-06.png" alt="i" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-06.png" alt="i" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-07.png" alt="v" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-07.png" alt="v" />
 					</span>
 					{/* <span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-08.png" alt="e" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-08.png" alt="e" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-09.png" alt=" " />
+						<img src="/photo/page/creative_with_refine/common/img/logo-09.png" alt=" " />
 					</span> */}
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-10.png" alt="w" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-10.png" alt="w" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-11.png" alt="i" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-11.png" alt="i" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-12.png" alt="t" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-12.png" alt="t" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-13.png" alt="h" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-13.png" alt="h" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-14.png" alt=" " />
+						<img src="/photo/page/creative_with_refine/common/img/logo-14.png" alt=" " />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-15.png" alt="R" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-15.png" alt="R" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-16.png" alt="R" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-16.png" alt="R" />
 					</span>
 					<span className="char">
-						<img src="/photo/page/creative_with_refine/01/img/logo-17.png" alt="R" />
+						<img src="/photo/page/creative_with_refine/common/img/logo-17.png" alt="R" />
 					</span>
 				</div>
 				<div className="init-logo_comp">
-					<img src="/photo/page/creative_with_refine/01/img/logo-comp.png" alt="ESTNATION" />
+					<img src="/photo/page/creative_with_refine/common/img/logo-comp.png" alt="ESTNATION" />
 				</div>
 			</div>
 		</div>

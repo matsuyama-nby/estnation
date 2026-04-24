@@ -6,8 +6,8 @@ export default function Menu({ isOpen, closeMenu }: any) {
 				<div className="menu-header">
 					<div className="logo-wrapper">
 						<picture>
-							<source srcSet="/photo/page/creative_with_refine/01/img/logo-title.webp" type="image/webp" />
-							<img src="/photo/page/creative_with_refine/01/img/logo-title.png" alt="Creative with Refine" className="w-[190px] md:w-[302.42px]" />
+							<source srcSet="/photo/page/creative_with_refine/common/img/logo-title.webp" type="image/webp" />
+							<img src="/photo/page/creative_with_refine/common/img/logo-title.png" alt="Creative with Refine" className="w-[190px] md:w-[302.42px]" />
 						</picture>
 					</div>
 					<button className="menu-btn" onClick={closeMenu}>CLOSE</button>
